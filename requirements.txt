@@ -1,2 +1,9 @@
 python-dotenv
+youtube-transcript-api
 langchain
+langchain-text-splitters
+spacy
+sentence-transformers
+langchain-openai
+langchain-text-splitters
+faiss-cpu
