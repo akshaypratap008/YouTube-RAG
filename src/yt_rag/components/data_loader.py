@@ -6,12 +6,10 @@ import spacy
 from sentence_transformers import SentenceTransformer
 import numpy as np
 from dotenv import load_dotenv
-import pickle
-import os
 from pathlib import Path
 
 from src.yt_rag.logger import logging
-from src.yt_rag.exceptions import CustomeException
+from src.yt_rag.exceptions import CustomException
 from src.yt_rag.utils import save_object, load_object
 
 load_dotenv()
@@ -38,7 +36,7 @@ class DataLoader:
             logging.info(f"[INFO] Extracted video id from url: {video_id}")
             return video_id
         except Exception as e:
-            raise CustomeException(e, sys)
+            raise CustomException(e, sys)
 
     def fetch_video_data(self) -> List[Dict[str, Any]]:
         """
@@ -59,7 +57,7 @@ class DataLoader:
                 logging.info(f"[INFO] Video data for video id {self.video_id} fetched.")
                 return self.preprocess_transcript(video_data = video_data, min_length = 10)
         except Exception as e:
-            raise CustomeException("No transcript found", sys)
+            raise CustomException("No transcript found", sys)
 
     def preprocess_transcript(self, video_data:List[Dict[str, Any]], min_length:int=10) -> List[Dict[str, Any]]:
         """
@@ -176,11 +174,12 @@ class DataLoader:
             self.save_chunks(chunks = chunks, file_path = "data/chunks.pkl")
             return chunks
         except Exception as e:
-            raise CustomeException(e, sys)
+            raise CustomException(e, sys)
 
     def save_chunks(self, chunks:List[Dict[str, Any]], file_path:str = "data/chunks.pkl"):
         """
-        Saves the chunks on disk
+        Saves the chunks on disk.
+        Chunks are in the form of Dict with keys "text", "start", "end"
         """
         save_object(obj = chunks, file_path=file_path)
         logging.info(f'[INFO] {len(chunks)} chunks saved to the disk')

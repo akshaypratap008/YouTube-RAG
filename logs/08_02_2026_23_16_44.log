@@ -1,0 +1,13 @@
+[ 2026-08-02 23:16:48,123] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-02 23:16:48,124] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-02 23:16:48,124] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-02 23:16:48,155] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-02 23:16:48,167] 36 root - INFO - [INFO] Extracted video id from url: sD468LfeVdc
+[ 2026-08-02 23:16:48,167] 23 root - INFO - Pickle file data/chunks.pkl loaded
+[ 2026-08-02 23:16:48,167] 194 root - INFO - [INFO] 50 chunks loaded
+[ 2026-08-02 23:16:48,168] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-02 23:16:50,423] 42 root - INFO - [INFO] Generating embeddings for 50 chunks
+[ 2026-08-02 23:16:51,647] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-02 23:16:51,978] 46 root - INFO - [INFO] Embeddings for 50 chunks generate. Embeddings shape: (50, 3072)
+[ 2026-08-02 23:16:51,979] 23 root - INFO - Pickle file data/chunks.pkl loaded

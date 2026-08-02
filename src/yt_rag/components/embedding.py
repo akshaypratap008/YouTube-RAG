@@ -1,5 +1,5 @@
 from src.yt_rag.logger import logging
-from src.yt_rag.exceptions import CustomeException
+from src.yt_rag.exceptions import CustomException
 from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
 import sys
@@ -26,7 +26,7 @@ class EmbeddingManager:
             logging.info(f"[INFO] Loading Embedding Model: {self.model_name}")
             self.model = OpenAIEmbeddings(model = self.model_name)
         except Exception as e:
-            raise CustomeException(e, sys)
+            raise CustomException(e, sys)
 
     def generate_embeddings(self, chunks:List[Dict[str, any]]) -> np.ndarray:
         """
