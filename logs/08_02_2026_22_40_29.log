@@ -1,0 +1,9 @@
+[ 2026-08-02 22:40:33,069] 38 root - INFO - [INFO] Extracted video id from url: sD468LfeVdc
+[ 2026-08-02 22:40:33,069] 23 root - INFO - Pickle file data/chunks.pkl loaded
+[ 2026-08-02 22:40:33,070] 195 root - INFO - [INFO] 50 chunks loaded
+[ 2026-08-02 22:40:33,070] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-02 22:40:35,515] 42 root - INFO - [INFO] Generating embeddings for 50 chunks
+[ 2026-08-02 22:40:37,425] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-02 22:40:37,791] 46 root - INFO - [INFO] Embeddings for 50 chunks generate. Embeddings shape: (50, 3072)
+[ 2026-08-02 22:40:37,795] 14 root - INFO - Pickle file saved at data/embeddings.pkl
+[ 2026-08-02 22:40:37,795] 54 root - INFO - Embeddings with shape (50, 3072) saved on disk

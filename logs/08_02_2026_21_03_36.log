@@ -1,0 +1,3 @@
+[ 2026-08-02 21:03:42,535] 37 root - INFO - [INFO] Extracted video id from url: sD468LfeVdc
+[ 2026-08-02 21:03:42,536] 23 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-02 21:03:45,476] 39 root - INFO - Generate embeddings for 50 chunks

@@ -1,0 +1,4 @@
+[ 2026-08-02 22:38:27,785] 38 root - INFO - [INFO] Extracted video id from url: sD468LfeVdc
+[ 2026-08-02 22:38:27,786] 23 root - INFO - Pickle file data/chunks.pkl loaded
+[ 2026-08-02 22:38:27,786] 195 root - INFO - [INFO] 50 chunks loaded
+[ 2026-08-02 22:38:27,786] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large

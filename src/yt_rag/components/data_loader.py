@@ -12,6 +12,7 @@ from pathlib import Path
 
 from src.yt_rag.logger import logging
 from src.yt_rag.exceptions import CustomeException
+from src.yt_rag.utils import save_object, load_object
 
 load_dotenv()
 
@@ -167,39 +168,33 @@ class DataLoader:
 
             if current_chunk:
                 chunks.append({
-                    "test" : " ".join(current_chunk),
+                    "text" : " ".join(current_chunk),
                     "start": chunk_start,
                     "end": chunk_end
                 })
             logging.info(f"[INFO] {len(chunks)} chunks created from processed transcript")
-            self.save_chunks(chunks = chunks)
+            self.save_chunks(chunks = chunks, file_path = "data/chunks.pkl")
             return chunks
         except Exception as e:
             raise CustomeException(e, sys)
 
-    def save_chunks(chunks:List[Dict[str, Any]], file_path:str = "data/chunks.pkl"):
+    def save_chunks(self, chunks:List[Dict[str, Any]], file_path:str = "data/chunks.pkl"):
         """
         Saves the chunks on disk
         """
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)      # create directory
-
-        with open(file_path, "wb") as f:
-            pickle.dump(chunks, f)
-
-        logging.info(f"[INFO] {len(chunks)} chunks saved")
+        save_object(obj = chunks, file_path=file_path)
+        logging.info(f'[INFO] {len(chunks)} chunks saved to the disk')
 
 
-    def load_chunks(file_path:str = "data/chunks.pkl") -> List[Dict[str, Any]]:
+    def load_chunks(self, file_path:str = "data/chunks.pkl") -> List[Dict[str, Any]]:
         """
         Loads chunks from pkl file. Chunks will be a list of dicts containing chunk text, start and end time
         """
-        try:
-            with open(file_path, "rb") as f:
-                chunks = pickle.load(f)
-            return chunks
-            logging.info(f"{len(chunks)} chunks loaded")
-        except Exception as e:
-            raise CustomeException(e, sys)
+
+        chunks= load_object(file_path=file_path)
+        logging.info(f"[INFO] {len(chunks)} chunks loaded")
+        return chunks
+        
         
 
 

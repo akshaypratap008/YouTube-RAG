@@ -1,0 +1,4 @@
+[ 2026-08-02 22:11:06,390] 37 root - INFO - [INFO] Extracted video id from url: sD468LfeVdc
+[ 2026-08-02 22:11:06,523] 23 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-02 22:11:11,111] 39 root - INFO - Generate embeddings for 50 chunks
+[ 2026-08-02 22:11:14,463] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
