@@ -3,7 +3,7 @@ from src.yt_rag.components.embedding import EmbeddingManager
 from src.yt_rag.components.vectorstore import FaissVectorStore, VectorStoreManager
 from src.yt_rag.components.search import RAGSearch
 
-url = "https://www.youtube.com/watch?v=xFvi8AVfB6Y"
+url = "https://www.youtube.com/watch?v=mn9z_VpGYoo&list=PLe0At5xTDM9GsH8jO1ZVmJjVRP9sI10sn"
 # loader = DataLoader(url = url)
 # video_data = loader.fetch_video_data()
 # chunks = loader.create_sementic_chunks(video_data)
@@ -22,7 +22,7 @@ url = "https://www.youtube.com/watch?v=xFvi8AVfB6Y"
 # VectorStoreManager().reset()
 rag = RAGSearch(url = url)
 
-query = "How does the creator's assessment of ChatGPT for coding differ from their assessment of Perplexity for the same task?"
+query = "What is the summary of the full video in 100-200 words?"
 print("Query: ", query)
 print()
 

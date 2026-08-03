@@ -110,9 +110,14 @@ class VectorStoreManager:
         self.persist_dir = Path(FaissVectorStore().persist_dir)
 
     def reset(self):
-        if self.persist_dir.exists():
-            shutil.rmtree(self.persist_dir)
-        shutil.rmtree("data")
-        logging.info(f"[INFO] Faiss Store reset complete. Data dir removed")
+        try:
+            if self.persist_dir.exists():
+                shutil.rmtree(self.persist_dir)
+            data_dir = Path("data")
+            if data_dir.exists():
+                shutil.rmtree(data_dir)
+            logging.info(f"[INFO] Faiss store and data dir cleared")
+        except Exception as e:
+            raise CustomException(e, sys)
 
 
