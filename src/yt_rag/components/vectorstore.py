@@ -20,6 +20,14 @@ class FaissVectorStore:
         os.makedirs(self.persist_dir, exist_ok=True)
 
     def add_embeddings(self, embeddings:np.ndarray, metadata_file_path: str = "data/chunks.pkl"):
+        """
+        Adds embeddings to vector store as faiss.index
+        Adds metadata to vector store as metadata.pkl
+        Args:
+            embeddings : embedding vectors
+            metadata_file_path: metadata_file_path which was saved in data folder during data loading
+        Returns: None
+        """
         try:
             dim = embeddings.shape[1]           # dimension to initialise vector store
             if self.index is None:
@@ -33,6 +41,9 @@ class FaissVectorStore:
             raise CustomException(e, sys)
 
     def add_metadata(self, metadata_file_path:str = "data/chunks.pkl"):
+        """
+        Adds metadata inside vector store as pickle file. add_embeddings adds metadata as well. 
+        """
         metadatas = load_object(file_path=metadata_file_path)
         if metadatas:
             if self.metadata is None:
@@ -40,6 +51,9 @@ class FaissVectorStore:
         logging.info(f"[INFO] Metadata stored in {self.persist_dir}")
         
     def save(self):
+        """
+        Save faiss index and metadata in vetor store
+        """
         try:
             faiss_path = os.path.join(self.persist_dir, "faiss.index")
             metadata_path = os.path.join(self.persist_dir, "metadata.pkl")
@@ -51,15 +65,30 @@ class FaissVectorStore:
             raise CustomException(e, sys)
 
     def load(self):
+        """
+        Load faiss index and metadata
+        """
         try:
             faiss_path = os.path.join(self.persist_dir, "faiss.index")
             metadata_path = os.path.join(self.persist_dir, "metadata.pkl")
             self.index = faiss.read_index(faiss_path)
-            self.metadata = load_object(file_path=self.metadata)
+            self.metadata = load_object(file_path=metadata_path)
 
             logging.info(f"[INFO] Faiss index and Metadata loaded")
         except Exception as e:
             raise CustomException(e, sys)
+
+    def search(self, query_embedding:np.ndarray, top_k:int = 5):
+        D, I = self.index.search(query_embedding, k=top_k)
+        results = []
+        for idx, dist in zip(I[0], D[0]):
+            meta = self.metadata[idx] if 0 <= idx < len(self.metadata) else None
+            results.append({
+                "index": idx,
+                "distance": dist,
+                "metadata": meta
+            })
+        return results
         
 
 

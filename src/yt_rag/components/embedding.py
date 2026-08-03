@@ -53,6 +53,16 @@ class EmbeddingManager:
         save_object(obj = embeddings, file_path=file_path)
         logging.info(f"Embeddings with shape {embeddings.shape} saved on disk")
 
+    def embed_query(self, query:str) -> np.ndarray:
+        """
+        Generates embeddings for the new query
+        Args: query
+        Returns: array of shape (1, embeding dim)
+        """
+        query_embedding = self.model.embed_query(text = query)      # this will return a list
+        query_embedding = np.array([query_embedding])       # will return a 2D array of shape (1, embeding dim)    
+        logging.info(f"[INFO] Query embedding generated. Query embedding dimension: {query_embedding.shape}")
+        return query_embedding
 
         
 

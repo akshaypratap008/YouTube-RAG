@@ -193,6 +193,7 @@ class DataLoader:
         chunks= load_object(file_path=file_path)
         logging.info(f"[INFO] {len(chunks)} chunks loaded")
         return chunks
+
         
         
 
