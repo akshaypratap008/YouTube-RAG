@@ -1,9 +1,9 @@
 from src.yt_rag.components.data_loader import DataLoader
 from src.yt_rag.components.embedding import EmbeddingManager
-from src.yt_rag.components.vectorstore import FaissVectorStore
+from src.yt_rag.components.vectorstore import FaissVectorStore, VectorStoreManager
 from src.yt_rag.components.search import RAGSearch
 
-url = "https://www.youtube.com/watch?v=sD468LfeVdc&t=39s"
+url = "https://www.youtube.com/watch?v=xFvi8AVfB6Y"
 # loader = DataLoader(url = url)
 # video_data = loader.fetch_video_data()
 # chunks = loader.create_sementic_chunks(video_data)
@@ -19,10 +19,20 @@ url = "https://www.youtube.com/watch?v=sD468LfeVdc&t=39s"
 # vectorstore.load()
 
 # iniating full pipeline directly through RAGSearch
+# VectorStoreManager().reset()
 rag = RAGSearch(url = url)
 
-query = "How can you fix the social media platform bot issue?"
+query = "How does the creator's assessment of ChatGPT for coding differ from their assessment of Perplexity for the same task?"
+print("Query: ", query)
+print()
 
-query_embedding = EmbeddingManager().embed_query(query = query)
+context = rag.search(query= query, top_k = 5)
 
-print(query_embedding.shape)
+result = rag.generate_response(context=context, query=query)
+print(result)
+
+timestamps = rag.get_video_timestamps()
+print("Timestamps: ", timestamps)
+
+
+

@@ -1,0 +1,9 @@
+[ 2026-08-03 22:01:05,271] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-03 22:01:05,271] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-03 22:01:05,272] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-03 22:01:05,310] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-03 22:01:05,352] 113 root - INFO - [INFO] Faiss Store reset complete
+[ 2026-08-03 22:01:05,353] 36 root - INFO - [INFO] xFvi8AVfB6Y : Extracted video id from url
+[ 2026-08-03 22:01:10,507] 57 root - INFO - [INFO] xFvi8AVfB6Y : Video data for video id fetched.
+[ 2026-08-03 22:01:10,509] 100 root - INFO - [INFO] xFvi8AVfB6Y : Video data preprocessing completed 

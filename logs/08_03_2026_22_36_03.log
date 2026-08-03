@@ -1,0 +1,67 @@
+[ 2026-08-03 22:36:07,471] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-03 22:36:07,471] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-03 22:36:07,471] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-03 22:36:07,519] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-03 22:36:07,570] 114 root - INFO - [INFO] Faiss Store reset complete. Data dir removed
+[ 2026-08-03 22:36:07,571] 36 root - INFO - [INFO] xFvi8AVfB6Y : Extracted video id from url
+[ 2026-08-03 22:36:08,994] 57 root - INFO - [INFO] xFvi8AVfB6Y : Video data for video id fetched.
+[ 2026-08-03 22:36:08,996] 100 root - INFO - [INFO] xFvi8AVfB6Y : Video data preprocessing completed 
+[ 2026-08-03 22:36:09,010] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-03 22:36:09,697] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:09,725] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:09,842] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:09,868] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:09,871] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-03 22:36:09,981] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:10,004] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:10,116] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:10,137] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:10,262] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:10,295] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:10,433] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:10,456] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:10,565] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-03 22:36:10,693] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:10,713] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:11,506] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-03 22:36:11,653] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-03 22:36:11,785] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-03 22:36:11,915] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-03 22:36:12,045] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:12,064] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:12,197] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:12,233] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:12,375] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:12,399] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:12,545] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:12,574] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:12,765] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-03 22:36:12,904] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:13,205] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-03 22:36:13,226] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:13,350] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:15,264] 173 root - INFO - [INFO] xFvi8AVfB6Y : 5 Semantic chunks created from processed transcript
+[ 2026-08-03 22:36:15,266] 15 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-03 22:36:15,266] 185 root - INFO - [INFO] xFvi8AVfB6Y : 5 chunks saved to the disk
+[ 2026-08-03 22:36:15,266] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-03 22:36:18,056] 42 root - INFO - [INFO] Generating embeddings for 5 chunks
+[ 2026-08-03 22:36:19,051] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:19,154] 46 root - INFO - [INFO] Embeddings for 5 chunks generate. Embeddings shape: (5, 3072)
+[ 2026-08-03 22:36:19,163] 15 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-03 22:36:19,164] 54 root - INFO - Embeddings with shape (5, 3072) saved on disk
+[ 2026-08-03 22:36:19,181] 38 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-03 22:36:19,185] 40 root - INFO - [INFO] Embeddings with shape (5, 3072) added to faiss index
+[ 2026-08-03 22:36:19,268] 24 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-03 22:36:19,268] 54 root - INFO - [INFO] Metadata stored in faiss_store
+[ 2026-08-03 22:36:19,278] 15 root - INFO - [INFO] Pickle file saved at faiss_store\metadata.pkl
+[ 2026-08-03 22:36:19,278] 66 root - INFO - [INFO] Saved faiss index and metadata to faiss_store
+[ 2026-08-03 22:36:19,280] 15 root - INFO - [INFO] Pickle file saved at faiss_store\metadata.pkl
+[ 2026-08-03 22:36:19,280] 66 root - INFO - [INFO] Saved faiss index and metadata to faiss_store
+[ 2026-08-03 22:36:19,309] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-03 22:36:19,309] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-03 22:36:19,309] 36 root - INFO - [INFO] New vectorstore build
+[ 2026-08-03 22:36:20,491] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-03 22:36:20,492] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-03 22:36:21,862] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-03 22:36:21,867] 64 root - INFO - [INFO] Query embedding generated for query: Which AI tool does the creator recommend for writing emails?. Query embedding dimension: (1, 3072)

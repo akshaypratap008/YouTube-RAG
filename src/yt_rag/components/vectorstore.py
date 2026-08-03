@@ -2,10 +2,13 @@ import os
 import sys
 import faiss
 import numpy as np
+from typing import List, Dict, Any
+import shutil
 
 from src.yt_rag.logger import logging
 from src.yt_rag.exceptions import CustomException
 from src.yt_rag.utils import load_object, save_object
+from pathlib import Path
 
 class FaissVectorStore:
     """
@@ -57,7 +60,7 @@ class FaissVectorStore:
         try:
             faiss_path = os.path.join(self.persist_dir, "faiss.index")
             metadata_path = os.path.join(self.persist_dir, "metadata.pkl")
-            self.index = faiss.write_index(self.index, faiss_path)          # write faiss index
+            faiss.index = faiss.write_index(self.index, faiss_path)          # write faiss index
             save_object(obj=self.metadata, file_path=metadata_path)          # save metadata inside faiss_store folder
                 
             logging.info(f"[INFO] Saved faiss index and metadata to {self.persist_dir}")
@@ -78,7 +81,17 @@ class FaissVectorStore:
         except Exception as e:
             raise CustomException(e, sys)
 
-    def search(self, query_embedding:np.ndarray, top_k:int = 5):
+    def search(self, query_embedding:np.ndarray, top_k:int = 5) -> List[Dict[str, Any]]:
+        """
+        Searches the query embedding inside faiss.index and return the most similar embeddings
+        Args:  
+            query_embedding: numpy array of dimensions same as embeddings
+            top_k: top k results based on distance
+        Returns:
+            List of Dict with "index", "distance" and "metadata"
+        """
+        if self.index is None:
+            self.load()
         D, I = self.index.search(query_embedding, k=top_k)
         results = []
         for idx, dist in zip(I[0], D[0]):
@@ -88,7 +101,18 @@ class FaissVectorStore:
                 "distance": dist,
                 "metadata": meta
             })
+        logging.info(f"[INFO] Vectorestore search for nearest vectors completed for query embedding of dimension {query_embedding.shape}")
         return results
         
+class VectorStoreManager:
+
+    def __init__(self):
+        self.persist_dir = Path(FaissVectorStore().persist_dir)
+
+    def reset(self):
+        if self.persist_dir.exists():
+            shutil.rmtree(self.persist_dir)
+        shutil.rmtree("data")
+        logging.info(f"[INFO] Faiss Store reset complete. Data dir removed")
 
 

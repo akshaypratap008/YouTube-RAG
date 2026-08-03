@@ -33,7 +33,7 @@ class DataLoader:
             )
             match = re.search(pattern, self.url)
             video_id = match.group(1)
-            logging.info(f"[INFO] Extracted video id from url: {video_id}")
+            logging.info(f"[INFO] {video_id} : Extracted video id from url")
             return video_id
         except Exception as e:
             raise CustomException(e, sys)
@@ -54,10 +54,10 @@ class DataLoader:
                         "start": snippet.start,
                         "duration": snippet.duration
                     })
-                logging.info(f"[INFO] Video data for video id {self.video_id} fetched.")
+                logging.info(f"[INFO] {self.video_id} : Video data for video id fetched.")
                 return self.preprocess_transcript(video_data = video_data, min_length = 10)
         except Exception as e:
-            raise CustomException("No transcript found", sys)
+            raise CustomException(f"{self.video_id} : No transcript found", sys)
 
     def preprocess_transcript(self, video_data:List[Dict[str, Any]], min_length:int=10) -> List[Dict[str, Any]]:
         """
@@ -97,10 +97,10 @@ class DataLoader:
 
             i = j
         
-        logging.info(f"[INFO] Video data preprocessing completed")
+        logging.info(f"[INFO] {self.video_id} : Video data preprocessing completed ")
         return merged
 
-    def create_sementic_chunks(self, video_data:List[Dict[str, Any]], similarity_threshold:float = 0.45, max_tokens:int = 300, overlap = 1) -> List[Dict[str, Any]]:
+    def create_semantic_chunks(self, video_data:List[Dict[str, Any]], similarity_threshold:float = 0.45, max_tokens:int = 300, overlap = 1) -> List[Dict[str, Any]]:
         """
         Create semantic chunks of the transcripts. Uses SentenceTransformers to generate embeddings of the segments and then use cosine similarity tk the semantic meaning to define the end of a chunk
         Args:
@@ -170,7 +170,7 @@ class DataLoader:
                     "start": chunk_start,
                     "end": chunk_end
                 })
-            logging.info(f"[INFO] {len(chunks)} chunks created from processed transcript")
+            logging.info(f"[INFO] {self.video_id} : {len(chunks)} Semantic chunks created from processed transcript")
             self.save_chunks(chunks = chunks, file_path = "data/chunks.pkl")
             return chunks
         except Exception as e:
@@ -182,7 +182,7 @@ class DataLoader:
         Chunks are in the form of Dict with keys "text", "start", "end"
         """
         save_object(obj = chunks, file_path=file_path)
-        logging.info(f'[INFO] {len(chunks)} chunks saved to the disk')
+        logging.info(f'[INFO] {self.video_id} : {len(chunks)} chunks saved to the disk')
 
 
     def load_chunks(self, file_path:str = "data/chunks.pkl") -> List[Dict[str, Any]]:
@@ -191,7 +191,7 @@ class DataLoader:
         """
 
         chunks= load_object(file_path=file_path)
-        logging.info(f"[INFO] {len(chunks)} chunks loaded")
+        logging.info(f"[INFO] {self.video_id} : {len(chunks)} chunks loaded")
         return chunks
 
         

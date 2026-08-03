@@ -61,7 +61,7 @@ class EmbeddingManager:
         """
         query_embedding = self.model.embed_query(text = query)      # this will return a list
         query_embedding = np.array([query_embedding])       # will return a 2D array of shape (1, embeding dim)    
-        logging.info(f"[INFO] Query embedding generated. Query embedding dimension: {query_embedding.shape}")
+        logging.info(f"[INFO] Query embedding generated for query: {query}. Query embedding dimension: {query_embedding.shape}")
         return query_embedding
 
         

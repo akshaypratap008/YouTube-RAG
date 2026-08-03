@@ -1,0 +1,13 @@
+[ 2026-08-03 15:53:53,616] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-03 15:53:53,619] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-03 15:53:53,619] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-03 15:53:54,147] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-03 15:53:54,254] 24 root - INFO - Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-03 15:53:54,254] 78 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-03 15:53:57,285] 53 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-03 15:53:57,304] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-03 15:53:59,975] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-03 15:54:00,000] 64 root - INFO - [INFO] Query embedding generated for query: How can you fix the social media platform bot issue?. Query embedding dimension: (1, 3072)
+[ 2026-08-03 15:54:00,005] 100 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-03 15:54:00,005] 73 root - INFO - [INFO] Query search completed. Relevant context extracted for query: How can you fix the social media platform bot issue?

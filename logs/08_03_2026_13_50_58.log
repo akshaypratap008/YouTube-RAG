@@ -1,0 +1,12 @@
+[ 2026-08-03 13:51:08,193] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-03 13:51:08,200] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-03 13:51:08,200] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-03 13:51:08,963] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-03 13:51:09,833] 23 root - INFO - Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-03 13:51:09,833] 78 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-03 13:51:14,906] 51 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-03 13:51:15,005] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-03 13:51:18,747] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-03 13:51:18,796] 64 root - INFO - [INFO] Query embedding generated. Query embedding dimension: (1, 3072)
+[ 2026-08-03 13:51:18,806] 100 root - INFO - [INFO] 
