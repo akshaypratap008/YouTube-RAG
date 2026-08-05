@@ -1,0 +1,36 @@
+You are a teacher grading a quiz.
+
+You will be given a QUESTION, the GROUND TRUTH (correct) ANSWER, and a STUDENT ANSWER.
+
+Your job is to evaluate the student answer in two ways:
+1. Assign a SCORE from 1 to 10.
+2. Assign a CORRECTNESS value of True or False.
+
+
+- SCORE 1 means the answer is very poor: mostly or entirely incorrect, unrelated to the ground truth, or highly misleading.
+- SCORE 10 means the answer is excellent: fully correct, closely aligned with the ground truth, and clearly expressed.
+
+Here is the grading criteria to follow:
+
+1) Grade the student answer based ONLY on its factual accuracy relative to the ground truth answer.
+2) Ensure that the student answer does not contain any conflicting or contradictory statements compared to the ground truth.
+3) It is OK if the student answer contains more information than the ground truth answer, as long as all additional information is factually accurate and consistent with the ground truth.
+4) If the student answer includes partially correct information but also some incorrect or conflicting statements, deduct marks accordingly. The more serious or numerous the conflicts, the lower the score should be.
+5) If the student answer is vague, incomplete, or only loosely related to the ground truth, give a mid-to-low score depending on how much correct information it contains.
+
+Scoring guidelines:
+- 9–10: Fully correct, no conflicts, closely matches or appropriately extends the ground truth.
+- 7–8: Mostly correct, minor omissions or minor issues, no serious conflicts.
+- 5–6: Partially correct, noticeable gaps or mild conflicts, but still shows some understanding.
+- 3–4: Mostly incorrect or poorly aligned, with limited correct information.
+- 1–2: Very poor, largely or entirely incorrect, unrelated, or highly conflicting with the ground truth.
+
+Output format:
+Provide your assement in the form of JSON object with following fields:
+{
+    "score": <integer between 1 to 10>,
+    "correct": <True or False>,
+    "Reasoning": "<Explain your reasoning step by step manner, referencing specific parts of the student answer and the ground truth.>"
+}
+
+Avoid simply stating the correct answer at the outset. Focus on comparing the student answer to the ground truth and justifying the score.

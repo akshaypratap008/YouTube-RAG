@@ -1,0 +1,101 @@
+    [{
+        "question": "What are the four essential characteristics of intelligent systems according to Yann LeCun?",
+        "answer" : "Four essential characteristics: Capacity to understand the physical world, persistent memory, ability to reason, and ability to plan",
+        "timestamp": "(0:02:49)"
+    },
+    {
+        "question": "Why LLMs are not the way to AGI?",
+        "answer" : "They cannot truly reason, plan, or understand the physical world in a sophisticated way",
+        "timestamp": "(0:02:30)"
+    },
+    {
+        "question": "What is a JEPA?",
+        "answer" : "A Joint-Embedding Predictive Architecture that predicts the representation of a full input from a corrupted version",
+        "timestamp": "(0:25:07)"
+    },
+    {
+        "question": "What is the fundamental difference between LLMs and JEPA?",
+        "answer" : "LLMs generate pixels or tokens to reconstruct inputs, whereas JEPA predicts representations without trying to reconstruct every detail",
+        "timestamp": "(0:28:15)"
+    },
+    {
+        "question": "What is V-JEPA and how does it work with video?",
+        "answer" : "An architecture trained to predict visual representations from video, moving toward a world model",
+        "timestamp": "(0:38:51)"
+    },
+    {
+        "question": "How can JEPA be used for planning tasks?",
+        "answer" : "It allows for hierarchical planning by operating in abstract representation spaces rather than raw pixel/token space",
+        "timestamp": "(0:42:10)"
+    },
+    {
+        "question": "Why LLMs cannot truly reason or plan as per LeCun?",
+        "answer" : "They produce tokens instinctively based on training statistics without planning their response beforehand",
+        "timestamp": "(0:03:09)"
+    },
+    {
+        "question": "What role did self-supervised learning play in the success of LLMs?",
+        "answer" : "It enables systems to capture the internal structure of data without needing task-specific labels, which is key to LLM success",
+        "timestamp": "(0:51:36)"
+    },
+    {
+        "question": "Why is video prediction more difficult than text prediction for generative models?",
+        "answer" : "Video is much higher bandwidth and requires understanding physical laws, making it more complex than text",
+        "timestamp": "(0:19:12)"
+    },
+    {
+        "question": "What is the 'Long tail' problem in prompt-based AI training?",
+        "answer" : "The vast space of possible prompts is too large for any model to have seen them all during training, leading to potential failure on new inputs",
+        "timestamp": "(1:11:00)"
+    },
+    {
+        "question": "How does LeCun define the concept of 'energy' in an energy-based model?",
+        "answer" : "In an energy-based model, energy is a scalar (prediction error) that is low for good answers and high for bad ones",
+        "timestamp": "(1:22:12)"
+    },
+    {
+        "question": "Why does LeCun advocate for open source AI platforms?",
+        "answer" : "To ensure diverse AI systems that represent various cultures, values, and languages, preventing centralized control",
+        "timestamp": "(1:39:10)"
+    },
+    {
+        "question": "How does Meta's business model accommodate open-source releases?",
+        "answer" : "It leverages a large existing user/customer base and allows the ecosystem to build and innovate on top of open-source models",
+        "timestamp": "(1:44:37)"
+    },
+    {
+        "question": "What is the significance of the Marvack Paradox in the context of AI?",
+        "answer" : "It highlights that high-level reasoning is often easier for AI than low-level physical world common sense",
+        "timestamp": "(0:55:27)"
+    },
+    {
+        "question": "How does LeCun view the role of reinforcement learning (RL) in his proposed architecture?",
+        "answer" : "It can be used to fine-tune systems, but LeCun suggests using objective functions directly for planning is more efficient",
+        "timestamp": "(1:32:06)"
+    },
+    {
+        "question": "What is the concern regarding AI models becoming 'woke'?",
+        "answer" : "The risk that over-tuning for specific social biases can lead to non-factual outputs or modified history",
+        "timestamp": "(1:34:12)"
+    },
+    {
+        "question": "What is the limitation of relying on language as a 'crutch' for vision systems?",
+        "answer" : "Language-based systems cannot capture the high-bandwidth experience of the physical world required for true common sense",
+        "timestamp": "(0:34:31)"
+    },
+    {
+        "question": "Why does LeCun compare the potential of AI to physical systems like rockets?",
+        "answer" : "Instructions don't help build a physical rocket; you need deep real-world expertise, just as LLMs lack the physical common sense for real-world tasks",
+        "timestamp": "(1:56:57)"
+    },
+    {
+        "question": "What is the future outlook for Llama development at Meta?",
+        "answer" : "Iterative improvements, better multimodal capabilities, and integrating world models capable of planning ",
+        "timestamp": "(1:57:56)"
+    },
+    {
+        "question": "Why does LeCun argue that AGI will not be an 'event' but a gradual progress?",
+        "answer" : "AGI is a long-term goal that will be reached through cumulative breakthroughs in world models and reasoning, not a single event",
+        "timestamp": "(2:04:52)"
+    }
+]

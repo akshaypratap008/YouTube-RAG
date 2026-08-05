@@ -5,7 +5,7 @@ from src.yt_rag.logger import logging
 from src.yt_rag.exceptions import CustomException
 from pathlib import Path
 import pandas as pd
-import time
+from datetime import datetime
 
 def save_object(obj, file_path:str):
     # saves the object as pickle file at file path
@@ -32,9 +32,25 @@ def load_prompt(prompt_name: str)-> str:
     prompt_path = Path("src")/f"yt_rag/prompts/{prompt_name}.txt"
     return prompt_path.read_text(encoding="utf-8")
 
-def save_eval_results(obj:pd.DataFrame, file_path:str = "eval_results"):
+def save_eval_results(obj:pd.DataFrame, dir_path:str = "eval_results"):
     """Save Evaluation results as excel"""
-    current_time = time.time()
-    file_path = Path(file_path/{current_time})
-    obj.to_excel(file_path=file_path)
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    dir = Path(dir_path)
+    dir.mkdir(exist_ok=True)
+    file_path = dir / f"eval_{timestamp}.csv"
+    obj.to_csv(file_path)
+
+def convert_to_seconds(timestamp:str) -> int:
+    """Converts timestamp (eg. '00:02:30') from str into seconds in int"""
+    timestamps = timestamp.lstrip("(").rstrip(")").split(":")
+    seconds = 0
+    for i, timestamp in enumerate(timestamps):
+        if i == 0:      # hour hand
+            seconds += int(timestamp) * 60 * 60    
+        if i == 1:      # minute hand
+            seconds += int(timestamp) * 60 
+        if i == 2:      # seconds hand
+            seconds += int(timestamp) * 1
+    return seconds
+
 
