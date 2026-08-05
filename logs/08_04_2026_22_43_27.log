@@ -1,0 +1,1269 @@
+[ 2026-08-04 22:43:33,157] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-04 22:43:33,159] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-04 22:43:33,159] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-04 22:43:33,376] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-04 22:43:47,992] 36 root - INFO - [INFO] 5t1vTLU7s40 : Extracted video id from url
+[ 2026-08-04 22:43:50,334] 57 root - INFO - [INFO] 5t1vTLU7s40 : Video data for video id fetched.
+[ 2026-08-04 22:43:50,367] 100 root - INFO - [INFO] 5t1vTLU7s40 : Video data preprocessing completed 
+[ 2026-08-04 22:43:50,384] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-04 22:43:51,389] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:51,556] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:51,584] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:51,796] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:51,820] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:51,875] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-04 22:43:51,986] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:52,014] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:52,139] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:52,166] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:52,453] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:52,474] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:52,645] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:52,675] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:52,857] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-04 22:43:52,989] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:53,012] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:53,827] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-04 22:43:53,944] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-04 22:43:54,072] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-04 22:43:54,211] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-04 22:43:54,327] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:54,357] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:54,548] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:54,573] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:54,735] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:54,763] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:54,918] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:54,945] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:55,136] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-04 22:43:55,261] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:55,670] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-04 22:43:55,701] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-04 22:43:55,888] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-04 22:44:16,678] 173 root - INFO - [INFO] 5t1vTLU7s40 : 87 Semantic chunks created from processed transcript
+[ 2026-08-04 22:44:16,679] 15 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-04 22:44:16,680] 185 root - INFO - [INFO] 5t1vTLU7s40 : 87 chunks saved to the disk
+[ 2026-08-04 22:44:16,680] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-04 22:44:20,274] 42 root - INFO - [INFO] Generating embeddings for 87 chunks
+[ 2026-08-04 22:44:22,375] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-04 22:44:23,316] 46 root - INFO - [INFO] Embeddings for 87 chunks generate. Embeddings shape: (87, 3072)
+[ 2026-08-04 22:44:23,321] 15 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-04 22:44:23,321] 54 root - INFO - Embeddings with shape (87, 3072) saved on disk
+[ 2026-08-04 22:44:23,325] 38 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-04 22:44:23,332] 40 root - INFO - [INFO] Embeddings with shape (87, 3072) added to faiss index
+[ 2026-08-04 22:44:23,437] 24 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-04 22:44:23,437] 54 root - INFO - [INFO] Metadata stored in faiss_store
+[ 2026-08-04 22:44:23,447] 15 root - INFO - [INFO] Pickle file saved at faiss_store\metadata.pkl
+[ 2026-08-04 22:44:23,447] 66 root - INFO - [INFO] Saved faiss index and metadata to faiss_store
+[ 2026-08-04 22:44:23,452] 15 root - INFO - [INFO] Pickle file saved at faiss_store\metadata.pkl
+[ 2026-08-04 22:44:23,452] 66 root - INFO - [INFO] Saved faiss index and metadata to faiss_store
+[ 2026-08-04 22:44:23,453] 36 root - INFO - [INFO] New vectorstore build
+[ 2026-08-04 22:44:25,067] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-04 22:44:25,068] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-04 22:44:27,097] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-04 22:44:27,104] 64 root - INFO - [INFO] Query embedding generated for query: How does the RTX 50 Series use AI to process images differently than traditional rendering?. Query embedding dimension: (1, 3072)
+[ 2026-08-04 22:44:27,243] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-04 22:44:27,244] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-04 22:44:27,249] 104 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-04 22:44:27,250] 84 root - INFO - [INFO] Query search completed. Relevant context extracted for query: How does the RTX 50 Series use AI to process images differently than traditional rendering?
+[ 2026-08-04 22:44:27,257] 103 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-04 22:44:28,436] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-04 22:44:28,561] 106 root - INFO - [INFO] Response generated by llm for the query: How does the RT..
+[ 2026-08-04 22:44:28,562] 115 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-04 22:44:28,562] 120 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-05 00:24:14,604] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:24:14,612] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:24:14,613] 40 root - INFO - [INFO] Existing vetorstore loaded
+[ 2026-08-05 00:24:14,615] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-05 00:24:14,618] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-05 00:24:27,256] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:27,529] 64 root - INFO - [INFO] Query embedding generated for query: Why does Yann LeCun believe auto-regressive LLMs are limited for achieving human-level intelligence?. Query embedding dimension: (1, 3072)
+[ 2026-08-05 00:24:27,543] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:24:27,545] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:24:27,569] 104 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-05 00:24:27,570] 84 root - INFO - [INFO] Query search completed. Relevant context extracted for query: Why does Yann LeCun believe auto-regressive LLMs are limited for achieving human-level intelligence?
+[ 2026-08-05 00:24:27,589] 103 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-05 00:24:30,959] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:31,015] 106 root - INFO - [INFO] Response generated by llm for the query: Why does Yann L..
+[ 2026-08-05 00:24:31,015] 115 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-05 00:24:31,015] 120 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-05 00:24:31,278] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fcf17-8a77-7713-8ce4-87267410da6c: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\489900899.py", line 14, in correctness
+    grade = grader_llm.invoke([
+        {"role": "system", "content": correctness_instructions},
+        {"role": "user", "content": answers}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:24:31,379] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fcf17-8a77-7713-8ce4-87267410da6c: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3760216074.py", line 9, in groundedness
+    grade = grounded_llm.invoke([
+        {"role": "system", "content": grounded_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:24:31,419] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fcf17-8a77-7713-8ce4-87267410da6c: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3705364235.py", line 12, in relevance
+    grade = relevance_llm.invoke([
+        {"role": "system", "content": relevance_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:24:37,151] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:40,019] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:24:40,021] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:24:40,022] 40 root - INFO - [INFO] Existing vetorstore loaded
+[ 2026-08-05 00:24:40,024] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-05 00:24:40,024] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-05 00:24:44,107] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:44,111] 64 root - INFO - [INFO] Query embedding generated for query: How does LeCun suggest machines should perform reasoning and planning in the future?. Query embedding dimension: (1, 3072)
+[ 2026-08-05 00:24:44,114] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:24:44,114] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:24:44,115] 104 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-05 00:24:44,116] 84 root - INFO - [INFO] Query search completed. Relevant context extracted for query: How does LeCun suggest machines should perform reasoning and planning in the future?
+[ 2026-08-05 00:24:44,117] 103 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-05 00:24:45,406] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:45,422] 106 root - INFO - [INFO] Response generated by llm for the query: How does LeCun ..
+[ 2026-08-05 00:24:45,422] 115 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-05 00:24:45,423] 120 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-05 00:24:45,452] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fcf17-ee2b-76a2-8aaa-9d7ec55b8e10: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\489900899.py", line 14, in correctness
+    grade = grader_llm.invoke([
+        {"role": "system", "content": correctness_instructions},
+        {"role": "user", "content": answers}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:24:45,521] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fcf17-ee2b-76a2-8aaa-9d7ec55b8e10: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3760216074.py", line 9, in groundedness
+    grade = grounded_llm.invoke([
+        {"role": "system", "content": grounded_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:24:45,607] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fcf17-ee2b-76a2-8aaa-9d7ec55b8e10: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3705364235.py", line 12, in relevance
+    grade = relevance_llm.invoke([
+        {"role": "system", "content": relevance_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:24:52,118] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:52,444] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:24:52,445] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:24:52,446] 40 root - INFO - [INFO] Existing vetorstore loaded
+[ 2026-08-05 00:24:52,449] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-05 00:24:52,449] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-05 00:24:58,890] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-05 00:24:59,143] 64 root - INFO - [INFO] Query embedding generated for query: Is it possible to create an AI system that is completely unbiased?. Query embedding dimension: (1, 3072)
+[ 2026-08-05 00:24:59,150] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:24:59,150] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:24:59,151] 104 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-05 00:24:59,151] 84 root - INFO - [INFO] Query search completed. Relevant context extracted for query: Is it possible to create an AI system that is completely unbiased?
+[ 2026-08-05 00:24:59,153] 103 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-05 00:25:01,480] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:01,523] 106 root - INFO - [INFO] Response generated by llm for the query: Is it possible ..
+[ 2026-08-05 00:25:01,524] 115 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-05 00:25:01,524] 120 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-05 00:25:01,547] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fcf18-1f51-73f2-89c0-496839f2ce05: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\489900899.py", line 14, in correctness
+    grade = grader_llm.invoke([
+        {"role": "system", "content": correctness_instructions},
+        {"role": "user", "content": answers}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:01,597] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fcf18-1f51-73f2-89c0-496839f2ce05: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3760216074.py", line 9, in groundedness
+    grade = grounded_llm.invoke([
+        {"role": "system", "content": grounded_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:01,636] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fcf18-1f51-73f2-89c0-496839f2ce05: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3705364235.py", line 12, in relevance
+    grade = relevance_llm.invoke([
+        {"role": "system", "content": relevance_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:10,817] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:10,869] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:25:10,870] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:25:10,870] 40 root - INFO - [INFO] Existing vetorstore loaded
+[ 2026-08-05 00:25:10,873] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-05 00:25:10,873] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-05 00:25:15,292] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:15,299] 64 root - INFO - [INFO] Query embedding generated for query: What is a "Joint-Embedding Predictive Architecture" (JEPA) and how does it differ from generative models?. Query embedding dimension: (1, 3072)
+[ 2026-08-05 00:25:15,304] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:25:15,304] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:25:15,305] 104 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-05 00:25:15,305] 84 root - INFO - [INFO] Query search completed. Relevant context extracted for query: What is a "Joint-Embedding Predictive Architecture" (JEPA) and how does it differ from generative models?
+[ 2026-08-05 00:25:15,307] 103 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-05 00:25:17,742] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:17,953] 106 root - INFO - [INFO] Response generated by llm for the query: What is a "Join..
+[ 2026-08-05 00:25:17,953] 115 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-05 00:25:17,954] 120 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-05 00:25:18,124] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fcf18-6750-7ce3-b1ee-82d8bdb5aa85: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\489900899.py", line 14, in correctness
+    grade = grader_llm.invoke([
+        {"role": "system", "content": correctness_instructions},
+        {"role": "user", "content": answers}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:18,192] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fcf18-6750-7ce3-b1ee-82d8bdb5aa85: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3760216074.py", line 9, in groundedness
+    grade = grounded_llm.invoke([
+        {"role": "system", "content": grounded_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:18,323] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fcf18-6750-7ce3-b1ee-82d8bdb5aa85: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3705364235.py", line 12, in relevance
+    grade = relevance_llm.invoke([
+        {"role": "system", "content": relevance_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:25,597] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:25,749] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:25:25,750] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:25:25,750] 40 root - INFO - [INFO] Existing vetorstore loaded
+[ 2026-08-05 00:25:25,753] 49 root - INFO - [INFO] OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-05 00:25:25,753] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-05 00:25:32,355] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:32,361] 64 root - INFO - [INFO] Query embedding generated for query: Why does LeCun argue that open-sourcing AI is essential for democracy?. Query embedding dimension: (1, 3072)
+[ 2026-08-05 00:25:32,365] 24 root - INFO - [INFO] Pickle file faiss_store\metadata.pkl loaded
+[ 2026-08-05 00:25:32,365] 80 root - INFO - [INFO] Faiss index and Metadata loaded
+[ 2026-08-05 00:25:32,365] 104 root - INFO - [INFO] Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-05 00:25:32,366] 84 root - INFO - [INFO] Query search completed. Relevant context extracted for query: Why does LeCun argue that open-sourcing AI is essential for democracy?
+[ 2026-08-05 00:25:32,367] 103 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-05 00:25:41,370] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-05 00:25:41,419] 106 root - INFO - [INFO] Response generated by llm for the query: Why does LeCun ..
+[ 2026-08-05 00:25:41,420] 115 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-05 00:25:41,420] 120 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-05 00:25:41,457] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fcf18-a169-7363-b754-8a45f8e20514: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\489900899.py", line 14, in correctness
+    grade = grader_llm.invoke([
+        {"role": "system", "content": correctness_instructions},
+        {"role": "user", "content": answers}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:41,530] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fcf18-a169-7363-b754-8a45f8e20514: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3760216074.py", line 9, in groundedness
+    grade = grounded_llm.invoke([
+        {"role": "system", "content": grounded_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:41,564] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fcf18-a169-7363-b754-8a45f8e20514: TypeError("Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\apaks\AppData\Local\Temp\ipykernel_1044\3705364235.py", line 12, in relevance
+    grade = relevance_llm.invoke([
+        {"role": "system", "content": relevance_instructions},
+        {"role": "user", "content": answer}
+    ])
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3442, in invoke
+    input_ = context.run(step.invoke, input_, config, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6002, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 476, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1849, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1656, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1994, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1751, in _generate
+    raise e
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1719, in _generate
+    self.root_client.chat.completions.with_raw_response.parse(**payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ~~~~^^^^^^^^^^^^^^^^^
+TypeError: Completions.parse() got an unexpected keyword argument 'temprature'. Did you mean 'temperature'?
+[ 2026-08-05 00:25:50,257] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

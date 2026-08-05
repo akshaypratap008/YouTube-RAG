@@ -7,3 +7,5 @@ sentence-transformers
 langchain-openai
 langchain-text-splitters
 faiss-cpu
+langsmith
+pandas

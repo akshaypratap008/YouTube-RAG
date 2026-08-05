@@ -10,8 +10,7 @@ RULES:
 - Keep the answer consise, correct and helpfull.
 
 FORMAT:
-1. Final Answer: Provide the best possible answer using the context.
-2. Cite the specific context snippets you used (quote 1-2 lines).
+Final Answer: Provide the best possible answer using the context.
 
 INPUT:
 Context: 

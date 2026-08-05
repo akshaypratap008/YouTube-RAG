@@ -64,7 +64,7 @@ class RAGSearch:
         self.vectorstore.save()
         
 
-    def search(self, query:str, top_k:int=5) -> str:
+    def search(self, query:str, top_k:int=5) -> List[str]:
         """
         Generates query embeddings using EmbeddingManager and search the vectorstore for closest vector to the query.
         Extracts metadata for the closest vectors and stores the text into a list
@@ -82,7 +82,7 @@ class RAGSearch:
                 if text:
                     texts.append(text)
         logging.info(f"[INFO] Query search completed. Relevant context extracted for query: {query}")
-        return " ".join(texts)
+        return texts
 
     def generate_response(self, context:str, query:str) -> str:
         """

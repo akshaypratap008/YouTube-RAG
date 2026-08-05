@@ -3,7 +3,7 @@ from src.yt_rag.components.embedding import EmbeddingManager
 from src.yt_rag.components.vectorstore import FaissVectorStore, VectorStoreManager
 from src.yt_rag.components.search import RAGSearch
 
-url = "https://www.youtube.com/watch?v=mn9z_VpGYoo&list=PLe0At5xTDM9GsH8jO1ZVmJjVRP9sI10sn"
+url = "https://www.youtube.com/watch?v=7ARBJQn6QkM&t=1040s"
 # loader = DataLoader(url = url)
 # video_data = loader.fetch_video_data()
 # chunks = loader.create_sementic_chunks(video_data)
@@ -22,11 +22,13 @@ url = "https://www.youtube.com/watch?v=mn9z_VpGYoo&list=PLe0At5xTDM9GsH8jO1ZVmJj
 # VectorStoreManager().reset()
 rag = RAGSearch(url = url)
 
-query = "What is the summary of the full video in 100-200 words?"
+query = "How does the RTX 50 Series use AI to process images differently than traditional rendering? "
 print("Query: ", query)
 print()
 
-context = rag.search(query= query, top_k = 5)
+relevant_chunks = rag.search(query= query, top_k = 5)
+
+context = " ".join(relevant_chunks)
 
 result = rag.generate_response(context=context, query=query)
 print(result)
