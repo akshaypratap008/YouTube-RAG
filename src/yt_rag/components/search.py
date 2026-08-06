@@ -21,23 +21,33 @@ class RAGSearch:
     Handles query search in faiss vector store
     """
 
-    def __init__(self, persist_dir:str = 'faiss_store', llm_model:str= "gpt-4o-mini", url:str | None = None, model_name: str = "text-embedding-3-large"):
+    def __init__(self, persist_dir:str = 'faiss_store', llm_model:str= "gpt-4o-mini", url:str | None = None, model_name: str = "text-embedding-3-large", video_id:str = None):
         self.persist_dir = persist_dir
         self.url = url
         self.model_name = model_name
-        
-        faiss_path = os.path.join(persist_dir, "faiss.index")
-        metadata_path = os.path.join(persist_dir, "metadata.pkl")
+
+        self.video_id = video_id
+        self.video_dir = None
+
+        # extract video id
+        loader = DataLoader(url= self.url)
+        self.video_id = loader.video_id
+        if not os.path.exists(self.persist_dir): 
+            os.makedirs(self.persist_dir, exist_ok= True)
+
+        self.video_dir = os.path.join(self.persist_dir, self.video_id)
+        faiss_path = os.path.join(self.video_dir, "faiss.index")
+        metadata_path = os.path.join(self.video_dir, "metadata.pkl")
         self.results = None
     
 
         if not os.path.exists(faiss_path) or not os.path.exists(metadata_path):
             self._build_vectorstore()
-            logging.info(f"[INFO] New vectorstore build")
+            logging.info(f"[INFO] New vectorstore build for {self.video_id}")
         else:
-            self.vectorstore = FaissVectorStore(persist_dir=self.persist_dir)
+            self.vectorstore = FaissVectorStore(video_id=self.video_id, persist_dir=self.video_dir)
             self.vectorstore.load()
-            logging.info(f"[INFO] Existing vetorstore loaded")
+            logging.info(f"[INFO] Existing vetorstore loaded for {self.video_id}")
 
         try:
             self.llm = ChatOpenAI(
@@ -52,14 +62,13 @@ class RAGSearch:
 
     def _build_vectorstore(self):
         loader = DataLoader(url = self.url)
-        video_id = loader.video_id
         video_data = loader.fetch_video_data()      # fetch transcript, preprocess the data and merge small segments
         chunks = loader.create_semantic_chunks(video_data=video_data)       # generate semantic chunks and save them in data folder
         embedding_manager = EmbeddingManager()
         embeddings = embedding_manager.generate_embeddings(chunks = chunks)     # generate embeddings
         embedding_manager.save_embeddings(embeddings=embeddings)         # save embeddings on disk
 
-        self.vectorstore = FaissVectorStore(persist_dir=self.persist_dir)
+        self.vectorstore = FaissVectorStore(persist_dir=self.video_dir, video_id=None)
         self.vectorstore.add_embeddings(embeddings=embeddings)
         self.vectorstore.save()
         
