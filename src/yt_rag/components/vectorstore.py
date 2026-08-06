@@ -15,12 +15,17 @@ class FaissVectorStore:
     Vector store to store embeddings for the chunks
     """
 
-    def __init__(self, persist_dir:str = "faiss_store"):
+    def __init__(self, video_id:str, persist_dir:str = "faiss_store"):
         self.persist_dir = persist_dir
+        self.video_id = video_id
         self.index = None
         self.metadata = None
 
         os.makedirs(self.persist_dir, exist_ok=True)
+
+        
+        self.video_dir = os.path.join(self.persist_dir, self.video_id)
+        os.makedirs(self.video_dir, exist_ok=True)
 
     def add_embeddings(self, embeddings:np.ndarray, metadata_file_path: str = "data/chunks.pkl"):
         """
@@ -58,8 +63,8 @@ class FaissVectorStore:
         Save faiss index and metadata in vetor store
         """
         try:
-            faiss_path = os.path.join(self.persist_dir, "faiss.index")
-            metadata_path = os.path.join(self.persist_dir, "metadata.pkl")
+            faiss_path = os.path.join(self.video_dir, "faiss.index")
+            metadata_path = os.path.join(self.video_id, "metadata.pkl")
             faiss.index = faiss.write_index(self.index, faiss_path)          # write faiss index
             save_object(obj=self.metadata, file_path=metadata_path)          # save metadata inside faiss_store folder
                 
@@ -106,17 +111,14 @@ class FaissVectorStore:
         
 class VectorStoreManager:
 
-    def __init__(self):
-        self.persist_dir = Path(FaissVectorStore().persist_dir)
+    def __init__(self, persist_dir:str = "faiss_store"):
+        self.persist_dir = Path(persist_dir)
 
     def reset(self):
         try:
             if self.persist_dir.exists():
                 shutil.rmtree(self.persist_dir)
-            data_dir = Path("data")
-            if data_dir.exists():
-                shutil.rmtree(data_dir)
-            logging.info(f"[INFO] Faiss store and data dir cleared")
+            logging.info(f"[INFO] Faiss store cleared")
         except Exception as e:
             raise CustomException(e, sys)
 
