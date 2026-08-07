@@ -28,9 +28,11 @@ def load_object(file_path:str):
     except Exception as e:
         raise CustomException(e, sys)
 
-def load_prompt(prompt_name: str)-> str:
-    prompt_path = Path("src")/f"yt_rag/prompts/{prompt_name}.txt"
+def load_prompt(path: str)-> str:
+    prompt_dir = "src/yt_rag/prompts"
+    prompt_path = Path(prompt_dir) / f"{path}"
     return prompt_path.read_text(encoding="utf-8")
+    
 
 def save_eval_results(obj:pd.DataFrame, dir_path:str = "eval_results"):
     """Save Evaluation results as excel"""
@@ -44,13 +46,21 @@ def convert_to_seconds(timestamp:str) -> int:
     """Converts timestamp (eg. '00:02:30') from str into seconds in int"""
     timestamps = timestamp.lstrip("(").rstrip(")").split(":")
     seconds = 0
-    for i, timestamp in enumerate(timestamps):
-        if i == 0:      # hour hand
-            seconds += int(timestamp) * 60 * 60    
-        if i == 1:      # minute hand
-            seconds += int(timestamp) * 60 
-        if i == 2:      # seconds hand
-            seconds += int(timestamp) * 1
+    if len(timestamps) == 2:
+        for i, timestamp in enumerate(timestamps):
+            if i == 0:
+                seconds += int(timestamp) * 60
+            elif i == 1:
+                seconds += int(timestamp)
+    elif len(timestamps) == 3:
+        for i, timestamp in enumerate(timestamps):
+            if i == 0:
+                seconds += int(timestamp) * 60 * 60
+            elif i == 1:
+                seconds += int(timestamp) * 60
+            elif i == 2:
+                seconds += int(timestamp)
+
     return seconds
 
 

@@ -1,7 +1,7 @@
-from src.yt_rag.components.data_loader import DataLoader
-from src.yt_rag.components.embedding import EmbeddingManager
-from src.yt_rag.components.vectorstore import FaissVectorStore, VectorStoreManager
 from src.yt_rag.components.search import RAGSearch
+# from src.yt_rag.components.data_loader import DataLoader
+# from src.yt_rag.components.embedding import EmbeddingManager
+# from src.yt_rag.components.vectorstore import FaissVectorStore, VectorStoreManager
 
 url = "https://www.youtube.com/watch?v=7ARBJQn6QkM&t=1040s"
 # loader = DataLoader(url = url)

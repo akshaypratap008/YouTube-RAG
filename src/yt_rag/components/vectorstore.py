@@ -21,11 +21,12 @@ class FaissVectorStore:
 
         if video_id and os.path.basename(self.persist_dir) != video_id:
             self.persist_dir = os.path.join(self.persist_dir, self.video_id)
-            
+
         self.index = None
         self.metadata = None
 
         os.makedirs(self.persist_dir, exist_ok=True)
+        logging.info(f"[INFO] {self.video_id} : Vector store initialised for {self.video_id}")
 
     def add_embeddings(self, embeddings:np.ndarray, metadata_file_path: str = "data/chunks.pkl"):
         """
@@ -42,7 +43,7 @@ class FaissVectorStore:
                 self.index = faiss.IndexFlatL2(dim)     # initialize vectorestore with dimension same as embeddings 
                 logging.info(f"[INFO] Empty Faiss index initialised")
             self.index.add(embeddings)
-            logging.info(f"[INFO] Embeddings with shape {embeddings.shape} added to faiss index")
+            logging.info(f"[INFO] {self.video_id} : Embeddings with shape {embeddings.shape} added to faiss index")
             self.add_metadata(metadata_file_path = metadata_file_path)
             self.save()
         except Exception as e:
@@ -56,7 +57,7 @@ class FaissVectorStore:
         if metadatas:
             if self.metadata is None:
                 self.metadata = metadatas
-        logging.info(f"[INFO] Metadata stored in {self.persist_dir}")
+        logging.info(f"[INFO] {self.video_id} : Metadata stored in {self.persist_dir}")
         
     def save(self):
         """
@@ -68,7 +69,7 @@ class FaissVectorStore:
             faiss.index = faiss.write_index(self.index, faiss_path)          # write faiss index
             save_object(obj=self.metadata, file_path=metadata_path)          # save metadata inside faiss_store folder
                 
-            logging.info(f"[INFO] Saved faiss index and metadata to {self.persist_dir}")
+            logging.info(f"[INFO] {self.video_id} : Saved faiss index and metadata to {self.persist_dir}")
         except Exception as e:
             raise CustomException(e, sys)
 
@@ -82,7 +83,7 @@ class FaissVectorStore:
             self.index = faiss.read_index(faiss_path)
             self.metadata = load_object(file_path=metadata_path)
 
-            logging.info(f"[INFO] Faiss index and Metadata loaded")
+            logging.info(f"[INFO] {self.video_id} : Faiss index and Metadata loaded")
         except Exception as e:
             raise CustomException(e, sys)
 
@@ -106,7 +107,7 @@ class FaissVectorStore:
                 "distance": dist,
                 "metadata": meta
             })
-        logging.info(f"[INFO] Vectorestore search for nearest vectors completed for query embedding of dimension {query_embedding.shape}")
+        logging.info(f"[INFO] {self.video_id} : Vectorestore search for nearest vectors completed for query embedding of dimension {query_embedding.shape}")
         return results
         
 class VectorStoreManager:

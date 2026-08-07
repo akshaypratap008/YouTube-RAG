@@ -1,0 +1,1669 @@
+[ 2026-08-08 00:11:39,920] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-08 00:11:39,921] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-08 00:11:39,921] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-08 00:11:40,344] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-08 00:11:40,464] 39 root - INFO - [INFO] Evaluation started
+[ 2026-08-08 00:11:41,699] 48 root - INFO - [INFO] - 
+[ 2026-08-08 00:11:42,027] 61 root - INFO - [INFO] Examples added to dataset for 0jspaMLxBig.json
+[ 2026-08-08 00:11:43,838] 36 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-08 00:11:43,842] 36 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-08 00:11:46,059] 57 root - INFO - [INFO] 0jspaMLxBig : Video data for video id fetched.
+[ 2026-08-08 00:11:46,065] 100 root - INFO - [INFO] 0jspaMLxBig : Video data preprocessing completed 
+[ 2026-08-08 00:11:46,071] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:11:46,915] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:46,941] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:47,062] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:47,121] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:47,146] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:11:47,377] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:47,400] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:47,512] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:47,531] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:47,702] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:47,722] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:47,839] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:47,862] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:48,112] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:11:48,227] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:48,247] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:48,816] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:11:48,934] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:11:49,051] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:11:49,172] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:11:49,300] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:49,317] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:49,430] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:49,447] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:49,560] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:49,576] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:49,689] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:49,704] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:49,825] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:11:49,956] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:50,231] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:11:50,250] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:50,369] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-08 00:11:58,327] 173 root - INFO - [INFO] 0jspaMLxBig : 54 Semantic chunks created from processed transcript
+[ 2026-08-08 00:11:58,329] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-08 00:11:58,330] 185 root - INFO - [INFO] 0jspaMLxBig : 54 chunks saved to the disk
+[ 2026-08-08 00:11:58,330] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:12:01,266] 42 root - INFO - [INFO] Generating embeddings for 54 chunks
+[ 2026-08-08 00:12:02,419] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:02,876] 46 root - INFO - [INFO] Embeddings for 54 chunks generate. Embeddings shape: (54, 3072)
+[ 2026-08-08 00:12:02,884] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-08 00:12:02,884] 54 root - INFO - Embeddings with shape (54, 3072) saved on disk
+[ 2026-08-08 00:12:02,885] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-08 00:12:02,889] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-08 00:12:02,891] 46 root - INFO - [INFO] None : Embeddings with shape (54, 3072) added to faiss index
+[ 2026-08-08 00:12:02,941] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-08 00:12:02,941] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\0jspaMLxBig
+[ 2026-08-08 00:12:02,950] 17 root - INFO - [INFO] Pickle file saved at faiss_store\0jspaMLxBig\metadata.pkl
+[ 2026-08-08 00:12:02,950] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\0jspaMLxBig
+[ 2026-08-08 00:12:02,954] 17 root - INFO - [INFO] Pickle file saved at faiss_store\0jspaMLxBig\metadata.pkl
+[ 2026-08-08 00:12:02,954] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\0jspaMLxBig
+[ 2026-08-08 00:12:02,955] 46 root - INFO - [INFO] 0jspaMLxBig New vectorstore build for 0jspaMLxBig
+[ 2026-08-08 00:12:04,071] 59 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:12:04,071] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:12:05,316] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:05,321] 64 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:12:05,469] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-08 00:12:05,469] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-08 00:12:05,476] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:12:05,476] 93 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?
+[ 2026-08-08 00:12:05,483] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:12:06,501] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:06,542] 115 root - INFO - [INFO] Response generated by llm for the query: What was the pr..
+[ 2026-08-08 00:12:06,542] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:12:06,542] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:12:08,434] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:08,520] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde7f-2ac6-7b31-a532-9bfecf947c6f: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:10,511] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:10,533] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde7f-2ac6-7b31-a532-9bfecf947c6f: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:11,940] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:11,955] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde7f-2ac6-7b31-a532-9bfecf947c6f: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:14,515] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:14,549] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde7f-2ac6-7b31-a532-9bfecf947c6f: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:14,568] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde7f-2ac6-7b31-a532-9bfecf947c6f: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:12:14,740] 72 root - INFO - [INFO] Evaluation completed for evaluation set - 0
+[ 2026-08-08 00:12:15,080] 61 root - INFO - [INFO] Examples added to dataset for 7ARBJQn6QkM&t.json
+[ 2026-08-08 00:12:15,870] 36 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-08 00:12:15,871] 36 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-08 00:12:17,532] 57 root - INFO - [INFO] 7ARBJQn6QkM : Video data for video id fetched.
+[ 2026-08-08 00:12:17,544] 100 root - INFO - [INFO] 7ARBJQn6QkM : Video data preprocessing completed 
+[ 2026-08-08 00:12:17,580] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:12:17,738] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:17,754] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:17,889] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:17,927] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:17,930] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:12:18,049] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:18,083] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:18,200] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:18,225] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:18,405] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:18,424] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:18,543] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:18,565] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:18,674] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:18,794] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:18,817] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:19,055] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:19,165] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:19,285] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:19,418] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:19,525] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:19,554] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:19,673] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:19,691] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:19,826] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:19,858] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:20,020] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:20,053] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:20,227] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:20,341] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:20,549] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:20,578] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:20,700] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:26,358] 173 root - INFO - [INFO] 7ARBJQn6QkM : 34 Semantic chunks created from processed transcript
+[ 2026-08-08 00:12:26,359] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-08 00:12:26,359] 185 root - INFO - [INFO] 7ARBJQn6QkM : 34 chunks saved to the disk
+[ 2026-08-08 00:12:26,359] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:12:27,624] 42 root - INFO - [INFO] Generating embeddings for 34 chunks
+[ 2026-08-08 00:12:28,266] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:28,557] 46 root - INFO - [INFO] Embeddings for 34 chunks generate. Embeddings shape: (34, 3072)
+[ 2026-08-08 00:12:28,560] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-08 00:12:28,560] 54 root - INFO - Embeddings with shape (34, 3072) saved on disk
+[ 2026-08-08 00:12:28,561] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-08 00:12:28,561] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-08 00:12:28,562] 46 root - INFO - [INFO] None : Embeddings with shape (34, 3072) added to faiss index
+[ 2026-08-08 00:12:28,646] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-08 00:12:28,646] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\7ARBJQn6QkM
+[ 2026-08-08 00:12:28,649] 17 root - INFO - [INFO] Pickle file saved at faiss_store\7ARBJQn6QkM\metadata.pkl
+[ 2026-08-08 00:12:28,649] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\7ARBJQn6QkM
+[ 2026-08-08 00:12:28,652] 17 root - INFO - [INFO] Pickle file saved at faiss_store\7ARBJQn6QkM\metadata.pkl
+[ 2026-08-08 00:12:28,653] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\7ARBJQn6QkM
+[ 2026-08-08 00:12:28,653] 46 root - INFO - [INFO] 7ARBJQn6QkM New vectorstore build for 7ARBJQn6QkM
+[ 2026-08-08 00:12:28,658] 59 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:12:28,659] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:12:30,161] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:30,166] 64 root - INFO - [INFO] Query embedding generated for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:12:30,272] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-08 00:12:30,272] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-08 00:12:30,272] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:12:30,272] 93 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?
+[ 2026-08-08 00:12:30,273] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:12:31,274] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:31,283] 115 root - INFO - [INFO] Response generated by llm for the query: What are the tw..
+[ 2026-08-08 00:12:31,284] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:12:31,284] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:12:33,479] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:33,541] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde7f-a7ed-7860-b9bb-36b6f67e4925: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:35,173] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:35,216] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde7f-a7ed-7860-b9bb-36b6f67e4925: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:36,687] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:36,713] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde7f-a7ed-7860-b9bb-36b6f67e4925: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:38,812] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:38,985] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde7f-a7ed-7860-b9bb-36b6f67e4925: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:39,060] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde7f-a7ed-7860-b9bb-36b6f67e4925: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:12:39,068] 36 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-08 00:12:39,069] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-08 00:12:39,071] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-08 00:12:39,071] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-08 00:12:39,071] 50 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-08 00:12:39,073] 59 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:12:39,073] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:12:41,139] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:41,147] 64 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:12:41,150] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-08 00:12:41,151] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-08 00:12:41,152] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:12:41,153] 93 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?
+[ 2026-08-08 00:12:41,155] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:12:41,958] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:41,969] 115 root - INFO - [INFO] Response generated by llm for the query: What was the pr..
+[ 2026-08-08 00:12:41,970] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:12:41,970] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:12:43,688] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:43,707] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde80-029b-76b2-be0e-a0ffa3ca0b78: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:45,892] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:45,934] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde80-029b-76b2-be0e-a0ffa3ca0b78: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:47,008] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:47,018] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde80-029b-76b2-be0e-a0ffa3ca0b78: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:49,023] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:49,056] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde80-029b-76b2-be0e-a0ffa3ca0b78: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:12:49,075] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde80-029b-76b2-be0e-a0ffa3ca0b78: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:12:49,270] 72 root - INFO - [INFO] Evaluation completed for evaluation set - 1
+[ 2026-08-08 00:12:49,587] 61 root - INFO - [INFO] Examples added to dataset for gFEE3w7F0ww.json
+[ 2026-08-08 00:12:50,767] 36 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-08 00:12:50,767] 36 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-08 00:12:53,206] 57 root - INFO - [INFO] gFEE3w7F0ww : Video data for video id fetched.
+[ 2026-08-08 00:12:53,277] 100 root - INFO - [INFO] gFEE3w7F0ww : Video data preprocessing completed 
+[ 2026-08-08 00:12:53,289] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:12:53,471] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:53,496] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:53,629] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:53,667] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:53,670] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:12:53,802] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:53,826] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:53,938] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:53,959] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:54,087] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:54,109] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:54,241] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:54,272] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:54,398] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:54,556] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:54,583] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:54,936] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:55,054] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:55,178] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:55,307] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:55,462] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:55,486] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:55,606] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:55,628] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:55,778] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:55,817] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:55,985] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:56,018] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:56,154] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:12:56,264] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:56,544] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:12:56,566] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:12:56,680] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:16,965] 173 root - INFO - [INFO] gFEE3w7F0ww : 130 Semantic chunks created from processed transcript
+[ 2026-08-08 00:13:16,966] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-08 00:13:16,967] 185 root - INFO - [INFO] gFEE3w7F0ww : 130 chunks saved to the disk
+[ 2026-08-08 00:13:16,967] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:13:18,033] 42 root - INFO - [INFO] Generating embeddings for 130 chunks
+[ 2026-08-08 00:13:18,932] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:19,507] 46 root - INFO - [INFO] Embeddings for 130 chunks generate. Embeddings shape: (130, 3072)
+[ 2026-08-08 00:13:19,511] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-08 00:13:19,512] 54 root - INFO - Embeddings with shape (130, 3072) saved on disk
+[ 2026-08-08 00:13:19,513] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-08 00:13:19,513] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-08 00:13:19,515] 46 root - INFO - [INFO] None : Embeddings with shape (130, 3072) added to faiss index
+[ 2026-08-08 00:13:19,568] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-08 00:13:19,568] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\gFEE3w7F0ww
+[ 2026-08-08 00:13:19,574] 17 root - INFO - [INFO] Pickle file saved at faiss_store\gFEE3w7F0ww\metadata.pkl
+[ 2026-08-08 00:13:19,574] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\gFEE3w7F0ww
+[ 2026-08-08 00:13:19,577] 17 root - INFO - [INFO] Pickle file saved at faiss_store\gFEE3w7F0ww\metadata.pkl
+[ 2026-08-08 00:13:19,577] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\gFEE3w7F0ww
+[ 2026-08-08 00:13:19,578] 46 root - INFO - [INFO] gFEE3w7F0ww New vectorstore build for gFEE3w7F0ww
+[ 2026-08-08 00:13:19,580] 59 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:13:19,580] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:13:21,069] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:21,077] 64 root - INFO - [INFO] Query embedding generated for query: What was the first computer program Travis Oliphant ever wrote?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:13:21,219] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-08 00:13:21,219] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-08 00:13:21,220] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:13:21,220] 93 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What was the first computer program Travis Oliphant ever wrote?
+[ 2026-08-08 00:13:21,263] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:13:22,386] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:22,404] 115 root - INFO - [INFO] Response generated by llm for the query: What was the fi..
+[ 2026-08-08 00:13:22,405] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:13:22,405] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:13:23,723] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:23,739] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde80-2f72-74b0-b216-25bde714e7bf: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:25,471] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:25,497] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde80-2f72-74b0-b216-25bde714e7bf: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:27,073] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:27,097] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde80-2f72-74b0-b216-25bde714e7bf: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:28,631] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:28,655] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde80-2f72-74b0-b216-25bde714e7bf: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:28,680] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde80-2f72-74b0-b216-25bde714e7bf: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:13:28,700] 36 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-08 00:13:28,705] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-08 00:13:28,712] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-08 00:13:28,713] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-08 00:13:28,713] 50 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-08 00:13:28,720] 59 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:13:28,721] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:13:30,424] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:30,429] 64 root - INFO - [INFO] Query embedding generated for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:13:30,438] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-08 00:13:30,439] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-08 00:13:30,440] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:13:30,440] 93 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?
+[ 2026-08-08 00:13:30,441] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:13:31,108] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:31,120] 115 root - INFO - [INFO] Response generated by llm for the query: What are the tw..
+[ 2026-08-08 00:13:31,121] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:13:31,121] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:13:32,618] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:32,643] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde80-c476-71c1-9d81-5b9950824825: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:35,767] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:35,778] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde80-c476-71c1-9d81-5b9950824825: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:37,454] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:37,477] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde80-c476-71c1-9d81-5b9950824825: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:39,118] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:39,154] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde80-c476-71c1-9d81-5b9950824825: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:39,171] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde80-c476-71c1-9d81-5b9950824825: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:13:39,195] 36 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-08 00:13:39,198] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-08 00:13:39,207] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-08 00:13:39,207] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-08 00:13:39,207] 50 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-08 00:13:39,209] 59 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:13:39,211] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:13:41,102] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:41,108] 64 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:13:41,116] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-08 00:13:41,117] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-08 00:13:41,118] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:13:41,118] 93 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?
+[ 2026-08-08 00:13:41,120] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:13:42,306] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:42,335] 115 root - INFO - [INFO] Response generated by llm for the query: What was the pr..
+[ 2026-08-08 00:13:42,336] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:13:42,337] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:13:43,999] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:44,020] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde80-ed75-7ec3-ab83-1fb559bc8d59: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:45,870] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:45,901] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde80-ed75-7ec3-ab83-1fb559bc8d59: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:47,157] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:47,198] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde80-ed75-7ec3-ab83-1fb559bc8d59: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:48,787] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:48,810] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde80-ed75-7ec3-ab83-1fb559bc8d59: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:13:48,821] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde80-ed75-7ec3-ab83-1fb559bc8d59: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:13:49,004] 72 root - INFO - [INFO] Evaluation completed for evaluation set - 2
+[ 2026-08-08 00:13:49,315] 61 root - INFO - [INFO] Examples added to dataset for hmtuvNfytjM&t.json
+[ 2026-08-08 00:13:50,049] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:13:50,051] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:13:51,874] 57 root - INFO - [INFO] hmtuvNfytjM : Video data for video id fetched.
+[ 2026-08-08 00:13:51,888] 100 root - INFO - [INFO] hmtuvNfytjM : Video data preprocessing completed 
+[ 2026-08-08 00:13:51,911] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:13:52,080] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:52,105] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:52,221] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:52,247] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:52,250] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:13:52,353] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:52,371] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:52,483] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:52,506] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:52,619] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:52,648] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:52,763] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:52,786] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:52,907] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:13:53,036] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:53,066] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:53,452] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:13:53,578] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:13:53,743] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:13:53,878] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:13:53,998] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:54,017] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:54,155] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:54,184] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:54,306] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:54,334] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:54,466] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:54,495] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:54,622] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:13:54,745] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:55,198] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:13:55,227] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:13:55,354] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:09,686] 173 root - INFO - [INFO] hmtuvNfytjM : 43 Semantic chunks created from processed transcript
+[ 2026-08-08 00:14:09,688] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-08 00:14:09,688] 185 root - INFO - [INFO] hmtuvNfytjM : 43 chunks saved to the disk
+[ 2026-08-08 00:14:09,688] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:14:10,750] 42 root - INFO - [INFO] Generating embeddings for 43 chunks
+[ 2026-08-08 00:14:11,516] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:11,828] 46 root - INFO - [INFO] Embeddings for 43 chunks generate. Embeddings shape: (43, 3072)
+[ 2026-08-08 00:14:11,831] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-08 00:14:11,831] 54 root - INFO - Embeddings with shape (43, 3072) saved on disk
+[ 2026-08-08 00:14:11,831] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-08 00:14:11,832] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-08 00:14:11,832] 46 root - INFO - [INFO] None : Embeddings with shape (43, 3072) added to faiss index
+[ 2026-08-08 00:14:11,914] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-08 00:14:11,914] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\hmtuvNfytjM
+[ 2026-08-08 00:14:11,917] 17 root - INFO - [INFO] Pickle file saved at faiss_store\hmtuvNfytjM\metadata.pkl
+[ 2026-08-08 00:14:11,917] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\hmtuvNfytjM
+[ 2026-08-08 00:14:11,919] 17 root - INFO - [INFO] Pickle file saved at faiss_store\hmtuvNfytjM\metadata.pkl
+[ 2026-08-08 00:14:11,920] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\hmtuvNfytjM
+[ 2026-08-08 00:14:11,920] 46 root - INFO - [INFO] hmtuvNfytjM New vectorstore build for hmtuvNfytjM
+[ 2026-08-08 00:14:11,921] 59 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:14:11,921] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:14:13,480] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:13,485] 64 root - INFO - [INFO] Query embedding generated for query: What is one of the most exciting capabilities of GPT-5 according to Sam Altman?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:14:13,623] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:13,623] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:13,624] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:14:13,624] 93 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What is one of the most exciting capabilities of GPT-5 according to Sam Altman?
+[ 2026-08-08 00:14:13,625] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:14:14,660] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:14,669] 115 root - INFO - [INFO] Response generated by llm for the query: What is one of ..
+[ 2026-08-08 00:14:14,670] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:14:14,670] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:14:16,555] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:16,578] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde81-17d7-7102-815c-287653e7285b: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:18,328] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:18,354] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde81-17d7-7102-815c-287653e7285b: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:20,154] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:20,179] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde81-17d7-7102-815c-287653e7285b: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:22,273] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:22,310] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde81-17d7-7102-815c-287653e7285b: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:22,346] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde81-17d7-7102-815c-287653e7285b: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:14:22,350] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:14:22,351] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-08 00:14:22,355] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:22,356] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:22,356] 50 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-08 00:14:22,358] 59 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:14:22,358] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:14:23,793] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:23,799] 64 root - INFO - [INFO] Query embedding generated for query: What was the first computer program Travis Oliphant ever wrote?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:14:23,802] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:23,803] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:23,803] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:14:23,804] 93 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What was the first computer program Travis Oliphant ever wrote?
+[ 2026-08-08 00:14:23,806] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:14:24,549] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:24,813] 115 root - INFO - [INFO] Response generated by llm for the query: What was the fi..
+[ 2026-08-08 00:14:24,813] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:14:24,813] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:14:26,220] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:26,414] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde81-960d-75f1-b5b1-9bb6372bfbb0: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:27,985] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:28,003] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde81-960d-75f1-b5b1-9bb6372bfbb0: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:29,322] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:29,334] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde81-960d-75f1-b5b1-9bb6372bfbb0: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:30,981] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:31,006] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde81-960d-75f1-b5b1-9bb6372bfbb0: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:31,018] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde81-960d-75f1-b5b1-9bb6372bfbb0: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:14:31,029] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:14:31,031] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-08 00:14:31,034] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:31,034] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:31,034] 50 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-08 00:14:31,037] 59 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:14:31,037] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:14:32,583] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:32,593] 64 root - INFO - [INFO] Query embedding generated for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:14:32,598] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:32,599] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:32,600] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:14:32,600] 93 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?
+[ 2026-08-08 00:14:32,602] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:14:33,387] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:33,396] 115 root - INFO - [INFO] Response generated by llm for the query: What are the tw..
+[ 2026-08-08 00:14:33,396] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:14:33,397] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:14:34,792] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:34,815] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde81-b7f2-7ce3-b6ed-cd79fe4d599e: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:36,516] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:36,532] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde81-b7f2-7ce3-b6ed-cd79fe4d599e: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:37,672] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:37,708] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde81-b7f2-7ce3-b6ed-cd79fe4d599e: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:39,441] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:39,449] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde81-b7f2-7ce3-b6ed-cd79fe4d599e: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:39,454] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde81-b7f2-7ce3-b6ed-cd79fe4d599e: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:14:39,458] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:14:39,459] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-08 00:14:39,460] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:39,460] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:39,460] 50 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-08 00:14:39,461] 59 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:14:39,461] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:14:41,580] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:41,583] 64 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:14:41,585] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-08 00:14:41,585] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-08 00:14:41,585] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:14:41,585] 93 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?
+[ 2026-08-08 00:14:41,586] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:14:42,332] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:42,668] 115 root - INFO - [INFO] Response generated by llm for the query: What was the pr..
+[ 2026-08-08 00:14:42,668] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:14:42,668] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:14:44,426] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:44,574] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde81-d8e1-7941-b2c9-01030563dd8a: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 130, in correctness
+    "difficulty": inputs['difficulty']
+                  ~~~~~~^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:46,207] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:46,221] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde81-d8e1-7941-b2c9-01030563dd8a: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 190, in groundedness
+    "reasoning": results['reasoning'],
+                  ^^^^^^^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:47,686] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:47,712] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde81-d8e1-7941-b2c9-01030563dd8a: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 160, in relevance
+    "value": results["relevant"],
+                  ^^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:49,317] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:49,329] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde81-d8e1-7941-b2c9-01030563dd8a: KeyError('difficulty')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 220, in retrieval_relevance
+    "value": results['relevant'],
+                  ^^^^^^^^^^^^^^^
+KeyError: 'difficulty'
+[ 2026-08-08 00:14:49,332] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde81-d8e1-7941-b2c9-01030563dd8a: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 227, in timestamp_error
+    Evaluates the error between the timestamps of the correct answer and the timestamp of the most relevant chunk retrieved by the rag
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-08 00:14:49,502] 72 root - INFO - [INFO] Evaluation completed for evaluation set - 3
+[ 2026-08-08 00:14:49,800] 61 root - INFO - [INFO] Examples added to dataset for sD468LfeVdc.json
+[ 2026-08-08 00:14:50,636] 36 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-08 00:14:50,636] 36 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-08 00:14:52,545] 57 root - INFO - [INFO] sD468LfeVdc : Video data for video id fetched.
+[ 2026-08-08 00:14:52,557] 100 root - INFO - [INFO] sD468LfeVdc : Video data preprocessing completed 
+[ 2026-08-08 00:14:52,567] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:14:52,751] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:52,769] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:52,878] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:52,896] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:52,898] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:14:53,003] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:53,022] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:53,134] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:53,153] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:53,263] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:53,283] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:53,391] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:53,408] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:53,525] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:14:53,647] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:14:53,663] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:14:53,990] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:14:54,143] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:14:54,256] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:14:54,515] 72 root - INFO - [INFO] Evaluation completed for evaluation set - 4

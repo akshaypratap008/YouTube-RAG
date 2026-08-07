@@ -43,11 +43,11 @@ class RAGSearch:
 
         if not os.path.exists(faiss_path) or not os.path.exists(metadata_path):
             self._build_vectorstore()
-            logging.info(f"[INFO] New vectorstore build for {self.video_id}")
+            logging.info(f"[INFO] {self.video_id} New vectorstore build for {self.video_id}")
         else:
             self.vectorstore = FaissVectorStore(video_id=self.video_id, persist_dir=self.video_dir)
             self.vectorstore.load()
-            logging.info(f"[INFO] Existing vetorstore loaded for {self.video_id}")
+            logging.info(f"[INFO] {self.video_id} Existing vetorstore loaded for {self.video_id}")
 
         try:
             self.llm = ChatOpenAI(
@@ -56,7 +56,7 @@ class RAGSearch:
                 temperature=0
             )
 
-            logging.info(f"[INFO] OpenAI chat model initialised: {llm_model}")
+            logging.info(f"[INFO] {self.video_id} OpenAI chat model initialised: {llm_model}")
         except Exception as e:
             raise CustomException(e, sys)
 
@@ -90,7 +90,7 @@ class RAGSearch:
                 text = metadata.get("text") or ""
                 if text:
                     texts.append(text)
-        logging.info(f"[INFO] Query search completed. Relevant context extracted for query: {query}")
+        logging.info(f"[INFO] {self.video_id} Query search completed. Relevant context extracted for query: {query}")
         return texts
 
     def generate_response(self, context:str, query:str) -> str:
@@ -104,7 +104,7 @@ class RAGSearch:
         """
         # load prompt
         template = PromptTemplate(
-            template = load_prompt("system_prompt"),
+            template = load_prompt("system_prompt.txt"),
             input_variables = ['context', 'query']
         )
 

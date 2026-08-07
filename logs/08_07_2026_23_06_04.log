@@ -1,0 +1,8 @@
+[ 2026-08-07 23:06:14,034] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-07 23:06:14,035] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-07 23:06:14,035] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-07 23:06:14,070] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-07 23:06:14,102] 39 root - INFO - [INFO] Evaluation started
+[ 2026-08-07 23:06:14,104] 53 root - INFO - [INFO] Evaluation set data loaded
+[ 2026-08-07 23:06:15,337] 63 root - INFO - [INFO] - 

@@ -1,0 +1,66 @@
+{
+"video_url": "https://www.youtube.com/watch?v=hmtuvNfytjM&t=811s",
+"video_title": "Sam Altman Shows Me GPT 5... And What's Next",
+"qa_pairs": [
+    {
+        "question": "What is one of the most exciting capabilities of GPT-5 according to Sam Altman?",
+        "answer": "He is most excited that for the first time, he can ask the model any hard scientific or technical question and get a pretty good answer, specifically highlighting its ability to write software almost instantaneously.",
+        "timestamp": "04:49",
+        "difficulty": "easy"
+    },
+    {
+        "question": "How does Sam Altman define superintelligence in the interview?",
+        "answer": "He defines it as a system that could perform better AI research than the entire OpenAI research team, or one that could do a better job running OpenAI than he could.",
+        "timestamp": "13:17",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What are the three main categories limiting AI development discussed in the video?",
+        "answer": "The three main categories are compute (infrastructure/chips/energy), data, and algorithmic design.",
+        "timestamp": "24:34",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What was the specific safety failing in ChatGPT that caught OpenAI off guard?",
+        "answer": "The model was being too sycophantic, or 'too flattering,' to users, which, while annoying for most, encouraged delusions in users with fragile mental states.",
+        "timestamp": "52:13",
+        "difficulty": "difficult"
+    },
+    {
+        "question": "Why does Sam Altman believe the social contract might need to change in the future?",
+        "answer": "He discusses how AI will transform knowledge work and jobs, and implies that as tools evolve and society competes, our expectations of what humans do versus what machines do will shift.",
+        "timestamp": "43:00",
+        "difficulty": "difficult"
+    },
+    {
+        "question": "What is the main limitation to scaling compute for AI currently?",
+        "answer": "The most significant limiting factor is energy availability, specifically the difficulty of finding gigawatts of power to run massive data centers.",
+        "timestamp": "27:04",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What does Sam Altman say about the relationship between GPT-5 and coding?",
+        "answer": "He notes that GPT-5 is so good at programming that it makes the computer feel like it can do almost anything, allowing users to express ideas in new, highly effective ways.",
+        "timestamp": "09:25",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is the 'Orion' model mentioned in the conversation?",
+        "answer": "Orion was a model released as GPT-4.5 that was considered too big and unwieldy, leading the team to pivot their scaling strategy toward better returns on reasoning.",
+        "timestamp": "33:06",
+        "difficulty": "difficult"
+    },
+    {
+        "question": "How does Sam Altman suggest users prepare for the AI future?",
+        "answer": "His number one piece of tactical advice is to simply use the tools to become fluent with their capabilities and figure out how to integrate them into daily life.",
+        "timestamp": "59:00",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is the potential impact of AI on scientific discovery by late 2027?",
+        "answer": "Altman predicts that by late 2027, most people will agree that there has been a significant new AI-driven scientific discovery.",
+        "timestamp": "11:47",
+        "difficulty": "medium"
+    }
+]
+}

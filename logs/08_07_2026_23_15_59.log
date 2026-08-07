@@ -1,0 +1,2672 @@
+[ 2026-08-07 23:16:08,121] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-07 23:16:08,121] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-07 23:16:08,122] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-07 23:16:08,153] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-07 23:16:08,184] 39 root - INFO - [INFO] Evaluation started
+[ 2026-08-07 23:16:09,345] 63 root - INFO - [INFO] - 
+[ 2026-08-07 23:16:09,651] 76 root - INFO - [INFO] Examples added to dataset for 0jspaMLxBig.json
+[ 2026-08-07 23:16:11,561] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:11,620] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-51f1-7091-a653-19025480b60f: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:11,625] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-51f1-7091-a653-19025480b60f: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:11,633] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-51f1-7091-a653-19025480b60f: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:11,638] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-51f1-7091-a653-19025480b60f: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:11,646] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-51f1-7091-a653-19025480b60f: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:11,933] 87 root - INFO - [INFO] Evaluation completed for evaluation set - 0
+[ 2026-08-07 23:16:12,236] 76 root - INFO - [INFO] Examples added to dataset for 7ARBJQn6QkM&t.json
+[ 2026-08-07 23:16:13,091] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:13,229] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-5806-7bf0-95b5-ed04e8a79661: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:13,244] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-5806-7bf0-95b5-ed04e8a79661: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:13,259] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-5806-7bf0-95b5-ed04e8a79661: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:13,291] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-5806-7bf0-95b5-ed04e8a79661: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:13,305] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-5806-7bf0-95b5-ed04e8a79661: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:13,312] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:13,320] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-58fd-71c1-ac13-88c763f22624: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:13,336] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-58fd-71c1-ac13-88c763f22624: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:13,345] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-58fd-71c1-ac13-88c763f22624: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:13,353] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-58fd-71c1-ac13-88c763f22624: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:13,359] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-58fd-71c1-ac13-88c763f22624: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:13,545] 87 root - INFO - [INFO] Evaluation completed for evaluation set - 1
+[ 2026-08-07 23:16:13,834] 76 root - INFO - [INFO] Examples added to dataset for gFEE3w7F0ww.json
+[ 2026-08-07 23:16:14,669] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:14,682] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-5e35-7a03-8090-8491ca7f37e1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:14,693] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-5e35-7a03-8090-8491ca7f37e1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:14,699] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-5e35-7a03-8090-8491ca7f37e1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:14,709] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-5e35-7a03-8090-8491ca7f37e1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:14,714] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-5e35-7a03-8090-8491ca7f37e1: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:14,718] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:14,723] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-5e7c-7780-ab93-7a08e15ff6fb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:14,728] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-5e7c-7780-ab93-7a08e15ff6fb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:14,733] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-5e7c-7780-ab93-7a08e15ff6fb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:14,740] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-5e7c-7780-ab93-7a08e15ff6fb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:14,744] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-5e7c-7780-ab93-7a08e15ff6fb: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:14,748] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:14,755] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-5e9b-7b33-927a-b0199e283b54: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:14,759] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-5e9b-7b33-927a-b0199e283b54: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:14,765] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-5e9b-7b33-927a-b0199e283b54: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:14,771] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-5e9b-7b33-927a-b0199e283b54: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:14,776] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-5e9b-7b33-927a-b0199e283b54: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:14,939] 87 root - INFO - [INFO] Evaluation completed for evaluation set - 2
+[ 2026-08-07 23:16:15,264] 76 root - INFO - [INFO] Examples added to dataset for hmtuvNfytjM&t.json
+[ 2026-08-07 23:16:16,034] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:16,064] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6393-79d1-852c-812922103c12: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:16,106] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6393-79d1-852c-812922103c12: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:16,121] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6393-79d1-852c-812922103c12: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:16,131] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6393-79d1-852c-812922103c12: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:16,142] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6393-79d1-852c-812922103c12: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:16,148] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:16,155] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6412-78c2-bf18-9844bc22ffe2: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:16,166] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6412-78c2-bf18-9844bc22ffe2: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:16,178] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6412-78c2-bf18-9844bc22ffe2: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:16,192] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6412-78c2-bf18-9844bc22ffe2: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:16,199] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6412-78c2-bf18-9844bc22ffe2: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:16,207] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:16,216] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-644c-7e50-92c2-087de7e33ad4: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:16,226] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-644c-7e50-92c2-087de7e33ad4: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:16,236] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-644c-7e50-92c2-087de7e33ad4: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:16,247] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-644c-7e50-92c2-087de7e33ad4: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:16,260] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-644c-7e50-92c2-087de7e33ad4: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:16,268] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:16,275] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-648a-7f93-9e79-8bd41a2c6d07: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:16,287] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-648a-7f93-9e79-8bd41a2c6d07: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:16,296] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-648a-7f93-9e79-8bd41a2c6d07: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:16,309] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-648a-7f93-9e79-8bd41a2c6d07: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:16,316] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-648a-7f93-9e79-8bd41a2c6d07: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:16,494] 87 root - INFO - [INFO] Evaluation completed for evaluation set - 3
+[ 2026-08-07 23:16:16,922] 76 root - INFO - [INFO] Examples added to dataset for sD468LfeVdc.json
+[ 2026-08-07 23:16:17,723] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:17,735] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6a33-7e01-83af-1b3fea085357: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:17,746] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6a33-7e01-83af-1b3fea085357: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:17,753] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6a33-7e01-83af-1b3fea085357: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:17,765] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6a33-7e01-83af-1b3fea085357: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:17,775] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6a33-7e01-83af-1b3fea085357: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:17,779] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:17,784] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6a72-7613-aa53-1e24239b54ae: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:17,793] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6a72-7613-aa53-1e24239b54ae: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:17,800] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6a72-7613-aa53-1e24239b54ae: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:17,808] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6a72-7613-aa53-1e24239b54ae: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:17,813] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6a72-7613-aa53-1e24239b54ae: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:17,818] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:17,824] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6a99-7792-9e6c-8c80bec5d9d1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:17,829] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6a99-7792-9e6c-8c80bec5d9d1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:17,836] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6a99-7792-9e6c-8c80bec5d9d1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:17,844] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6a99-7792-9e6c-8c80bec5d9d1: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:17,850] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6a99-7792-9e6c-8c80bec5d9d1: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:17,855] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:17,861] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6abd-7122-9df0-8d2e83bdb107: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:17,866] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6abd-7122-9df0-8d2e83bdb107: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:17,873] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6abd-7122-9df0-8d2e83bdb107: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:17,879] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6abd-7122-9df0-8d2e83bdb107: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:17,883] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6abd-7122-9df0-8d2e83bdb107: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:17,887] 2006 langsmith.evaluation._runner - ERROR - Error running target function: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1999, in _forward
+    fn(*args, langsmith_extra=langsmith_extra)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 79, in target
+    return self.run_rag_pipeline(url = eval_set['video_url'], query = inputs['question'])
+                                       ~~~~~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[ 2026-08-07 23:16:17,892] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde4c-6add-7683-97d6-cdedcfe029eb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 124, in correctness
+    correctness_instruction = load_prompt(prompt_name="correctness_prompt")         # loads prompt from text files inside src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\correctness_prompt.txt'
+[ 2026-08-07 23:16:17,896] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde4c-6add-7683-97d6-cdedcfe029eb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 185, in groundedness
+    groundedness_instructions = load_prompt("groundedness_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\groundedness_prompt.txt'
+[ 2026-08-07 23:16:17,901] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde4c-6add-7683-97d6-cdedcfe029eb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 155, in relevance
+    relevance_instructions = load_prompt("relevance_prompt")            # loads prompt from src.yt_rag.prompts.eval_prompts
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\relevance_prompt.txt'
+[ 2026-08-07 23:16:17,907] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde4c-6add-7683-97d6-cdedcfe029eb: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 215, in retrieval_relevance
+    retrieved_relevance_instructions = load_prompt("retrieval_relevance_prompt")
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\utils.py", line 33, in load_prompt
+    return prompt_path.read_text(encoding="utf-8")
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\apaks\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'src\\yt_rag\\prompts\\retrieval_relevance_prompt.txt'
+[ 2026-08-07 23:16:17,911] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde4c-6add-7683-97d6-cdedcfe029eb: KeyError('timestamp')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 370, in evaluate_run
+    result = self.func(
+        run,
+        example,
+        langsmith_extra={"run_id": evaluator_run_id, "metadata": metadata},
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\run_helpers.py", line 777, in wrapper
+    function_result = run_container["context"].run(
+        func, *args, **kwargs
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 791, in wrapper
+    return func(*args, **kwargs)
+  File "c:\Users\apaks\projects\YT-RAG\src\yt_rag\evals\eval_pipeline.py", line 240, in timestamp_error
+    correct_ts = convert_to_seconds(reference_outputs["timestamp"])
+                                    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'timestamp'
+[ 2026-08-07 23:16:18,095] 87 root - INFO - [INFO] Evaluation completed for evaluation set - 4

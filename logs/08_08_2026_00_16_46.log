@@ -1,0 +1,369 @@
+[ 2026-08-08 00:17:02,232] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-08 00:17:02,232] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-08 00:17:02,233] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-08 00:17:02,281] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-08 00:17:02,425] 39 root - INFO - [INFO] Evaluation started
+[ 2026-08-08 00:17:03,686] 48 root - INFO - [INFO] - 
+[ 2026-08-08 00:17:04,002] 67 root - INFO - [INFO] Examples added to dataset for 0jspaMLxBig.json
+[ 2026-08-08 00:17:05,855] 36 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-08 00:17:05,858] 36 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-08 00:17:08,097] 57 root - INFO - [INFO] 0jspaMLxBig : Video data for video id fetched.
+[ 2026-08-08 00:17:08,114] 100 root - INFO - [INFO] 0jspaMLxBig : Video data preprocessing completed 
+[ 2026-08-08 00:17:08,133] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:17:09,071] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:09,093] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:09,232] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:09,255] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:09,261] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:17:09,379] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:09,399] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:09,517] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:09,540] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:09,662] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:09,681] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:09,795] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:09,815] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:09,930] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:10,073] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:10,095] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:10,719] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:10,883] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:10,994] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:11,107] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:11,214] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:11,233] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:11,352] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:11,376] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:11,529] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:11,554] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:11,674] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:11,694] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:11,839] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:11,952] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:12,333] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:12,351] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:12,468] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:22,737] 173 root - INFO - [INFO] 0jspaMLxBig : 54 Semantic chunks created from processed transcript
+[ 2026-08-08 00:17:22,739] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-08 00:17:22,739] 185 root - INFO - [INFO] 0jspaMLxBig : 54 chunks saved to the disk
+[ 2026-08-08 00:17:22,739] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:17:25,756] 42 root - INFO - [INFO] Generating embeddings for 54 chunks
+[ 2026-08-08 00:17:26,623] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:26,996] 46 root - INFO - [INFO] Embeddings for 54 chunks generate. Embeddings shape: (54, 3072)
+[ 2026-08-08 00:17:27,000] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-08 00:17:27,000] 54 root - INFO - Embeddings with shape (54, 3072) saved on disk
+[ 2026-08-08 00:17:27,001] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-08 00:17:27,002] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-08 00:17:27,002] 46 root - INFO - [INFO] None : Embeddings with shape (54, 3072) added to faiss index
+[ 2026-08-08 00:17:27,067] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-08 00:17:27,067] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\0jspaMLxBig
+[ 2026-08-08 00:17:27,072] 17 root - INFO - [INFO] Pickle file saved at faiss_store\0jspaMLxBig\metadata.pkl
+[ 2026-08-08 00:17:27,072] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\0jspaMLxBig
+[ 2026-08-08 00:17:27,075] 17 root - INFO - [INFO] Pickle file saved at faiss_store\0jspaMLxBig\metadata.pkl
+[ 2026-08-08 00:17:27,075] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\0jspaMLxBig
+[ 2026-08-08 00:17:27,076] 46 root - INFO - [INFO] 0jspaMLxBig New vectorstore build for 0jspaMLxBig
+[ 2026-08-08 00:17:28,300] 59 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:17:28,300] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:17:29,596] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:29,604] 64 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:17:29,707] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-08 00:17:29,708] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-08 00:17:29,708] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:17:29,709] 93 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?
+[ 2026-08-08 00:17:29,714] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:17:30,797] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:30,888] 115 root - INFO - [INFO] Response generated by llm for the query: What was the pr..
+[ 2026-08-08 00:17:30,888] 124 root - INFO - [INFO] Fetching timestamps for the reveant chunks
+[ 2026-08-08 00:17:30,888] 129 root - INFO - [INFO] Timestamps succesfully fetched
+[ 2026-08-08 00:17:33,576] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:33,632] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator correctness> on run 019fde84-14b0-7a22-aeaa-6044be7d86d6: ValueError('Expected an EvaluationResult object, or dict with a metric \'key\' and optional \'score\'; got {\'key\': \'correctness\', \'score\': 4, \'value\': False, \'reasoning\': "The student answer states that Andrew Ng\'s primary reason for creating online courses was to automate parts of the teaching process and to allow him to build deeper relationships with students. This is partially related to his goals but does not accurately capture the main intent, which was to help anyone interested in machine learning break into the field and foster a global community of learners. Since the student\'s answer implies a focus on personal efficiency and relationship building rather than the broader educational goal, it is considered mostly incorrect and lacks factual alignment with the ground truth.", \'difficulty\': \'easy\'}')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 286, in _coerce_evaluation_result
+    return EvaluationResult(**{"source_run_id": source_run_id, **result})
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for EvaluationResult
+reasoning
+  Extra inputs are not permitted [type=extra_forbidden, input_value="The student answer state... with the ground truth.", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+difficulty
+  Extra inputs are not permitted [type=extra_forbidden, input_value='easy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 375, in evaluate_run
+    return self._format_result(result, evaluator_run_id)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 322, in _format_result
+    return self._coerce_evaluation_results(result, source_run_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 306, in _coerce_evaluation_results
+    return self._coerce_evaluation_result(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(dict, results), source_run_id=source_run_id, allow_no_key=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 288, in _coerce_evaluation_result
+    raise ValueError(
+    ...<2 lines>...
+    ) from e
+ValueError: Expected an EvaluationResult object, or dict with a metric 'key' and optional 'score'; got {'key': 'correctness', 'score': 4, 'value': False, 'reasoning': "The student answer states that Andrew Ng's primary reason for creating online courses was to automate parts of the teaching process and to allow him to build deeper relationships with students. This is partially related to his goals but does not accurately capture the main intent, which was to help anyone interested in machine learning break into the field and foster a global community of learners. Since the student's answer implies a focus on personal efficiency and relationship building rather than the broader educational goal, it is considered mostly incorrect and lacks factual alignment with the ground truth.", 'difficulty': 'easy'}
+[ 2026-08-08 00:17:36,131] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:36,158] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator groundedness> on run 019fde84-14b0-7a22-aeaa-6044be7d86d6: ValueError('Expected an EvaluationResult object, or dict with a metric \'key\' and optional \'score\'; got {\'key\': \'groundedness\', \'score\': 8, \'value\': True, \'reasoning\': "The STUDENT ANSWER accurately reflects the essence of Andrew Ng\'s motivations for creating online courses, which includes the desire to automate parts of education to enhance the impact of teaching. This is supported by the FACTS where Ng mentions his desire to avoid repetitive tasks like filming the same lectures and instead focus on building relationships with students. The term \'automate parts of the teaching process\' aligns well with his exploration of automation discussed in the FACTS. However, the statement could be seen as slightly too broad as it does not fully encompass all aspects of Ng\'s experiences and motivations expressed in the FACTS (such as reaching a global audience or catering to a much larger interest in AI). Nonetheless, it captures the primary essence, justifying a high score but preventing a perfect score because of this minor vagueness. Overall, the response is well-grounded and does not present any unsupported claims.", \'difficulty\': \'easy\'}')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 286, in _coerce_evaluation_result
+    return EvaluationResult(**{"source_run_id": source_run_id, **result})
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for EvaluationResult
+reasoning
+  Extra inputs are not permitted [type=extra_forbidden, input_value="The STUDENT ANSWER accur...any unsupported claims.", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+difficulty
+  Extra inputs are not permitted [type=extra_forbidden, input_value='easy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 375, in evaluate_run
+    return self._format_result(result, evaluator_run_id)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 322, in _format_result
+    return self._coerce_evaluation_results(result, source_run_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 306, in _coerce_evaluation_results
+    return self._coerce_evaluation_result(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(dict, results), source_run_id=source_run_id, allow_no_key=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 288, in _coerce_evaluation_result
+    raise ValueError(
+    ...<2 lines>...
+    ) from e
+ValueError: Expected an EvaluationResult object, or dict with a metric 'key' and optional 'score'; got {'key': 'groundedness', 'score': 8, 'value': True, 'reasoning': "The STUDENT ANSWER accurately reflects the essence of Andrew Ng's motivations for creating online courses, which includes the desire to automate parts of education to enhance the impact of teaching. This is supported by the FACTS where Ng mentions his desire to avoid repetitive tasks like filming the same lectures and instead focus on building relationships with students. The term 'automate parts of the teaching process' aligns well with his exploration of automation discussed in the FACTS. However, the statement could be seen as slightly too broad as it does not fully encompass all aspects of Ng's experiences and motivations expressed in the FACTS (such as reaching a global audience or catering to a much larger interest in AI). Nonetheless, it captures the primary essence, justifying a high score but preventing a perfect score because of this minor vagueness. Overall, the response is well-grounded and does not present any unsupported claims.", 'difficulty': 'easy'}
+[ 2026-08-08 00:17:37,851] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:37,904] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator relevance> on run 019fde84-14b0-7a22-aeaa-6044be7d86d6: ValueError('Expected an EvaluationResult object, or dict with a metric \'key\' and optional \'score\'; got {\'key\': \'relevance\', \'score\': 9, \'value\': True, \'reasoning\': "The student answer addresses the question by directly stating Andrew Ng\'s primary reason for creating online courses, which is to \'automate parts of the teaching process\' and increase his impact. These points highlight how online courses enable a single educator to reach more students and foster better relationships. The response is concise, focused, and clearly connects to the question without any off-topic digressions, justifying a high relevance score.", \'difficulty\': \'easy\'}')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 286, in _coerce_evaluation_result
+    return EvaluationResult(**{"source_run_id": source_run_id, **result})
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for EvaluationResult
+reasoning
+  Extra inputs are not permitted [type=extra_forbidden, input_value="The student answer addre...a high relevance score.", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+difficulty
+  Extra inputs are not permitted [type=extra_forbidden, input_value='easy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 375, in evaluate_run
+    return self._format_result(result, evaluator_run_id)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 322, in _format_result
+    return self._coerce_evaluation_results(result, source_run_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 306, in _coerce_evaluation_results
+    return self._coerce_evaluation_result(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(dict, results), source_run_id=source_run_id, allow_no_key=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 288, in _coerce_evaluation_result
+    raise ValueError(
+    ...<2 lines>...
+    ) from e
+ValueError: Expected an EvaluationResult object, or dict with a metric 'key' and optional 'score'; got {'key': 'relevance', 'score': 9, 'value': True, 'reasoning': "The student answer addresses the question by directly stating Andrew Ng's primary reason for creating online courses, which is to 'automate parts of the teaching process' and increase his impact. These points highlight how online courses enable a single educator to reach more students and foster better relationships. The response is concise, focused, and clearly connects to the question without any off-topic digressions, justifying a high relevance score.", 'difficulty': 'easy'}
+[ 2026-08-08 00:17:39,832] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:39,890] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator retrieval_relevance> on run 019fde84-14b0-7a22-aeaa-6044be7d86d6: ValueError('Expected an EvaluationResult object, or dict with a metric \'key\' and optional \'score\'; got {\'key\': \'retrieval_relevance\', \'score\': 8, \'value\': True, \'reasoning\': "The FACTS provide considerable insight into Andrew Ng\'s motivations and experiences related to the development of online courses. Key reasons outlined include his desire to automate aspects of his teaching (mentioned when he refers to his history with automation) and to improve the educational experience for learners, such as when he aimed to create more impactful content and engage better with students. Phrases like \'doing what\'s best for learners\' and \'creating content to help so many people learn about machine learning\' illustrate his commitment to enhancing education through online platforms. There are some broader reflections on machine learning and his experiences at Stanford that could be seen as slightly off-topic, but overall, the subject matter is tightly aligned with the QUESTION.", \'difficulty\': \'easy\'}')
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 286, in _coerce_evaluation_result
+    return EvaluationResult(**{"source_run_id": source_run_id, **result})
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for EvaluationResult
+reasoning
+  Extra inputs are not permitted [type=extra_forbidden, input_value="The FACTS provide consid...gned with the QUESTION.", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+difficulty
+  Extra inputs are not permitted [type=extra_forbidden, input_value='easy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 375, in evaluate_run
+    return self._format_result(result, evaluator_run_id)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 322, in _format_result
+    return self._coerce_evaluation_results(result, source_run_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 306, in _coerce_evaluation_results
+    return self._coerce_evaluation_result(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(dict, results), source_run_id=source_run_id, allow_no_key=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 288, in _coerce_evaluation_result
+    raise ValueError(
+    ...<2 lines>...
+    ) from e
+ValueError: Expected an EvaluationResult object, or dict with a metric 'key' and optional 'score'; got {'key': 'retrieval_relevance', 'score': 8, 'value': True, 'reasoning': "The FACTS provide considerable insight into Andrew Ng's motivations and experiences related to the development of online courses. Key reasons outlined include his desire to automate aspects of his teaching (mentioned when he refers to his history with automation) and to improve the educational experience for learners, such as when he aimed to create more impactful content and engage better with students. Phrases like 'doing what's best for learners' and 'creating content to help so many people learn about machine learning' illustrate his commitment to enhancing education through online platforms. There are some broader reflections on machine learning and his experiences at Stanford that could be seen as slightly off-topic, but overall, the subject matter is tightly aligned with the QUESTION.", 'difficulty': 'easy'}
+[ 2026-08-08 00:17:39,907] 1735 langsmith.evaluation._runner - ERROR - Error running evaluator <DynamicRunEvaluator timestamp_error> on run 019fde84-14b0-7a22-aeaa-6044be7d86d6: ValueError("Expected an EvaluationResult object, or dict with a metric 'key' and optional 'score'; got {'key': 'timestamp_error', 'score': 262.51099999999997, 'value': 262.51099999999997, 'reasoning': None, 'difficulty': 'easy'}")
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 286, in _coerce_evaluation_result
+    return EvaluationResult(**{"source_run_id": source_run_id, **result})
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for EvaluationResult
+reasoning
+  Extra inputs are not permitted [type=extra_forbidden, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+difficulty
+  Extra inputs are not permitted [type=extra_forbidden, input_value='easy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\_runner.py", line 1689, in _run_evaluators
+    evaluator_response = evaluator.evaluate_run(  # type: ignore[call-arg]
+        run=run,
+        example=example,
+        evaluator_run_id=evaluator_run_id,
+    )
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 375, in evaluate_run
+    return self._format_result(result, evaluator_run_id)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 322, in _format_result
+    return self._coerce_evaluation_results(result, source_run_id)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 306, in _coerce_evaluation_results
+    return self._coerce_evaluation_result(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        cast(dict, results), source_run_id=source_run_id, allow_no_key=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\apaks\projects\YT-RAG\.venv\Lib\site-packages\langsmith\evaluation\evaluator.py", line 288, in _coerce_evaluation_result
+    raise ValueError(
+    ...<2 lines>...
+    ) from e
+ValueError: Expected an EvaluationResult object, or dict with a metric 'key' and optional 'score'; got {'key': 'timestamp_error', 'score': 262.51099999999997, 'value': 262.51099999999997, 'reasoning': None, 'difficulty': 'easy'}
+[ 2026-08-08 00:17:40,088] 78 root - INFO - [INFO] Evaluation completed for evaluation set - 0
+[ 2026-08-08 00:17:40,392] 67 root - INFO - [INFO] Examples added to dataset for 7ARBJQn6QkM&t.json
+[ 2026-08-08 00:17:41,292] 36 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-08 00:17:41,296] 36 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-08 00:17:42,858] 57 root - INFO - [INFO] 7ARBJQn6QkM : Video data for video id fetched.
+[ 2026-08-08 00:17:42,861] 100 root - INFO - [INFO] 7ARBJQn6QkM : Video data preprocessing completed 
+[ 2026-08-08 00:17:42,867] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-08 00:17:43,057] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:43,072] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:43,179] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:43,199] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:43,202] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-08 00:17:43,320] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:43,344] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:43,459] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:43,483] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:43,597] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:43,624] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:43,770] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:43,829] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:43,966] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:44,089] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:44,131] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:44,442] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:44,557] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:44,671] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:44,791] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:44,915] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:44,934] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:45,052] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:45,085] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:45,414] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:45,434] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:45,556] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:45,584] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:45,714] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-08 00:17:45,837] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:46,192] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-08 00:17:46,214] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:46,335] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:51,766] 173 root - INFO - [INFO] 7ARBJQn6QkM : 34 Semantic chunks created from processed transcript
+[ 2026-08-08 00:17:51,767] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-08 00:17:51,768] 185 root - INFO - [INFO] 7ARBJQn6QkM : 34 chunks saved to the disk
+[ 2026-08-08 00:17:51,768] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:17:52,823] 42 root - INFO - [INFO] Generating embeddings for 34 chunks
+[ 2026-08-08 00:17:53,492] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:53,811] 46 root - INFO - [INFO] Embeddings for 34 chunks generate. Embeddings shape: (34, 3072)
+[ 2026-08-08 00:17:53,836] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-08 00:17:53,836] 54 root - INFO - Embeddings with shape (34, 3072) saved on disk
+[ 2026-08-08 00:17:53,837] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-08 00:17:53,837] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-08 00:17:53,838] 46 root - INFO - [INFO] None : Embeddings with shape (34, 3072) added to faiss index
+[ 2026-08-08 00:17:53,886] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-08 00:17:53,887] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\7ARBJQn6QkM
+[ 2026-08-08 00:17:53,893] 17 root - INFO - [INFO] Pickle file saved at faiss_store\7ARBJQn6QkM\metadata.pkl
+[ 2026-08-08 00:17:53,893] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\7ARBJQn6QkM
+[ 2026-08-08 00:17:53,900] 17 root - INFO - [INFO] Pickle file saved at faiss_store\7ARBJQn6QkM\metadata.pkl
+[ 2026-08-08 00:17:53,901] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\7ARBJQn6QkM
+[ 2026-08-08 00:17:53,902] 46 root - INFO - [INFO] 7ARBJQn6QkM New vectorstore build for 7ARBJQn6QkM
+[ 2026-08-08 00:17:53,903] 59 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-08 00:17:53,903] 26 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-08 00:17:55,364] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-08 00:17:55,371] 64 root - INFO - [INFO] Query embedding generated for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?. Query embedding dimension: (1, 3072)
+[ 2026-08-08 00:17:55,434] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-08 00:17:55,435] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-08 00:17:55,435] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-08 00:17:55,435] 93 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?
+[ 2026-08-08 00:17:55,436] 112 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-08-08 00:17:56,722] 78 root - INFO - [INFO] Evaluation completed for evaluation set - 1
+[ 2026-08-08 00:17:57,022] 67 root - INFO - [INFO] Examples added to dataset for gFEE3w7F0ww.json
+[ 2026-08-08 00:17:57,811] 36 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-08 00:17:57,812] 36 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-08 00:17:59,267] 1732 langsmith.run_helpers - WARNING - Unable to process trace outputs: KeyboardInterrupt()
+[ 2026-08-08 00:17:59,310] 78 root - INFO - [INFO] Evaluation completed for evaluation set - 2
+[ 2026-08-08 00:17:59,614] 67 root - INFO - [INFO] Examples added to dataset for hmtuvNfytjM&t.json
+[ 2026-08-08 00:18:00,412] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:18:00,413] 36 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-08 00:18:01,030] 78 root - INFO - [INFO] Evaluation completed for evaluation set - 3
+[ 2026-08-08 00:18:01,384] 67 root - INFO - [INFO] Examples added to dataset for sD468LfeVdc.json
+[ 2026-08-08 00:18:02,146] 36 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-08 00:18:02,149] 36 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-08 00:18:02,886] 78 root - INFO - [INFO] Evaluation completed for evaluation set - 4

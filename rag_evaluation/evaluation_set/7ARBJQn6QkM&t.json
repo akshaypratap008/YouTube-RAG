@@ -1,0 +1,68 @@
+{
+"video_url": "https://www.youtube.com/watch?v=7ARBJQn6QkM&t=1051s",
+"video_title": "NVIDIA CEO Jensen Huang's Vision for the Future",
+"qa_pairs": [
+    {
+        "question": "What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?",
+        "answer": "The perfect computer must be capable of both sequential processing (for about 90% of code) and parallel processing (for the 10% of code that accounts for 99% of processing tasks).",
+        "timestamp": "04:41",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Why did NVIDIA focus on video games as its primary market in the early days?",
+        "answer": "NVIDIA chose video games because they required parallel processing for 3D graphics and represented a potentially massive entertainment market, which provided the revenue needed to fund R&D for more advanced technologies.",
+        "timestamp": "05:45",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What is the function of CUDA in the context of GPU computing?",
+        "answer": "CUDA is a software platform that allows programmers to use familiar languages like C to instruct GPUs, making parallel processing accessible for general-purpose applications beyond just graphics.",
+        "timestamp": "08:29",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Why was the 2012 'AlexNet' model a turning point for AI and NVIDIA?",
+        "answer": "AlexNet demonstrated that neural networks could drastically outperform previous methods in image recognition when trained on large datasets using parallel processing, marking the shift from manual instruction to training computers to learn.",
+        "timestamp": "11:04",
+        "difficulty": "medium"
+    },
+    {
+        "question": "How does Jensen Huang explain the concept of 'AI hallucination' and how it is mitigated?",
+        "answer": "Hallucination occurs when an AI generates plausible but ungrounded answers. It is mitigated by 'grounding' the model with specific context or data sources—such as PDFs or search results—that serve as the 'ground truth.'",
+        "timestamp": "26:54",
+        "difficulty": "difficult"
+    },
+    {
+        "question": "What is the role of Omniverse and Cosmos in the future of robotics?",
+        "answer": "Omniverse provides a physics-based 3D simulation environment, while Cosmos acts as a 'world model.' Together, they allow robots to be trained on vast amounts of data in digital environments, grounding their learning in physical laws like gravity and friction.",
+        "timestamp": "28:20",
+        "difficulty": "difficult"
+    },
+    {
+        "question": "How has the energy efficiency of NVIDIA's AI supercomputers changed since 2016?",
+        "answer": "Jensen Huang notes that their latest hardware is 10,000 times more energy-efficient for AI computing compared to the original DGX-1 delivered to OpenAI in 2016.",
+        "timestamp": "37:15",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is Jensen Huang's stance on the long-term relevance of the 'Transformer' architecture?",
+        "answer": "He views the Transformer as a stepping stone. He believes that future evolutions will be so significant that current architectures will be barely recognizable, emphasizing the need for flexible hardware that supports ongoing innovation.",
+        "timestamp": "39:45",
+        "difficulty": "difficult"
+    },
+    {
+        "question": "How does the RTX 50 Series use AI to improve graphics performance?",
+        "answer": "Instead of rendering all 8 million pixels of a 4K display, it renders only 500,000 pixels through ray tracing and uses AI to 'guess' or extrapolate the remaining pixels, resulting in a perfect image with higher efficiency.",
+        "timestamp": "53:14",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What is Jensen Huang's primary advice for students entering the workforce today?",
+        "answer": "He advises students to learn how to interact with AI, specifically focusing on the 'art' of prompting and constantly asking how AI can be used to improve performance in their specific field of study or work.",
+        "timestamp": "55:50",
+        "difficulty": "easy"
+    }
+]
+}
+
+
