@@ -34,32 +34,35 @@ def load_prompt(path: str)-> str:
     return prompt_path.read_text(encoding="utf-8")
     
 
-def save_eval_results(obj:pd.DataFrame, dir_path:str = "eval_results"):
+def save_eval_results(obj:pd.DataFrame, dir_path:str = "rag_evaluation/eval_results"):
     """Save Evaluation results as excel"""
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     dir = Path(dir_path)
     dir.mkdir(exist_ok=True)
     file_path = dir / f"eval_{timestamp}.csv"
-    obj.to_csv(file_path)
+    obj.to_csv(file_path, index = False)
+    logging.info(f"[INFO] Eval results saved to: {file_path}")
+    return file_path
 
 def convert_to_seconds(timestamp:str) -> int:
     """Converts timestamp (eg. '00:02:30') from str into seconds in int"""
-    timestamps = timestamp.lstrip("(").rstrip(")").split(":")
     seconds = 0
-    if len(timestamps) == 2:
-        for i, timestamp in enumerate(timestamps):
-            if i == 0:
-                seconds += int(timestamp) * 60
-            elif i == 1:
-                seconds += int(timestamp)
-    elif len(timestamps) == 3:
-        for i, timestamp in enumerate(timestamps):
-            if i == 0:
-                seconds += int(timestamp) * 60 * 60
-            elif i == 1:
-                seconds += int(timestamp) * 60
-            elif i == 2:
-                seconds += int(timestamp)
+    if timestamp is str:
+        timestamps = timestamp.lstrip("(").rstrip(")").split(":")
+        if len(timestamps) == 2:
+            for i, timestamp in enumerate(timestamps):
+                if i == 0:
+                    seconds += int(timestamp) * 60
+                elif i == 1:
+                    seconds += int(timestamp)
+        elif len(timestamps) == 3:
+            for i, timestamp in enumerate(timestamps):
+                if i == 0:
+                    seconds += int(timestamp) * 60 * 60
+                elif i == 1:
+                    seconds += int(timestamp) * 60
+                elif i == 2:
+                    seconds += int(timestamp)
 
     return seconds
 

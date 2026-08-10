@@ -5,62 +5,52 @@
     {
         "question": "What was the primary reason Andrew Ng decided to create online courses?",
         "answer": "His goal was to help anyone with an interest in machine learning to break into the field and foster a broad, global community of learners.",
-        "timestamp": "08:00",
-        "difficulty": "easy"
+        "metadata": {"timestamp": "08:00", "difficulty": "easy"}
     },
     {
         "question": "What was the 'failed' feature Andrew Ng attempted to implement in his early online education platform?",
         "answer": "He built a feature that allowed multiple people to be logged into the same website simultaneously to watch videos together, but it was rarely used because learners preferred watching independently.",
-        "timestamp": "10:06",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "10:06", "difficulty": "medium"}
     },
     {
         "question": "What was the significance of the helicopter project in Pieter Abbeel’s PhD thesis?",
         "answer": "It was a pioneering application of reinforcement learning to make a helicopter fly upside down and perform complex aerial maneuvers.",
-        "timestamp": "18:42",
-        "difficulty": "easy"
+        "metadata": {"timestamp": "18:42", "difficulty": "easy"}
     },
     {
         "question": "According to Andrew Ng, what did researchers 'get wrong' during the early days of Google Brain?",
         "answer": "They initially put too much emphasis on unsupervised learning instead of focusing on the immense potential of supervised learning.",
-        "timestamp": "23:34",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "23:34", "difficulty": "medium"}
     },
     {
         "question": "What key insight did Adam Coates provide that influenced the direction of Google Brain?",
         "answer": "Coates generated a graph showing that increasing the scale of the model and the training data led to better performance, which gave Ng the conviction to pursue large-scale deep learning.",
-        "timestamp": "25:49",
-        "difficulty": "difficult"
+        "metadata": {"timestamp": "25:49", "difficulty": "difficult"}
     },
     {
         "question": "How does Andrew Ng suggest one should debug machine learning algorithms?",
         "answer": "He advises a systematic approach to identifying why a model is not improving, including checking for overfitting, trying different regularization techniques, or varying architectures, rather than just using a standard code debugger.",
-        "timestamp": "39:05",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "39:05", "difficulty": "medium"}
     },
     {
         "question": "What does Ng identify as the current limitation of reinforcement learning in real-world settings?",
         "answer": "While reinforcement learning is powerful for games and simulations, there is a lack of widespread, impactful, and deployed real-world industrial applications compared to other methods.",
-        "timestamp": "43:39",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "43:39", "difficulty": "medium"}
     },
     {
         "question": "Can you describe the 'self-supervised' learning technique mentioned regarding image rotation?",
         "answer": "It involves taking unlabeled images, rotating them by multiples of 90 degrees, and training a neural network to predict the original orientation, essentially generating labels automatically.",
-        "timestamp": "46:50",
-        "difficulty": "difficult"
+        "metadata": {"timestamp": "46:50", "difficulty": "difficult"}
     },
     {
         "question": "What is the 'AI transformation playbook' suggested for companies?",
         "answer": "It is a guide for companies to start small, with internal projects like speech recognition or computer vision, to build expertise and proof-of-concept before scaling to core business operations.",
-        "timestamp": "114:34",
-        "difficulty": "difficult"
+        "metadata": {"timestamp": "114:34", "difficulty": "difficult"}
     },
     {
         "question": "What is Andrew Ng's stance on Artificial General Intelligence (AGI)?",
         "answer": "He believes humanity will eventually reach AGI, but he finds it impossible to estimate whether that will take 100, 500, or 5,000 years.",
-        "timestamp": "121:38",
-        "difficulty": "easy"
+        "metadata": {"timestamp": "121:38", "difficulty": "easy"}
     }
 ]
 }

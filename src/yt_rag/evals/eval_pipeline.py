@@ -8,7 +8,8 @@ from typing_extensions import Annotated, TypedDict
 from langchain_openai import ChatOpenAI
 from langsmith import Client
 from langsmith import traceable
-
+import pandas as pd
+from src.yt_rag.utils import save_eval_results
 
 from src.yt_rag.components.search import RAGSearch
 from src.yt_rag.logger import logging
@@ -18,10 +19,7 @@ import time
 
 load_dotenv()
 
-os.environ["LANGSMITH_API_KEY"] = os.getenv("LANGSMITH_API_KEY")
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["LANGSMITH_TRACING"] = "true"
-os.environ["LANGSMITH_PROJECT"] = "YouTube-RAG"
+os.environ['LANGCHAIN_PROJECT'] = "YouTube-RAG"
 
 LLM_JUDGE_MODEL = "gpt-4o-mini"
 
@@ -30,58 +28,61 @@ class EvalPipeline:
     Runs evaluation pipeline
     """
 
-    def __init__(self, eval_set_dir:str = "rag_evaluation/evaluation_set"):
+    def __init__(self, eval_set_dir:str = "rag_evaluation/evaluation_set", video_url:str = None):
         """
         Initiate Evaluation pipeline
         """
         self.eval_set_dir = eval_set_dir
         self.eval_sets_names: list = os.listdir(Path(self.eval_set_dir))
+        self.video_url = video_url
         logging.info(f"[INFO] Evaluation started")
 
+    @traceable(name = "run_evals")
     def run_evaluations(self):
         """
         Visit each eval set -> load examples to dataset -> run evaluations.
         """
         try:
             client = Client()
-            dataset = client.create_dataset(f"RAG-Full-Evaluation")
-            logging.info(f"[INFO] - ")
+            dataset = client.create_dataset(f"RAG-Full-Evaluation-5")
+            logging.info(f"[INFO] - Dataset Created using Langsmith")
             eval_dir = Path(self.eval_set_dir)
-            for i, eval_set in enumerate(self.eval_sets_names):
-                file_path = eval_dir / eval_set
-                with open(file_path, "r") as f:
-                    data = json.load(f)
-                examples = data['qa_pairs'][0]
-                client.create_example(
-                    inputs = {
-                        "question": examples['question'], 
-                        "difficulty": examples['difficulty']
-                    },
-                    outputs= {
-                        "answer": examples['answer'],
-                        "timestamp": examples["timestamp"]
-                    },
-                    metadata= {"timestamp": convert_to_seconds(examples['timestamp'])},
-                    dataset_id = dataset.id
-                )
-                logging.info(f"[INFO] Examples added to dataset for {eval_set}")
+            eval_set_path = eval_dir / "sD468LfeVdc.json"
+            with open(eval_set_path, 'r') as f:
+                data = json.load(f)
+            examples = data.get("qa_pairs")
+            examples = [
+                {
+                    "inputs": {"question": item.get('question')},
+                    "outputs": {"answer": item.get('answer'), "timestamp": item.get("metadata", {}).get("timestamp")},
+                    "metadata": item.get("metadata")
+                }
+                for item in examples
+            ]
+            client.create_examples(dataset_id=dataset.id, examples=examples)
+            logging.info(f"[INFO] Examples added to dataset")
 
-                def target(inputs:dict) -> dict:
-                    return self.run_rag_pipeline(url = data['video_url'], query = inputs['question'])
+            def target(inputs:dict) -> dict:
+                return self.run_rag_pipeline(query = inputs.get("question"))
 
-                experiment_results = client.evaluate(
-                    target, 
-                    data = "RAG-Full-Evaluation",
-                    evaluators= [self.correctness, self.groundedness, self.relevance, self.retrieval_relevance, self.timestamp_error],
-                    metadata= {"version": "LCEL context, gpt-4-0125-preview"}
-                )
-                logging.info(f"[INFO] Evaluation completed for evaluation set - {i}")
+            experiment_results = client.evaluate(
+                target, 
+                data = dataset.id,
+                evaluators= [self.correctness, self.groundedness, self.relevance, self.retrieval_relevance, self.timestamp_error],
+                experiment_prefix="rag-pipeline-eval",
+                metadata= {"version": "LCEL context, gpt-4-0125-preview"}
+            )
+            logging.info(f"[INFO] Experiment results generated")
+            eval_results = experiment_results.to_pandas()
+            save_eval_results(obj=eval_results)
+
+            logging.info(f"[INFO] Evaluation completed for evaluation set")
         except Exception as e:
             raise CustomException(e, sys)
 
-    @traceable()
-    def run_rag_pipeline(self, url, query):
-        rag = RAGSearch(url = url)
+    @traceable(name = "run_rag_pipeline")
+    def run_rag_pipeline(self, query):
+        rag = RAGSearch(url = self.video_url)
         start = time.time()
         relevant_chunks = rag.search(query = query)
         context = " ".join(relevant_chunks)
@@ -91,7 +92,7 @@ class EvalPipeline:
 
         # check if timestamps have been retrieved
         if timestamps and isinstance(timestamps[0], (list, tuple)) and len(timestamps[0]) >= 1:
-            timestamp = timestamps[0][0]            # assignes the start time for the most relevant chunk to timestamp variable
+            timestamp = convert_to_seconds(timestamps[0][0])            # assignes the start time for the most relevant chunk to timestamp variable
         else:
             timestamp = None
 
@@ -132,8 +133,7 @@ STUDENT ANSWER: {outputs["answer"]}
             "key": "correctness",
             "score": results['grade'],
             "value": results['correct'],
-            "comment": results['reasoning'],
-            "metadata": {"dificulty": inputs.get('difficulty')}
+            "comment": results['reasoning']
         }
     
     def relevance(self, inputs: dict, outputs: dict) -> dict:
@@ -162,11 +162,10 @@ STUDENT ANSWER: {outputs['answer']}
             "key": "relevance",
             "score": results['grade'],
             "value": results["relevant"],
-            "comment": results['reasoning'],
-            "metadata": {"dificulty": inputs.get('difficulty')}
+            "comment": results['reasoning']
         }
 
-    def groundedness(self, inputs:dict, outputs:dict) -> dict:
+    def groundedness(self, outputs:dict) -> dict:
         """
         Evaluates the groundedness of the Answers. Grades between 1-10 on how much the answer relates to the retrieved chunks. 
         """
@@ -192,8 +191,7 @@ STUDENT ANSWER: {outputs['answer']}
             "key": "groundedness",
             "score": results['grade'],
             "value": results['grounded'],
-            "comment": results['reasoning'],
-            "metadata": {"dificulty": inputs.get('difficulty')}
+            "comment": results['reasoning']
         }
 
     def retrieval_relevance(self, inputs: dict, outputs:dict) -> dict:
@@ -222,8 +220,7 @@ QUESTION : {inputs['question']}
             "key": "retrieval_relevance",
             "score": results['grade'],
             "value": results['relevant'],
-            "comment": results['reasoning'],
-            "metadata": {"dificulty": inputs.get('difficulty')}
+            "comment": results['reasoning']
         }
 
     def timestamp_error(self, inputs:dict, outputs:dict, reference_outputs:dict) -> dict:
@@ -238,8 +235,7 @@ QUESTION : {inputs['question']}
                 "key": "timestamp_error",
                 "score": None,
                 "value": None,
-                "comment": "No timestamp were pulled for the extracted documents",
-                "metadata": {"dificulty": inputs.get('difficulty')}
+                "comment": "No timestamp were pulled for the extracted documents"
             }
 
         error = abs(correct_ts - retrieved_ts)   
@@ -247,9 +243,7 @@ QUESTION : {inputs['question']}
         return {
             "key": "timestamp_error",
             "score": error,
-            "value": error,
-            "reasoning": None,
-            "difficulty": inputs['difficulty']
+            "comment": None
         }   
 
 

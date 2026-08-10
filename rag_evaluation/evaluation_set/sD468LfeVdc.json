@@ -5,62 +5,52 @@
     {
         "question": "Who is conducting the mock interview?",
         "answer": "The interviewer is Keith Galli, a senior data scientist.",
-        "timestamp": "07:38",
-        "difficulty": "easy"
+        "metadata": {"timestamp": "07:38", "difficulty": "easy"}
         },
     {
         "question": "What specific AI topics is Kylie Ying interested in?",
         "answer": "She is particularly interested in reinforcement learning, robotics, and building superhuman AIs for games like chess and poker.",
-        "timestamp": "06:23",
-        "difficulty": "easy"
+        "metadata": {"timestamp": "06:23", "difficulty": "easy"}
     },
     {
         "question": "What is the primary bot issue described in the scenario?",
         "answer": "The platform faces coordinated bot attacks where bots quickly reply to posts (specifically from the CEO, Mr. Elong Tusk) to promote scams, money schemes, or share propaganda and fake news.",
-        "timestamp": "08:37",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "08:37", "difficulty": "medium"}
     },
     {
         "question": "What features does Kylie suggest investigating to detect bot accounts?",
         "answer": "She suggests looking at the content of posts (hashtags, links, timing), account attributes (follower/following counts and ratios), and engagement data (repetitive content, whether followers are also spam accounts).",
-        "timestamp": "15:46",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "15:46", "difficulty": "medium"}
     },
     {
         "question": "What is a specific internal system feature that could help identify spam?",
         "answer": "The team could use the 'report spam' data, where high counts or rates of users marking a post or account as spam serve as a key indicator.",
-        "timestamp": "19:08",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "19:08", "difficulty": "medium"}
     },
     {
         "question": "Why might relying solely on user reports for spam labeling be problematic?",
         "answer": "It can be influenced by bad actors or trolls who might conduct targeted attacks to label innocent users as spam, making the system less robust.",
-        "timestamp": "49:31",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "49:31", "difficulty": "medium"}
     },
     {
         "question": "What is the suggested approach for handling post timing in the model?",
         "answer": "Convert timestamps into an integer representation, such as seconds or milliseconds since the Epoch, to detect spikes in activity, like 10 posts occurring within a single second.",
-        "timestamp": "38:11",
-        "difficulty": "difficult"
+        "metadata": {"timestamp": "38:11", "difficulty": "difficult"}
     },
     {
         "question": "How does Kylie propose handling email address data for the model?",
         "answer": "She suggests an encoding scheme using common email domains (binary 0 or 1) and checking for random characters in the prefix, as bots may use low-quality or suspicious email patterns.",
-        "timestamp": "35:39",
-        "difficulty": "difficult"
+        "metadata": {"timestamp": "35:39", "difficulty": "difficult"}
     },
     {
         "question": "What technical implementation strategy does Keith suggest for processing high volumes of tweets?",
         "answer": "He suggests using batching to process groups of tweets at once rather than handling them individually, which would be inefficient given the volume on the platform.",
-        "timestamp": "120:45",
-        "difficulty": "difficult"
+        "metadata": {"timestamp": "120:45", "difficulty": "difficult"}
     },
     {
         "question": "What is the significance of the follower-to-following ratio in detecting bots?",
         "answer": "It acts as a feature to identify accounts that follow a massive number of users while having very few followers themselves, which is a common behavior pattern for spam bots.",
-        "timestamp": "17:41",
-        "difficulty": "medium"
+        "metadata": {"timestamp": "17:41", "difficulty": "medium"}
     }
 ]
 }
