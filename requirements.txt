@@ -5,7 +5,8 @@ langchain-text-splitters
 spacy
 sentence-transformers
 langchain-openai
-langchain-text-splitters
 faiss-cpu
 langsmith
 pandas
+deepeval
+pytest

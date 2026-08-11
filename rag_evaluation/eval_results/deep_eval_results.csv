@@ -1,0 +1,6 @@
+date_time,eval_set,embedding_model,chunk_similarity_threshold,max_token,top_k,recall_score,precission_score
+2026-08-11 21:44:58.052791,0jspaMLxBig.json,text-embedding-3-large,0.45,300,5,1.0,0.9283333333333332
+2026-08-11 21:46:00.262481,7ARBJQn6QkM&t.json,text-embedding-3-large,0.45,300,5,0.85,0.8172222222222223
+2026-08-11 21:47:06.196542,gFEE3w7F0ww.json,text-embedding-3-large,0.45,300,5,0.9,0.9416666666666668
+2026-08-11 21:48:01.640714,hmtuvNfytjM&t.json,text-embedding-3-large,0.45,300,5,1.0,0.8700000000000001
+2026-08-11 21:49:00.422555,sD468LfeVdc.json,text-embedding-3-large,0.45,300,5,1.0,0.9359722222222222
