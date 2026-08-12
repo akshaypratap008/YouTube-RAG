@@ -11,11 +11,13 @@ from src.yt_rag.utils import save_object
 
 load_dotenv()
 
+EMBEDDING_MODEL = "text-embedding-3-large"
+
 class EmbeddingManager:
     """
     Handles document embeddings using OpenAI  
     """
-    def __init__(self, model_name:str = "text-embedding-3-large"):
+    def __init__(self, model_name:str = EMBEDDING_MODEL):
         self.model_name = model_name
         self.model = None
         self._load_model()

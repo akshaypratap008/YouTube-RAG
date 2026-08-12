@@ -14,6 +14,11 @@ from src.yt_rag.utils import save_object, load_object
 
 load_dotenv()
 
+SIMILARITY_THRESHOLD = 0.40
+MAX_TOKEN = 300
+OVERLAP = 1
+
+
 class DataLoader:
     """
     Responsible for fetching the video data using api. Preprocess the data. Create chunks using semantic chunking and save chunks on the disk
@@ -100,7 +105,7 @@ class DataLoader:
         logging.info(f"[INFO] {self.video_id} : Video data preprocessing completed ")
         return merged
 
-    def create_semantic_chunks(self, video_data:List[Dict[str, Any]], similarity_threshold:float = 0.45, max_tokens:int = 300, overlap = 1) -> List[Dict[str, Any]]:
+    def create_semantic_chunks(self, video_data:List[Dict[str, Any]], similarity_threshold:float = SIMILARITY_THRESHOLD, max_tokens:int = MAX_TOKEN, overlap = OVERLAP) -> List[Dict[str, Any]]:
         """
         Create semantic chunks of the transcripts. Uses SentenceTransformers to generate embeddings of the segments and then use cosine similarity tk the semantic meaning to define the end of a chunk
         Args:

@@ -1,0 +1,1190 @@
+[ 2026-08-12 20:03:20,388] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-12 20:03:20,390] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-12 20:03:20,391] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-12 20:03:20,552] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-12 20:03:22,601] 26 root - INFO - [INFO] 0jspaMLxBig.json Evaluation initiated for evaluation_set: 0jspaMLxBig.json
+[ 2026-08-12 20:03:22,602] 38 root - INFO - [INFO] 0jspaMLxBig.json : Evaluation set loaded from rag_evaluation\evaluation_set\0jspaMLxBig.json
+[ 2026-08-12 20:03:22,751] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:22,754] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:24,448] 62 root - INFO - [INFO] 0jspaMLxBig : Video data for video id fetched.
+[ 2026-08-12 20:03:24,458] 105 root - INFO - [INFO] 0jspaMLxBig : Video data preprocessing completed 
+[ 2026-08-12 20:03:24,469] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-12 20:03:25,445] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:25,471] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:25,596] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:25,621] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:25,633] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-12 20:03:25,747] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:25,772] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:25,905] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:25,929] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:26,050] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:26,074] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:26,196] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:26,222] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:26,346] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:03:26,469] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:26,496] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:26,991] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:03:27,117] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:03:27,234] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:03:27,363] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:03:27,472] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:27,494] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:27,626] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:27,655] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:27,795] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:27,822] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:27,950] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:27,977] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:28,155] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:03:28,284] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:28,620] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:03:28,640] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:28,774] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:35,196] 178 root - INFO - [INFO] 0jspaMLxBig : 55 Semantic chunks created from processed transcript
+[ 2026-08-12 20:03:35,198] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-12 20:03:35,198] 190 root - INFO - [INFO] 0jspaMLxBig : 55 chunks saved to the disk
+[ 2026-08-12 20:03:35,198] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:37,541] 44 root - INFO - [INFO] Generating embeddings for 55 chunks
+[ 2026-08-12 20:03:38,324] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:38,865] 48 root - INFO - [INFO] Embeddings for 55 chunks generate. Embeddings shape: (55, 3072)
+[ 2026-08-12 20:03:38,889] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-12 20:03:38,889] 56 root - INFO - Embeddings with shape (55, 3072) saved on disk
+[ 2026-08-12 20:03:38,892] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-12 20:03:38,892] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-12 20:03:38,894] 46 root - INFO - [INFO] None : Embeddings with shape (55, 3072) added to faiss index
+[ 2026-08-12 20:03:38,986] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-12 20:03:38,987] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\0jspaMLxBig
+[ 2026-08-12 20:03:39,007] 17 root - INFO - [INFO] Pickle file saved at faiss_store\0jspaMLxBig\metadata.pkl
+[ 2026-08-12 20:03:39,008] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\0jspaMLxBig
+[ 2026-08-12 20:03:39,022] 17 root - INFO - [INFO] Pickle file saved at faiss_store\0jspaMLxBig\metadata.pkl
+[ 2026-08-12 20:03:39,023] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\0jspaMLxBig
+[ 2026-08-12 20:03:39,034] 53 root - INFO - [INFO] 0jspaMLxBig New vectorstore build for 0jspaMLxBig
+[ 2026-08-12 20:03:40,040] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:40,043] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:41,267] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:41,273] 66 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:41,446] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:41,446] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:41,447] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:41,447] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?
+[ 2026-08-12 20:03:41,452] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:41,453] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:41,454] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:41,454] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:41,454] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:41,456] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:41,458] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:42,758] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:42,769] 66 root - INFO - [INFO] Query embedding generated for query: What was the 'failed' feature Andrew Ng attempted to implement in his early online education platform?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:42,773] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:42,774] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:42,774] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:42,775] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What was the 'failed' feature Andrew Ng attempted to implement in his early online education platform?
+[ 2026-08-12 20:03:42,786] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:42,789] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:42,792] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:42,793] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:42,793] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:42,796] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:42,799] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:44,141] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:44,151] 66 root - INFO - [INFO] Query embedding generated for query: What was the significance of the helicopter project in Pieter Abbeel’s PhD thesis?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:44,154] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:44,154] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:44,154] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:44,155] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What was the significance of the helicopter project in Pieter Abbeel’s PhD thesis?
+[ 2026-08-12 20:03:44,159] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:44,161] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:44,163] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:44,163] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:44,163] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:44,165] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:44,166] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:45,391] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:45,403] 66 root - INFO - [INFO] Query embedding generated for query: According to Andrew Ng, what did researchers 'get wrong' during the early days of Google Brain?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:45,408] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:45,408] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:45,409] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:45,409] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: According to Andrew Ng, what did researchers 'get wrong' during the early days of Google Brain?
+[ 2026-08-12 20:03:45,421] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:45,423] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:45,425] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:45,425] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:45,426] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:45,431] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:45,435] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:46,771] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:46,777] 66 root - INFO - [INFO] Query embedding generated for query: What key insight did Adam Coates provide that influenced the direction of Google Brain?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:46,782] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:46,782] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:46,783] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:46,783] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What key insight did Adam Coates provide that influenced the direction of Google Brain?
+[ 2026-08-12 20:03:46,793] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:46,795] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:46,798] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:46,798] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:46,798] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:46,801] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:46,804] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:48,051] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:48,059] 66 root - INFO - [INFO] Query embedding generated for query: How does Andrew Ng suggest one should debug machine learning algorithms?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:48,065] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:48,066] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:48,067] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:48,068] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: How does Andrew Ng suggest one should debug machine learning algorithms?
+[ 2026-08-12 20:03:48,081] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:48,084] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:48,088] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:48,088] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:48,089] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:48,094] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:48,097] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:49,400] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:49,409] 66 root - INFO - [INFO] Query embedding generated for query: What does Ng identify as the current limitation of reinforcement learning in real-world settings?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:49,412] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:49,413] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:49,413] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:49,413] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What does Ng identify as the current limitation of reinforcement learning in real-world settings?
+[ 2026-08-12 20:03:49,422] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:49,424] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:49,426] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:49,426] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:49,427] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:49,430] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:49,433] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:50,691] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:50,694] 66 root - INFO - [INFO] Query embedding generated for query: Can you describe the 'self-supervised' learning technique mentioned regarding image rotation?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:50,695] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:50,695] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:50,695] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:50,696] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: Can you describe the 'self-supervised' learning technique mentioned regarding image rotation?
+[ 2026-08-12 20:03:50,715] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:50,716] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:50,718] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:50,718] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:50,718] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:50,720] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:50,721] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:52,105] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:52,114] 66 root - INFO - [INFO] Query embedding generated for query: What is the 'AI transformation playbook' suggested for companies?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:52,117] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:52,118] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:52,119] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:52,120] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What is the 'AI transformation playbook' suggested for companies?
+[ 2026-08-12 20:03:52,132] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-08-12 20:03:52,134] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-08-12 20:03:52,138] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:52,139] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:52,139] 57 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-08-12 20:03:52,143] 66 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:03:52,146] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:03:53,381] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:03:53,387] 66 root - INFO - [INFO] Query embedding generated for query: What is Andrew Ng's stance on Artificial General Intelligence (AGI)?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:03:53,391] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-08-12 20:03:53,392] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-08-12 20:03:53,393] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:03:53,394] 102 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What is Andrew Ng's stance on Artificial General Intelligence (AGI)?
+[ 2026-08-12 20:03:53,401] 55 root - INFO - [INFO] 0jspaMLxBig.json : Test cases created
+[ 2026-08-12 20:03:54,485] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:03:55,518] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:03:56,513] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:03:57,498] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:03:58,489] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:03:59,479] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:00,603] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:01,817] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:02,831] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:03,824] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:05,949] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,624] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,626] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,627] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,628] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,648] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,651] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,652] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,653] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:06,654] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,665] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,666] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,667] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,668] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,669] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,670] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,673] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,675] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,676] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:11,679] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,788] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,793] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,883] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,922] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,927] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,933] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:17,980] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,165] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,176] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,239] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,273] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,278] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,293] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,299] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,325] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,367] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,391] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,505] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:18,750] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:19,037] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:19,306] 85 root - INFO - [INFO] 0jspaMLxBig.json : Evaluation completed for evaluation set: 0jspaMLxBig.json
+[ 2026-08-12 20:04:19,318] 87 root - INFO - [INFO] 0jspaMLxBig.json : Evaluation results saved
+[ 2026-08-12 20:04:19,321] 26 root - INFO - [INFO] 7ARBJQn6QkM&t.json Evaluation initiated for evaluation_set: 7ARBJQn6QkM&t.json
+[ 2026-08-12 20:04:19,321] 38 root - INFO - [INFO] 7ARBJQn6QkM&t.json : Evaluation set loaded from rag_evaluation\evaluation_set\7ARBJQn6QkM&t.json
+[ 2026-08-12 20:04:19,324] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:19,325] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:21,146] 62 root - INFO - [INFO] 7ARBJQn6QkM : Video data for video id fetched.
+[ 2026-08-12 20:04:21,161] 105 root - INFO - [INFO] 7ARBJQn6QkM : Video data preprocessing completed 
+[ 2026-08-12 20:04:21,234] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-12 20:04:21,376] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:21,405] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:21,525] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:21,547] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:21,557] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-12 20:04:21,668] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:21,692] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:21,813] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:21,841] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:21,964] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:21,988] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:22,159] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:22,187] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:22,325] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:04:22,463] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:22,488] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:22,806] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:04:22,928] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:04:23,050] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:04:23,228] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:04:23,357] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:23,385] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:23,515] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:23,558] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:23,703] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:23,741] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:23,885] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:23,922] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:24,049] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:04:24,176] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:24,693] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:04:24,720] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:24,837] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:29,108] 178 root - INFO - [INFO] 7ARBJQn6QkM : 35 Semantic chunks created from processed transcript
+[ 2026-08-12 20:04:29,109] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-12 20:04:29,109] 190 root - INFO - [INFO] 7ARBJQn6QkM : 35 chunks saved to the disk
+[ 2026-08-12 20:04:29,109] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:30,088] 44 root - INFO - [INFO] Generating embeddings for 35 chunks
+[ 2026-08-12 20:04:30,638] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:30,952] 48 root - INFO - [INFO] Embeddings for 35 chunks generate. Embeddings shape: (35, 3072)
+[ 2026-08-12 20:04:30,955] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-12 20:04:30,955] 56 root - INFO - Embeddings with shape (35, 3072) saved on disk
+[ 2026-08-12 20:04:30,956] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-12 20:04:30,956] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-12 20:04:30,957] 46 root - INFO - [INFO] None : Embeddings with shape (35, 3072) added to faiss index
+[ 2026-08-12 20:04:31,010] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-12 20:04:31,010] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\7ARBJQn6QkM
+[ 2026-08-12 20:04:31,013] 17 root - INFO - [INFO] Pickle file saved at faiss_store\7ARBJQn6QkM\metadata.pkl
+[ 2026-08-12 20:04:31,013] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\7ARBJQn6QkM
+[ 2026-08-12 20:04:31,015] 17 root - INFO - [INFO] Pickle file saved at faiss_store\7ARBJQn6QkM\metadata.pkl
+[ 2026-08-12 20:04:31,015] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\7ARBJQn6QkM
+[ 2026-08-12 20:04:31,017] 53 root - INFO - [INFO] 7ARBJQn6QkM New vectorstore build for 7ARBJQn6QkM
+[ 2026-08-12 20:04:31,018] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:31,019] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:32,316] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:32,322] 66 root - INFO - [INFO] Query embedding generated for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:32,453] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:32,453] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:32,454] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:32,454] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?
+[ 2026-08-12 20:04:32,456] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:32,457] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:32,458] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:32,458] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:32,458] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:32,460] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:32,461] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:33,658] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:33,669] 66 root - INFO - [INFO] Query embedding generated for query: Why did NVIDIA focus on video games as its primary market in the early days?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:33,674] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:33,675] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:33,676] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:33,676] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: Why did NVIDIA focus on video games as its primary market in the early days?
+[ 2026-08-12 20:04:33,730] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:33,733] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:33,735] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:33,736] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:33,736] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:33,739] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:33,742] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:35,031] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:35,040] 66 root - INFO - [INFO] Query embedding generated for query: What is the function of CUDA in the context of GPU computing?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:35,043] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:35,044] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:35,045] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:35,045] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What is the function of CUDA in the context of GPU computing?
+[ 2026-08-12 20:04:35,058] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:35,060] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:35,064] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:35,065] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:35,065] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:35,069] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:35,073] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:36,713] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:36,721] 66 root - INFO - [INFO] Query embedding generated for query: Why was the 2012 'AlexNet' model a turning point for AI and NVIDIA?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:36,724] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:36,725] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:36,725] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:36,725] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: Why was the 2012 'AlexNet' model a turning point for AI and NVIDIA?
+[ 2026-08-12 20:04:36,738] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:36,740] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:36,742] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:36,743] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:36,743] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:36,746] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:36,751] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:38,145] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:38,156] 66 root - INFO - [INFO] Query embedding generated for query: How does Jensen Huang explain the concept of 'AI hallucination' and how it is mitigated?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:38,159] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:38,160] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:38,160] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:38,161] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: How does Jensen Huang explain the concept of 'AI hallucination' and how it is mitigated?
+[ 2026-08-12 20:04:38,173] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:38,175] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:38,178] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:38,178] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:38,179] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:38,185] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:38,189] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:39,398] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:39,403] 66 root - INFO - [INFO] Query embedding generated for query: What is the role of Omniverse and Cosmos in the future of robotics?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:39,405] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:39,405] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:39,405] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:39,405] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What is the role of Omniverse and Cosmos in the future of robotics?
+[ 2026-08-12 20:04:39,410] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:39,411] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:39,412] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:39,412] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:39,412] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:39,413] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:39,415] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:40,642] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:40,648] 66 root - INFO - [INFO] Query embedding generated for query: How has the energy efficiency of NVIDIA's AI supercomputers changed since 2016?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:40,652] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:40,653] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:40,654] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:40,654] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: How has the energy efficiency of NVIDIA's AI supercomputers changed since 2016?
+[ 2026-08-12 20:04:40,664] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:40,667] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:40,670] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:40,671] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:40,671] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:40,677] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:40,680] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:42,057] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:42,066] 66 root - INFO - [INFO] Query embedding generated for query: What is Jensen Huang's stance on the long-term relevance of the 'Transformer' architecture?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:42,071] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:42,072] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:42,092] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:42,092] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What is Jensen Huang's stance on the long-term relevance of the 'Transformer' architecture?
+[ 2026-08-12 20:04:42,103] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:42,235] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:42,239] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:42,240] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:42,240] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:42,244] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:42,247] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:43,798] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:43,805] 66 root - INFO - [INFO] Query embedding generated for query: How does the RTX 50 Series use AI to improve graphics performance?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:43,808] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:43,809] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:43,810] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:43,810] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: How does the RTX 50 Series use AI to improve graphics performance?
+[ 2026-08-12 20:04:43,818] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-12 20:04:43,821] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-12 20:04:43,823] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:43,824] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:43,824] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-12 20:04:43,827] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:04:43,830] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:04:45,232] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:45,240] 66 root - INFO - [INFO] Query embedding generated for query: What is Jensen Huang's primary advice for students entering the workforce today?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:04:45,245] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-12 20:04:45,246] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-12 20:04:45,247] 110 root - INFO - [INFO] 7ARBJQn6QkM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:04:45,247] 102 root - INFO - [INFO] 7ARBJQn6QkM Query search completed. Relevant context extracted for query: What is Jensen Huang's primary advice for students entering the workforce today?
+[ 2026-08-12 20:04:45,269] 55 root - INFO - [INFO] 7ARBJQn6QkM&t.json : Test cases created
+[ 2026-08-12 20:04:46,504] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:47,704] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:48,715] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:49,747] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:50,748] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:51,802] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:52,958] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:53,966] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:54,991] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:56,045] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:04:58,290] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:58,883] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:58,884] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:58,885] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:58,887] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:58,888] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:04:58,889] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,819] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,820] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,821] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,823] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,824] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,825] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,826] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,826] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,827] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:01,828] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:07,676] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:07,708] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:07,713] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,576] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,677] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,684] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,746] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,755] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,774] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:11,951] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,013] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,032] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,058] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,105] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,225] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,247] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,258] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,327] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,330] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,408] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,423] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,570] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,587] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:12,922] 85 root - INFO - [INFO] 7ARBJQn6QkM&t.json : Evaluation completed for evaluation set: 7ARBJQn6QkM&t.json
+[ 2026-08-12 20:05:12,959] 87 root - INFO - [INFO] 7ARBJQn6QkM&t.json : Evaluation results saved
+[ 2026-08-12 20:05:12,959] 26 root - INFO - [INFO] gFEE3w7F0ww.json Evaluation initiated for evaluation_set: gFEE3w7F0ww.json
+[ 2026-08-12 20:05:12,960] 38 root - INFO - [INFO] gFEE3w7F0ww.json : Evaluation set loaded from rag_evaluation\evaluation_set\gFEE3w7F0ww.json
+[ 2026-08-12 20:05:12,964] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:12,965] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:15,975] 62 root - INFO - [INFO] gFEE3w7F0ww : Video data for video id fetched.
+[ 2026-08-12 20:05:15,990] 105 root - INFO - [INFO] gFEE3w7F0ww : Video data preprocessing completed 
+[ 2026-08-12 20:05:15,996] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-12 20:05:16,164] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:16,199] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:16,306] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:16,324] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:16,330] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-12 20:05:16,443] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:16,465] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:16,612] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:16,628] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:16,741] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:16,762] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:16,889] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:16,922] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:17,130] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:05:17,268] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:17,296] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:17,533] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:05:17,668] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:05:17,782] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:05:17,915] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:05:18,041] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:18,068] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:18,193] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:18,218] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:18,366] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:18,390] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:18,550] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:18,571] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:18,721] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:05:18,847] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:19,082] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:05:19,100] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:19,225] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:39,384] 178 root - INFO - [INFO] gFEE3w7F0ww : 130 Semantic chunks created from processed transcript
+[ 2026-08-12 20:05:39,386] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-12 20:05:39,386] 190 root - INFO - [INFO] gFEE3w7F0ww : 130 chunks saved to the disk
+[ 2026-08-12 20:05:39,387] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:40,717] 44 root - INFO - [INFO] Generating embeddings for 130 chunks
+[ 2026-08-12 20:05:41,530] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:42,912] 48 root - INFO - [INFO] Embeddings for 130 chunks generate. Embeddings shape: (130, 3072)
+[ 2026-08-12 20:05:42,916] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-12 20:05:42,917] 56 root - INFO - Embeddings with shape (130, 3072) saved on disk
+[ 2026-08-12 20:05:42,917] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-12 20:05:42,918] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-12 20:05:42,920] 46 root - INFO - [INFO] None : Embeddings with shape (130, 3072) added to faiss index
+[ 2026-08-12 20:05:42,958] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-12 20:05:42,958] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\gFEE3w7F0ww
+[ 2026-08-12 20:05:42,962] 17 root - INFO - [INFO] Pickle file saved at faiss_store\gFEE3w7F0ww\metadata.pkl
+[ 2026-08-12 20:05:42,962] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\gFEE3w7F0ww
+[ 2026-08-12 20:05:42,965] 17 root - INFO - [INFO] Pickle file saved at faiss_store\gFEE3w7F0ww\metadata.pkl
+[ 2026-08-12 20:05:42,965] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\gFEE3w7F0ww
+[ 2026-08-12 20:05:42,973] 53 root - INFO - [INFO] gFEE3w7F0ww New vectorstore build for gFEE3w7F0ww
+[ 2026-08-12 20:05:42,975] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:42,977] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:45,764] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:45,775] 66 root - INFO - [INFO] Query embedding generated for query: What was the first computer program Travis Oliphant ever wrote?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:45,929] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:45,929] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:45,930] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:45,930] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What was the first computer program Travis Oliphant ever wrote?
+[ 2026-08-12 20:05:45,939] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:45,940] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:45,944] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:45,944] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:45,945] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:45,946] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:45,948] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:47,280] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:47,291] 66 root - INFO - [INFO] Query embedding generated for query: What specific gap did the 'Numeric' library fill in the Python ecosystem?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:47,298] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:47,299] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:47,304] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:47,305] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What specific gap did the 'Numeric' library fill in the Python ecosystem?
+[ 2026-08-12 20:05:47,344] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:47,347] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:47,357] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:47,358] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:47,359] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:47,365] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:47,372] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:49,928] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:49,931] 66 root - INFO - [INFO] Query embedding generated for query: Why did Travis create SciPy?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:49,933] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:49,933] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:49,934] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:49,934] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: Why did Travis create SciPy?
+[ 2026-08-12 20:05:50,150] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:50,151] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:50,154] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:50,154] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:50,154] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:50,157] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:50,158] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:51,978] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:51,981] 66 root - INFO - [INFO] Query embedding generated for query: What is the primary difference in philosophy between 'conda' and 'pip' as described by Travis?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:51,983] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:51,983] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:51,984] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:51,984] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What is the primary difference in philosophy between 'conda' and 'pip' as described by Travis?
+[ 2026-08-12 20:05:52,000] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:52,001] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:52,002] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:52,003] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:52,003] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:52,004] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:52,006] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:53,315] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:53,321] 66 root - INFO - [INFO] Query embedding generated for query: What are the three main things people are willing to pay for in open-source infrastructure?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:53,328] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:53,329] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:53,330] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:53,330] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What are the three main things people are willing to pay for in open-source infrastructure?
+[ 2026-08-12 20:05:53,340] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:53,344] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:53,349] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:53,350] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:53,350] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:53,355] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:53,364] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:56,274] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:56,279] 66 root - INFO - [INFO] Query embedding generated for query: How does Quansight Labs fund its non-profit mission to support open-source maintainers?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:56,282] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:56,282] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:56,283] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:56,283] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: How does Quansight Labs fund its non-profit mission to support open-source maintainers?
+[ 2026-08-12 20:05:56,287] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:56,287] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:56,289] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:56,289] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:56,289] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:56,290] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:56,291] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:57,884] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:57,907] 66 root - INFO - [INFO] Query embedding generated for query: What is the main goal of the 'data-apis.org' project?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:57,912] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:57,913] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:57,914] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:57,914] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What is the main goal of the 'data-apis.org' project?
+[ 2026-08-12 20:05:57,922] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:57,923] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:57,927] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:57,928] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:57,928] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:57,933] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:57,936] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:05:59,514] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:05:59,518] 66 root - INFO - [INFO] Query embedding generated for query: What is 'Numba' and how does it improve Python's performance?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:05:59,522] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:59,522] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:59,523] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:05:59,523] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What is 'Numba' and how does it improve Python's performance?
+[ 2026-08-12 20:05:59,555] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:05:59,556] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:05:59,558] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:05:59,559] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:05:59,559] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:05:59,560] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:05:59,562] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:06:02,609] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:02,615] 66 root - INFO - [INFO] Query embedding generated for query: Why does Travis suggest that hiring is 'multi-dimensional'?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:06:02,624] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:06:02,625] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:06:02,626] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:06:02,627] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: Why does Travis suggest that hiring is 'multi-dimensional'?
+[ 2026-08-12 20:06:02,638] 41 root - INFO - [INFO] gFEE3w7F0ww : Extracted video id from url
+[ 2026-08-12 20:06:02,641] 29 root - INFO - [INFO] gFEE3w7F0ww : Vector store initialised for gFEE3w7F0ww
+[ 2026-08-12 20:06:02,646] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:06:02,646] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:06:02,646] 57 root - INFO - [INFO] gFEE3w7F0ww Existing vetorstore loaded for gFEE3w7F0ww
+[ 2026-08-12 20:06:02,650] 66 root - INFO - [INFO] gFEE3w7F0ww OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:06:02,656] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:06:04,655] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:04,661] 66 root - INFO - [INFO] Query embedding generated for query: What is the significance of the 'bolt-ons' mentioned regarding TensorFlow?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:06:04,663] 26 root - INFO - [INFO] Pickle file faiss_store\gFEE3w7F0ww\metadata.pkl loaded
+[ 2026-08-12 20:06:04,663] 86 root - INFO - [INFO] gFEE3w7F0ww : Faiss index and Metadata loaded
+[ 2026-08-12 20:06:04,664] 110 root - INFO - [INFO] gFEE3w7F0ww : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:06:04,664] 102 root - INFO - [INFO] gFEE3w7F0ww Query search completed. Relevant context extracted for query: What is the significance of the 'bolt-ons' mentioned regarding TensorFlow?
+[ 2026-08-12 20:06:04,667] 55 root - INFO - [INFO] gFEE3w7F0ww.json : Test cases created
+[ 2026-08-12 20:06:06,557] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:08,086] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:10,515] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:12,266] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:14,614] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:16,354] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:17,976] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:19,753] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:20,789] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:22,233] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:06:25,104] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,903] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,904] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,905] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,907] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,908] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,910] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,912] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:25,914] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,886] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,887] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,887] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,888] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,889] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,890] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,891] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,892] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,894] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,895] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:31,897] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,448] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,500] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,510] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,619] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,635] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,638] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,695] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,749] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,757] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,763] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,776] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,778] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,792] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,795] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,803] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,833] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:40,835] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:41,125] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:41,277] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:41,393] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:41,848] 85 root - INFO - [INFO] gFEE3w7F0ww.json : Evaluation completed for evaluation set: gFEE3w7F0ww.json
+[ 2026-08-12 20:06:41,879] 87 root - INFO - [INFO] gFEE3w7F0ww.json : Evaluation results saved
+[ 2026-08-12 20:06:41,879] 26 root - INFO - [INFO] hmtuvNfytjM&t.json Evaluation initiated for evaluation_set: hmtuvNfytjM&t.json
+[ 2026-08-12 20:06:41,881] 38 root - INFO - [INFO] hmtuvNfytjM&t.json : Evaluation set loaded from rag_evaluation\evaluation_set\hmtuvNfytjM&t.json
+[ 2026-08-12 20:06:41,947] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:06:42,000] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:06:43,802] 62 root - INFO - [INFO] hmtuvNfytjM : Video data for video id fetched.
+[ 2026-08-12 20:06:43,819] 105 root - INFO - [INFO] hmtuvNfytjM : Video data preprocessing completed 
+[ 2026-08-12 20:06:43,831] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-12 20:06:44,013] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:44,035] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:44,148] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:44,166] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:44,170] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-12 20:06:44,282] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:44,312] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:44,436] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:44,455] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:44,580] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:44,610] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:44,725] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:44,749] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:44,871] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:06:44,982] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:45,008] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:45,257] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:06:45,389] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:06:45,511] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:06:45,641] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:06:45,761] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:45,791] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:45,901] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:45,918] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:46,040] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:46,059] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:46,196] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:46,218] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:46,335] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:06:46,447] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:46,659] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:06:46,691] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:46,818] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:54,677] 178 root - INFO - [INFO] hmtuvNfytjM : 43 Semantic chunks created from processed transcript
+[ 2026-08-12 20:06:54,678] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-12 20:06:54,679] 190 root - INFO - [INFO] hmtuvNfytjM : 43 chunks saved to the disk
+[ 2026-08-12 20:06:54,679] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:06:55,680] 44 root - INFO - [INFO] Generating embeddings for 43 chunks
+[ 2026-08-12 20:06:56,188] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:56,563] 48 root - INFO - [INFO] Embeddings for 43 chunks generate. Embeddings shape: (43, 3072)
+[ 2026-08-12 20:06:56,590] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-12 20:06:56,591] 56 root - INFO - Embeddings with shape (43, 3072) saved on disk
+[ 2026-08-12 20:06:56,594] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-12 20:06:56,594] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-12 20:06:56,598] 46 root - INFO - [INFO] None : Embeddings with shape (43, 3072) added to faiss index
+[ 2026-08-12 20:06:56,726] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-12 20:06:56,727] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\hmtuvNfytjM
+[ 2026-08-12 20:06:56,733] 17 root - INFO - [INFO] Pickle file saved at faiss_store\hmtuvNfytjM\metadata.pkl
+[ 2026-08-12 20:06:56,733] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\hmtuvNfytjM
+[ 2026-08-12 20:06:56,738] 17 root - INFO - [INFO] Pickle file saved at faiss_store\hmtuvNfytjM\metadata.pkl
+[ 2026-08-12 20:06:56,739] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\hmtuvNfytjM
+[ 2026-08-12 20:06:56,743] 53 root - INFO - [INFO] hmtuvNfytjM New vectorstore build for hmtuvNfytjM
+[ 2026-08-12 20:06:56,745] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:06:56,746] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:06:58,469] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:06:58,487] 66 root - INFO - [INFO] Query embedding generated for query: What is one of the most exciting capabilities of GPT-5 according to Sam Altman?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:06:58,562] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:06:58,562] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-12 20:06:58,562] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:06:58,562] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What is one of the most exciting capabilities of GPT-5 according to Sam Altman?
+[ 2026-08-12 20:06:58,566] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:06:58,566] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:06:58,567] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:06:58,567] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:06:58,568] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:06:58,569] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:06:58,570] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:00,039] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:00,051] 66 root - INFO - [INFO] Query embedding generated for query: How does Sam Altman define superintelligence in the interview?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:00,054] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:00,055] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:00,056] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:00,057] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: How does Sam Altman define superintelligence in the interview?
+[ 2026-08-12 20:07:00,075] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:00,078] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:00,082] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:00,083] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:00,083] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:00,088] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:00,092] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:01,390] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:01,394] 66 root - INFO - [INFO] Query embedding generated for query: What are the three main categories limiting AI development discussed in the video?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:01,396] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:01,396] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:01,396] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:01,396] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What are the three main categories limiting AI development discussed in the video?
+[ 2026-08-12 20:07:01,400] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:01,401] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:01,402] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:01,402] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:01,402] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:01,403] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:01,404] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:03,020] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:03,036] 66 root - INFO - [INFO] Query embedding generated for query: What was the specific safety failing in ChatGPT that caught OpenAI off guard?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:03,040] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:03,040] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:03,041] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:03,042] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What was the specific safety failing in ChatGPT that caught OpenAI off guard?
+[ 2026-08-12 20:07:03,076] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:03,083] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:03,086] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:03,087] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:03,088] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:03,092] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:03,098] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:04,849] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:04,853] 66 root - INFO - [INFO] Query embedding generated for query: Why does Sam Altman believe the social contract might need to change in the future?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:04,854] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:04,855] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:04,855] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:04,855] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: Why does Sam Altman believe the social contract might need to change in the future?
+[ 2026-08-12 20:07:04,860] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:04,861] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:04,862] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:04,863] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:04,863] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:04,864] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:04,866] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:07,097] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:07,101] 66 root - INFO - [INFO] Query embedding generated for query: What is the main limitation to scaling compute for AI currently?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:07,103] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:07,103] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:07,103] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:07,104] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What is the main limitation to scaling compute for AI currently?
+[ 2026-08-12 20:07:07,172] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:07,173] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:07,174] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:07,174] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:07,175] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:07,176] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:07,178] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:09,009] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:09,022] 66 root - INFO - [INFO] Query embedding generated for query: What does Sam Altman say about the relationship between GPT-5 and coding?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:09,027] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:09,028] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:09,029] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:09,029] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What does Sam Altman say about the relationship between GPT-5 and coding?
+[ 2026-08-12 20:07:09,055] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:09,058] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:09,061] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:09,061] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:09,061] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:09,069] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:09,074] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:10,863] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:10,871] 66 root - INFO - [INFO] Query embedding generated for query: What is the 'Orion' model mentioned in the conversation?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:10,873] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:10,873] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:10,873] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:10,874] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What is the 'Orion' model mentioned in the conversation?
+[ 2026-08-12 20:07:10,878] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:10,879] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:10,880] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:10,880] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:10,880] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:10,882] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:10,883] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:12,416] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:12,424] 66 root - INFO - [INFO] Query embedding generated for query: How does Sam Altman suggest users prepare for the AI future?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:12,426] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:12,426] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:12,426] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:12,427] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: How does Sam Altman suggest users prepare for the AI future?
+[ 2026-08-12 20:07:12,430] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-08-12 20:07:12,431] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-08-12 20:07:12,432] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:12,432] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:12,432] 57 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-08-12 20:07:12,434] 66 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:07:12,435] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:07:14,145] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:14,160] 66 root - INFO - [INFO] Query embedding generated for query: What is the potential impact of AI on scientific discovery by late 2027?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:07:14,165] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-08-12 20:07:14,166] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-08-12 20:07:14,167] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:07:14,168] 102 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What is the potential impact of AI on scientific discovery by late 2027?
+[ 2026-08-12 20:07:14,185] 55 root - INFO - [INFO] hmtuvNfytjM&t.json : Test cases created
+[ 2026-08-12 20:07:15,546] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:17,136] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:18,721] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:20,151] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:22,555] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:25,147] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:27,095] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:28,277] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:29,593] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:31,582] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:07:33,781] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,500] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,501] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,502] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,503] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,505] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,506] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:34,507] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,559] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,561] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,561] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,563] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,564] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,566] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,568] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,570] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,570] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,571] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,572] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:38,573] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:49,954] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,100] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,132] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,169] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,179] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,212] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,299] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,434] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,562] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,586] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,674] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,683] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,817] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,867] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,881] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,970] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:50,997] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:51,107] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:51,489] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:51,702] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:51,900] 85 root - INFO - [INFO] hmtuvNfytjM&t.json : Evaluation completed for evaluation set: hmtuvNfytjM&t.json
+[ 2026-08-12 20:07:51,920] 87 root - INFO - [INFO] hmtuvNfytjM&t.json : Evaluation results saved
+[ 2026-08-12 20:07:51,921] 26 root - INFO - [INFO] sD468LfeVdc.json Evaluation initiated for evaluation_set: sD468LfeVdc.json
+[ 2026-08-12 20:07:51,946] 38 root - INFO - [INFO] sD468LfeVdc.json : Evaluation set loaded from rag_evaluation\evaluation_set\sD468LfeVdc.json
+[ 2026-08-12 20:07:51,955] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:07:51,958] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:07:54,237] 62 root - INFO - [INFO] sD468LfeVdc : Video data for video id fetched.
+[ 2026-08-12 20:07:54,257] 105 root - INFO - [INFO] sD468LfeVdc : Video data preprocessing completed 
+[ 2026-08-12 20:07:54,269] 190 sentence_transformers.base.model - INFO - No device provided, using cpu
+[ 2026-08-12 20:07:54,472] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:54,518] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:54,673] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:54,701] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:54,716] 1001 sentence_transformers.base.model - INFO - Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+[ 2026-08-12 20:07:54,841] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:54,862] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:54,978] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:55,009] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:55,136] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:55,155] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:55,292] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:55,323] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:55,455] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:07:55,578] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:55,606] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:55,938] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:07:56,075] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:07:56,239] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:07:56,395] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:07:56,506] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:56,529] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:56,869] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:56,887] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:57,007] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:57,025] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:57,144] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:57,166] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:57,292] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[ 2026-08-12 20:07:57,413] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:57,675] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+[ 2026-08-12 20:07:57,692] 1025 httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+[ 2026-08-12 20:07:57,806] 1025 httpx - INFO - HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:08,020] 178 root - INFO - [INFO] sD468LfeVdc : 50 Semantic chunks created from processed transcript
+[ 2026-08-12 20:08:08,021] 17 root - INFO - [INFO] Pickle file saved at data/chunks.pkl
+[ 2026-08-12 20:08:08,022] 190 root - INFO - [INFO] sD468LfeVdc : 50 chunks saved to the disk
+[ 2026-08-12 20:08:08,022] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:09,248] 44 root - INFO - [INFO] Generating embeddings for 50 chunks
+[ 2026-08-12 20:08:09,906] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:10,290] 48 root - INFO - [INFO] Embeddings for 50 chunks generate. Embeddings shape: (50, 3072)
+[ 2026-08-12 20:08:10,315] 17 root - INFO - [INFO] Pickle file saved at data/embeddings.pkl
+[ 2026-08-12 20:08:10,315] 56 root - INFO - Embeddings with shape (50, 3072) saved on disk
+[ 2026-08-12 20:08:10,316] 29 root - INFO - [INFO] None : Vector store initialised for None
+[ 2026-08-12 20:08:10,317] 44 root - INFO - [INFO] Empty Faiss index initialised
+[ 2026-08-12 20:08:10,318] 46 root - INFO - [INFO] None : Embeddings with shape (50, 3072) added to faiss index
+[ 2026-08-12 20:08:10,374] 26 root - INFO - [INFO] Pickle file data/chunks.pkl loaded
+[ 2026-08-12 20:08:10,374] 60 root - INFO - [INFO] None : Metadata stored in faiss_store\sD468LfeVdc
+[ 2026-08-12 20:08:10,383] 17 root - INFO - [INFO] Pickle file saved at faiss_store\sD468LfeVdc\metadata.pkl
+[ 2026-08-12 20:08:10,384] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\sD468LfeVdc
+[ 2026-08-12 20:08:10,391] 17 root - INFO - [INFO] Pickle file saved at faiss_store\sD468LfeVdc\metadata.pkl
+[ 2026-08-12 20:08:10,391] 72 root - INFO - [INFO] None : Saved faiss index and metadata to faiss_store\sD468LfeVdc
+[ 2026-08-12 20:08:10,414] 53 root - INFO - [INFO] sD468LfeVdc New vectorstore build for sD468LfeVdc
+[ 2026-08-12 20:08:10,417] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:10,418] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:12,222] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:12,229] 66 root - INFO - [INFO] Query embedding generated for query: Who is conducting the mock interview?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:12,324] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:12,325] 86 root - INFO - [INFO] None : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:12,325] 110 root - INFO - [INFO] None : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:12,326] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: Who is conducting the mock interview?
+[ 2026-08-12 20:08:12,339] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:12,340] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:12,341] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:12,341] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:12,341] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:12,343] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:12,345] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:14,507] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:14,512] 66 root - INFO - [INFO] Query embedding generated for query: What specific AI topics is Kylie Ying interested in?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:14,513] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:14,513] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:14,514] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:14,514] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What specific AI topics is Kylie Ying interested in?
+[ 2026-08-12 20:08:14,529] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:14,530] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:14,531] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:14,531] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:14,532] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:14,534] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:14,536] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:16,583] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:16,598] 66 root - INFO - [INFO] Query embedding generated for query: What is the primary bot issue described in the scenario?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:16,603] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:16,604] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:16,605] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:16,605] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What is the primary bot issue described in the scenario?
+[ 2026-08-12 20:08:16,623] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:16,630] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:16,633] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:16,635] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:16,636] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:16,644] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:16,648] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:18,305] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:18,309] 66 root - INFO - [INFO] Query embedding generated for query: What features does Kylie suggest investigating to detect bot accounts?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:18,310] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:18,311] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:18,311] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:18,311] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What features does Kylie suggest investigating to detect bot accounts?
+[ 2026-08-12 20:08:18,691] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:18,692] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:18,693] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:18,694] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:18,694] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:18,696] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:18,697] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:21,196] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:21,199] 66 root - INFO - [INFO] Query embedding generated for query: What is a specific internal system feature that could help identify spam?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:21,200] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:21,200] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:21,201] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:21,201] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What is a specific internal system feature that could help identify spam?
+[ 2026-08-12 20:08:21,215] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:21,215] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:21,216] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:21,217] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:21,217] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:21,218] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:21,220] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:22,819] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:22,849] 66 root - INFO - [INFO] Query embedding generated for query: Why might relying solely on user reports for spam labeling be problematic?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:22,852] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:22,852] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:22,853] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:22,853] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: Why might relying solely on user reports for spam labeling be problematic?
+[ 2026-08-12 20:08:22,864] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:22,867] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:22,871] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:22,871] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:22,872] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:22,877] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:22,882] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:24,363] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:24,365] 66 root - INFO - [INFO] Query embedding generated for query: What is the suggested approach for handling post timing in the model?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:24,366] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:24,366] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:24,367] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:24,367] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What is the suggested approach for handling post timing in the model?
+[ 2026-08-12 20:08:24,371] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:24,372] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:24,373] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:24,373] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:24,373] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:24,374] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:24,375] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:27,151] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:27,169] 66 root - INFO - [INFO] Query embedding generated for query: How does Kylie propose handling email address data for the model?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:27,173] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:27,174] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:27,176] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:27,176] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: How does Kylie propose handling email address data for the model?
+[ 2026-08-12 20:08:27,192] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:27,194] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:27,195] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:27,196] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:27,196] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:27,200] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:27,202] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:29,042] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:29,049] 66 root - INFO - [INFO] Query embedding generated for query: What technical implementation strategy does Keith suggest for processing high volumes of tweets?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:29,052] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:29,053] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:29,054] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:29,054] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What technical implementation strategy does Keith suggest for processing high volumes of tweets?
+[ 2026-08-12 20:08:29,067] 41 root - INFO - [INFO] sD468LfeVdc : Extracted video id from url
+[ 2026-08-12 20:08:29,071] 29 root - INFO - [INFO] sD468LfeVdc : Vector store initialised for sD468LfeVdc
+[ 2026-08-12 20:08:29,074] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:29,074] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:29,075] 57 root - INFO - [INFO] sD468LfeVdc Existing vetorstore loaded for sD468LfeVdc
+[ 2026-08-12 20:08:29,079] 66 root - INFO - [INFO] sD468LfeVdc OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-12 20:08:29,083] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-12 20:08:30,788] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:30,794] 66 root - INFO - [INFO] Query embedding generated for query: What is the significance of the follower-to-following ratio in detecting bots?. Query embedding dimension: (1, 3072)
+[ 2026-08-12 20:08:30,796] 26 root - INFO - [INFO] Pickle file faiss_store\sD468LfeVdc\metadata.pkl loaded
+[ 2026-08-12 20:08:30,796] 86 root - INFO - [INFO] sD468LfeVdc : Faiss index and Metadata loaded
+[ 2026-08-12 20:08:30,797] 110 root - INFO - [INFO] sD468LfeVdc : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-08-12 20:08:30,797] 102 root - INFO - [INFO] sD468LfeVdc Query search completed. Relevant context extracted for query: What is the significance of the follower-to-following ratio in detecting bots?
+[ 2026-08-12 20:08:30,804] 55 root - INFO - [INFO] sD468LfeVdc.json : Test cases created
+[ 2026-08-12 20:08:32,198] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:33,580] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:34,895] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:35,951] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:36,987] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:38,113] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:39,205] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:40,247] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:41,270] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:42,740] 546 deepeval.evaluate.execute.e2e - INFO - in _a_execute_llm_test_cases
+[ 2026-08-12 20:08:45,038] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,919] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,920] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,921] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,922] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,923] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,924] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,925] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:45,925] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,252] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,255] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,256] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,258] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,259] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,260] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,261] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,262] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,262] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,263] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:51,264] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,650] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,716] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,741] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,751] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,816] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,831] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,892] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,898] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,921] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:58,975] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,009] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,103] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,131] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,252] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,342] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,481] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,668] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,771] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,785] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:08:59,824] 1740 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-08-12 20:09:00,070] 85 root - INFO - [INFO] sD468LfeVdc.json : Evaluation completed for evaluation set: sD468LfeVdc.json
+[ 2026-08-12 20:09:00,099] 87 root - INFO - [INFO] sD468LfeVdc.json : Evaluation results saved

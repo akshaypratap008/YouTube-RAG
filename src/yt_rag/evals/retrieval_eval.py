@@ -63,12 +63,12 @@ class RetrivalEval:
         self.hyperparameters = {
             "retriever": "base_k5",
             "embedding_model": "text-embedding-3-large",
-            "similarity_threshold": 0.45,
+            "similarity_threshold": 0.60,
             "max_tokens": 300,
-            "overlap": 1,
+            "overlap": 2,
             "top_k": 5,
             "judge_model": LLM_JUDGE_MODEL,
-            "eval_set": "0jspaMLxBig.json"
+            "eval_set": self.eval_set_name
         }
 
         try:
@@ -91,17 +91,24 @@ class RetrivalEval:
 
     def save_results(self, result):
         recall_scores = []
-        precission_score = []
+        precision_scores = []
+
+        success_count = 0
+        failure_count = 0
 
         for test_result in result.test_results:
             for metric in test_result.metrics_data:
                 if metric.name == "Contextual Recall":
                     recall_scores.append(metric.score)
                 elif metric.name == "Contextual Precision":
-                    precission_score.append(metric.score)
+                    precision_scores.append(metric.score)
+                if metric.success:
+                    success_count += 1
+                else :
+                    failure_count += 1
 
         final_recall_score = np.mean(recall_scores)
-        final_precission_score = np.mean(precission_score)
+        final_precision_score = np.mean(precision_scores)
 
     
         result_df = pd.DataFrame([{
@@ -112,7 +119,9 @@ class RetrivalEval:
             "max_token": self.hyperparameters.get("max_tokens"),
             "top_k": self.hyperparameters.get("top_k"),
             "recall_score": final_recall_score,
-            "precission_score": final_precission_score
+            "precision_score": final_precision_score,
+            "success" : success_count,
+            "failure": failure_count
         }])
 
         try:
