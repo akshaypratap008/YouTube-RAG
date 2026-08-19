@@ -10,3 +10,4 @@ langsmith
 pandas
 deepeval
 pytest
+langgraph

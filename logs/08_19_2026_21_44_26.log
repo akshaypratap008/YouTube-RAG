@@ -1,0 +1,33 @@
+[ 2026-08-19 21:54:40,543] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-08-19 21:54:40,545] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-08-19 21:54:40,545] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-08-19 21:54:41,550] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-08-19 23:10:05,605] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:11:59,694] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:11:59,708] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:11:59,710] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-19 23:11:59,853] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-19 23:11:59,853] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-19 23:11:59,853] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-19 23:12:05,361] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-19 23:20:34,183] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:24:57,750] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:29:32,344] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:29:32,365] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:29:32,366] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-19 23:29:32,383] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-19 23:29:32,383] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-19 23:29:32,383] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-19 23:29:32,386] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-19 23:29:32,389] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-19 23:29:37,518] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"
+[ 2026-08-19 23:32:31,971] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:32:31,979] 41 root - INFO - [INFO] 7ARBJQn6QkM : Extracted video id from url
+[ 2026-08-19 23:32:31,980] 29 root - INFO - [INFO] 7ARBJQn6QkM : Vector store initialised for 7ARBJQn6QkM
+[ 2026-08-19 23:32:31,982] 26 root - INFO - [INFO] Pickle file faiss_store\7ARBJQn6QkM\metadata.pkl loaded
+[ 2026-08-19 23:32:31,983] 86 root - INFO - [INFO] 7ARBJQn6QkM : Faiss index and Metadata loaded
+[ 2026-08-19 23:32:31,983] 57 root - INFO - [INFO] 7ARBJQn6QkM Existing vetorstore loaded for 7ARBJQn6QkM
+[ 2026-08-19 23:32:31,984] 66 root - INFO - [INFO] 7ARBJQn6QkM OpenAI chat model initialised: gpt-4o-mini
+[ 2026-08-19 23:32:31,986] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-08-19 23:32:34,110] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 401 Unauthorized"

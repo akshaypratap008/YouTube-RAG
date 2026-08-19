@@ -3,6 +3,8 @@ from src.yt_rag.components.search import RAGSearch
 # from src.yt_rag.components.embedding import EmbeddingManager
 # from src.yt_rag.components.vectorstore import FaissVectorStore, VectorStoreManager
 
+
+
 url = "https://www.youtube.com/watch?v=7ARBJQn6QkM&t=1040s"
 # loader = DataLoader(url = url)
 # video_data = loader.fetch_video_data()
