@@ -1,0 +1,116 @@
+{
+  "video_title": "Sam Altman Shows Me GPT 5... And What's Next",
+  "video_url": "https://www.youtube.com/watch?v=hmtuvNfytjM&t=811s",
+  "goldens": [
+    {
+      "input": "What is one of the most exciting capabilities of GPT-5 according to Sam Altman?",
+      "expected_output": "He is most excited that for the first time, he can ask the model any hard scientific or technical question and get a pretty good answer, specifically highlighting its ability to write software almost instantaneously.",
+      "context": [
+        "the thing that I am most excited about is this is a model for the first time where I feel like I can ask kind of any hard scientific or technical question and get a pretty good answer"
+      ],
+      "metadata": {
+        "timestamp": "04:49",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "How does Sam Altman define superintelligence in the interview?",
+      "expected_output": "He defines it as a system that could perform better AI research than the entire OpenAI research team, or one that could do a better job running OpenAI than he could.",
+      "context": [
+        "If we had a system that could do better research, better AI research than uh say the whole open AI research team, like if we were willing, if we said, \"Okay, the best way we can use our GPUs is to let this AI decide what experiments we should run smarter than like the whole brain trust of Open AAI.\" Yeah. And if that same to make a personal example, if that same system could do a better job running open AI than I could. So you have something that's like, you know, better than the best researchers, better than me at this, better than other people at their jobs, that would feel like super intelligence to me"
+      ],
+      "metadata": {
+        "timestamp": "13:17",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What are the three main categories limiting AI development discussed in the video?",
+      "expected_output": "The three main categories are compute (infrastructure/chips/energy), data, and algorithmic design.",
+      "context": [
+        "there are three big categories that have been limiting factors for AI. The first is compute, the second is data and the third is algorithmic design"
+      ],
+      "metadata": {
+        "timestamp": "24:34",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What was the specific safety failing in ChatGPT that caught OpenAI off guard?",
+      "expected_output": "The model was being too sycophantic, or 'too flattering,' to users, which, while annoying for most, encouraged delusions in users with fragile mental states.",
+      "context": [
+        "we had this issue with sickency where the model was kind of being too flattering to users and for some users it was most users it was just annoying but for some users that had like fragile mental states it was encouraging delusions"
+      ],
+      "metadata": {
+        "timestamp": "52:13",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "Why does Sam Altman believe the social contract might need to change in the future?",
+      "expected_output": "He discusses how AI will transform knowledge work and jobs, and implies that as tools evolve and society competes, our expectations of what humans do versus what machines do will shift.",
+      "context": [
+        "something fundamental about the social contract may have to change. It may not. It may it may be that like actually capitalism works as it's been working surprisingly well and like demand supply balances do their thing and we all just figure out kind of new jobs and new ways to transfer value to each other. But it seems to me likely that we will decide we need to think about how access to this maybe most important resource of the future gets shared"
+      ],
+      "metadata": {
+        "timestamp": "43:00",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is the main limitation to scaling compute for AI currently?",
+      "expected_output": "The most significant limiting factor is energy availability, specifically the difficulty of finding gigawatts of power to run massive data centers.",
+      "context": [
+        "We're currently most limited by energy. um you know like if you're gonna you want to run a gigawatt scale data center it's like a gigawatt how hard can that be to find it's really hard to find a gigawatt of power available in short term"
+      ],
+      "metadata": {
+        "timestamp": "27:04",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What does Sam Altman say about the relationship between GPT-5 and coding?",
+      "expected_output": "He notes that GPT-5 is so good at programming that it makes the computer feel like it can do almost anything, allowing users to express ideas in new, highly effective ways.",
+      "context": [
+        "this idea of the AI can write software for anything. And that means that you can express ideas in new ways that the AI can do very advanced things. It can do, you know, it can like in some sense you could like ask GPT4 anything, but because GPT5 is so good at programming, it feels like it can do anything. Of course, it can't do things in the physical world, but it can get a computer to do very complex things"
+      ],
+      "metadata": {
+        "timestamp": "09:25",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What is the 'Orion' model mentioned in the conversation?",
+      "expected_output": "Orion was a model released as GPT-4.5 that was considered too big and unwieldy, leading the team to pivot their scaling strategy toward better returns on reasoning.",
+      "context": [
+        "we did a model called Orion that we released as GPT 4.5. And we had we did too big of a model. It was just it was it's a very cool model, but it's unwieldly to use. And we realized that for kind of some of the research we need to do on top of a model, we need a different shape. So we we followed one scaling law that kept being good without without really internalizing. There was a new even steeper scaling law that we got better returns for compute on, which was this reasoning thing"
+      ],
+      "metadata": {
+        "timestamp": "33:06",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "How does Sam Altman suggest users prepare for the AI future?",
+      "expected_output": "His number one piece of tactical advice is to simply use the tools to become fluent with their capabilities and figure out how to integrate them into daily life.",
+      "context": [
+        "The number one piece of tactical advice is just use the tools. Like the the number of people that I have the the most common question I get asked about AI is like what should I how should I help my kids prepare for the world? What should I tell my kids? The second most question is like how do I invest in this AI world? But stick with that first one. Um I am surprised how many people ask that and have never tried using Chachi PT for anything other than like a better version of a Google search. And so the number one piece of advice that I give is just try to like get fluent with the capability of the tools"
+      ],
+      "metadata": {
+        "timestamp": "59:00",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What is the potential impact of AI on scientific discovery by late 2027?",
+      "expected_output": "Altman predicts that by late 2027, most people will agree that there has been a significant new AI-driven scientific discovery.",
+      "context": [
+        "I would say most people will agree that that happens at some point over the next two years. But the definition of significant matters a lot. And so some people significant might happen, you know, in early 25. Some people might maybe not until late 2026. Sorry, early 2026. Maybe some people not until late 2027, but I would I would bet that by late 27, most people agree that there has been an AIdriven significant new discovery"
+      ],
+      "metadata": {
+        "timestamp": "11:47",
+        "difficulty": "medium"
+      }
+    }
+  ]
+}

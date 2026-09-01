@@ -22,22 +22,35 @@ url = "https://www.youtube.com/watch?v=7ARBJQn6QkM&t=1040s"
 
 # iniating full pipeline directly through RAGSearch
 # VectorStoreManager().reset()
-rag = RAGSearch(url = url)
+# rag = RAGSearch(url = url)
 
-query = "How does the RTX 50 Series use AI to process images differently than traditional rendering? "
-print("Query: ", query)
-print()
+# query = "How does the RTX 50 Series use AI to process images differently than traditional rendering? "
+# print("Query: ", query)
+# print()
 
-relevant_chunks = rag.search(query= query, top_k = 5)
+# relevant_chunks = rag.search(query= query, top_k = 5)
 
-context = " ".join(relevant_chunks)
+# context = " ".join(relevant_chunks)
 
-result = rag.generate_response(context=context, query=query)
-print(result)
+# result = rag.generate_response(context=context, query=query)
+# print(result)
 
-timestamps = rag.get_video_timestamps()
-print("Timestamps: ", timestamps)
+# timestamps = rag.get_video_timestamps()
+# print("Timestamps: ", timestamps)
 
+from langgraph_app import rag_workflow
+
+url = "https://www.youtube.com/watch?v=98o_L3jlixw&t=695s"
+query = "Who is the host in the podcast?"
+
+initial_state = {
+    "video_url" : url,
+    "query" : query
+}
+
+config = {'run_name': "langgraph_full_workflow"}
+response = rag_workflow.invoke(initial_state, config=config)
+print(response['answer'])
 
 
 

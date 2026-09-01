@@ -1,0 +1,116 @@
+{
+  "video_title": "NVIDIA CEO Jensen Huang's Vision for the Future",
+  "video_url": "https://www.youtube.com/watch?v=7ARBJQn6QkM&t=1051s",
+  "goldens": [
+    {
+      "input": "What are the two types of processing that the 'perfect computer' should be able to do according to Jensen Huang?",
+      "expected_output": "The perfect computer must be capable of both sequential processing (for about 90% of code) and parallel processing (for the 10% of code that accounts for 99% of processing tasks).",
+      "context": [
+        "there are just a few lines of code, maybe10% of the code, does 99% % of the processing and that 99% of the processing could be donein parallel. However the other 90% of the code has to be done sequentially. It turns out thatthe proper computer the perfect computer is one that could do sequential processing and parallelprocessing not just one or the other"
+      ],
+      "metadata": {
+        "timestamp": "04:41",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "Why did NVIDIA focus on video games as its primary market in the early days?",
+      "expected_output": "NVIDIA chose video games because they required parallel processing for 3D graphics and represented a potentially massive entertainment market, which provided the revenue needed to fund R&D for more advanced technologies.",
+      "context": [
+        "video games has potential to be the largestmarket for for entertainment ever. And it turned out to be true. And having it being a large marketis important because the technology is complicated and if we had a large market, our R&D budget couldbe large, we could create new technology. And that flywheel between technology and market and greatertechnology was really the flywheel that got NVIDIA to become one of the most importanttechnology companies in the world. It was all because of video games"
+      ],
+      "metadata": {
+        "timestamp": "05:45",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What is the function of CUDA in the context of GPU computing?",
+      "expected_output": "CUDA is a software platform that allows programmers to use familiar languages like C to instruct GPUs, making parallel processing accessible for general-purpose applications beyond just graphics.",
+      "context": [
+        "it's a platform called CUDA which lets programmers tell the GPU what to do usingprogramming languages that they already know like C"
+      ],
+      "metadata": {
+        "timestamp": "08:29",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "Why was the 2012 'AlexNet' model a turning point for AI and NVIDIA?",
+      "expected_output": "AlexNet demonstrated that neural networks could drastically outperform previous methods in image recognition when trained on large datasets using parallel processing, marking the shift from manual instruction to training computers to learn.",
+      "context": [
+        "In 2012, a group of three researchers submits an entry to a famous competition where the goal isto create computer systems that could recognize images and label them with categories. And theirentry just crushes the competition. It gets way fewer answers wrong. It was incredible. It blowseveryone away. It's called AlexNet, and it's a kind of AI called the neural network. My understandingis one reason it was so good is that they used a huge amount of data to train that systemand they did it on NVIDIA GPUs. All of a sudden, GPUs weren't just a way to make computers fasterand more efficient they're becoming the engines of a whole new way of computing. We're moving frominstructing computers with step-by-step directions to training computers to learn by showing them ahuge number of examples"
+      ],
+      "metadata": {
+        "timestamp": "11:04",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "How does Jensen Huang explain the concept of 'AI hallucination' and how it is mitigated?",
+      "expected_output": "Hallucination occurs when an AI generates plausible but ungrounded answers. It is mitigated by 'grounding' the model with specific context or data sources—such as PDFs or search results—that serve as the 'ground truth.'",
+      "context": [
+        "it has the tendency to hallucinate if it goes on too long or if it pontificates abouta topic it you know is not informed about, it'll still do a good job generating plausible answers.It just wasn't grounded in the truth. And so people called it hallucination. Andso the next generation shortly it was, it had the ability to be conditioned by context, soyou could upload your PDF and now it's grounded by the PDF. The PDF becomes the ground truth. Itcould be it could actually look up search and then the search becomes its ground truth. Andbetween that it could reason about what is how to produce the answer that you're asking for. Andso the first part is a generative AI and the second part is ground truth"
+      ],
+      "metadata": {
+        "timestamp": "26:54",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is the role of Omniverse and Cosmos in the future of robotics?",
+      "expected_output": "Omniverse provides a physics-based 3D simulation environment, while Cosmos acts as a 'world model.' Together, they allow robots to be trained on vast amounts of data in digital environments, grounding their learning in physical laws like gravity and friction.",
+      "context": [
+        "the way we augment Cosmoswith ground truth is with physical simulations, because Omniverse uses physics simulation whichis based on principled solvers. The mathematics is Newtonian physics is the, right, it's the math weknow, all of the the fundamental laws of physics we've understood for a very longtime. And it's encoded into, captured into Omniverse. That's why Omniverse is a simulator"
+      ],
+      "metadata": {
+        "timestamp": "28:20",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "How has the energy efficiency of NVIDIA's AI supercomputers changed since 2016?",
+      "expected_output": "Jensen Huang notes that their latest hardware is 10,000 times more energy-efficient for AI computing compared to the original DGX-1 delivered to OpenAI in 2016.",
+      "context": [
+        "The very first version was DGX 1, Idelivered to Open AI in 2016 and that was $250,000. 10,000 times more power, more energy necessarythan this version and this version has six times more performance"
+      ],
+      "metadata": {
+        "timestamp": "37:15",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What is Jensen Huang's stance on the long-term relevance of the 'Transformer' architecture?",
+      "expected_output": "He views the Transformer as a stepping stone. He believes that future evolutions will be so significant that current architectures will be barely recognizable, emphasizing the need for flexible hardware that supports ongoing innovation.",
+      "context": [
+        "that transformer is the last AI algorithm, AI architecture that any researcher willever discover again, or that transformers is a stepping stone towards evolutions oftransformers that are uh barely recognizable as a transformer years from now. And we believe thelatter"
+      ],
+      "metadata": {
+        "timestamp": "39:45",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "How does the RTX 50 Series use AI to improve graphics performance?",
+      "expected_output": "Instead of rendering all 8 million pixels of a 4K display, it renders only 500,000 pixels through ray tracing and uses AI to 'guess' or extrapolate the remaining pixels, resulting in a perfect image with higher efficiency.",
+      "context": [
+        "Out of 8 million pixels or so ina 4K display we are computing, we're processing only 500,000 of them. The rest of them we use AIto predict. The AI guessed it and yet the image is perfect. We inform it by the 500,000 pixels that wecomputed and we ray traced every single one and it's all beautiful. It's perfect. And then we tell theAI, if these are the 500,000 perfect pixels in this screen, what are the other 8 million? And it goes itfills in the rest of the screen and it's perfect"
+      ],
+      "metadata": {
+        "timestamp": "53:14",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What is Jensen Huang's primary advice for students entering the workforce today?",
+      "expected_output": "He advises students to learn how to interact with AI, specifically focusing on the 'art' of prompting and constantly asking how AI can be used to improve performance in their specific field of study or work.",
+      "context": [
+        "if I were a student today the first thing I would do is to learn AI. How doI learn to interact with ChatGPT, how do I learn to interact with Gemini Pro, and how do I learnto interact with Grok? Learning how to interact with with AI is not unlike beingsomeone who is really good at asking questions. You're incredibly good at asking questions andand prompting AI is very very similar. You can't just randomly ask a bunch of questionsand so asking an AI to be assistant to you requires some expertise andartistry and how to prompt it. And so if I were, if I were a student today, irrespective whetherit's for for math or for science or chemistry or biology or doesn't matter what field of scienceI'm going to go into or what profession, I'm going to ask myself, how can I use AI to do my jobbetter"
+      ],
+      "metadata": {
+        "timestamp": "55:50",
+        "difficulty": "easy"
+      }
+    }
+  ]
+}

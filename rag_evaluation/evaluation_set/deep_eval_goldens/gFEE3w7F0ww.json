@@ -1,0 +1,117 @@
+{
+  "video_title": "Travis Oliphant: NumPy, SciPy, Anaconda, Python & Scientific Programming | Lex Fridman Podcast #224",
+  "video_url": "https://www.youtube.com/watch?v=gFEE3w7F0ww",
+  "goldens": [
+    {
+      "input": "What was the first computer program Travis Oliphant ever wrote?",
+      "expected_output": "It was a simple loop in BASIC on an Atari 800 or 400 computer during a class in the fourth grade.",
+      "context": [
+        "i think it was infourth grade just a simple uh loop inbasic basic basic on an atari 800 atari400 i think or maybe there's an atari800 it was at a part of a class and wejust were just basic loopsto print things out"
+      ],
+      "metadata": {
+        "timestamp": "01:11",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What specific gap did the 'Numeric' library fill in the Python ecosystem?",
+      "expected_output": "It provided an array object, specifically an n-dimensional array, which was previously missing from the Python language.",
+      "context": [
+        "what gap did numeric fill merrick fillthe gap of having an array object sothere was no array out there was noarray there was a one dimensionalbyte concept but there was nouh n-dimensional two threefour-dimensional tensor they call it now"
+      ],
+      "metadata": {
+        "timestamp": "10:46",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "Why did Travis create SciPy?",
+      "expected_output": "He was using Python for scientific tasks previously handled by MATLAB but was missing critical tools like ordinary differential equation solvers, integration functions, and optimization algorithms.",
+      "context": [
+        "there's things that weremissing like i didn't have an ordinarydifferential equation solver i couldjust call right i didn't haveintegration hey i wanted to integratethis function okay well i don't havejust a function i can call to do thatum these are things i remember beingcritical things that i was missingoptimization i just want to pass afunction to an optimizer and have ittell me what the optimum value isuh those are things like well why don'twe just write a library that adds thesetools"
+      ],
+      "metadata": {
+        "timestamp": "23:19",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What is the primary difference in philosophy between 'conda' and 'pip' as described by Travis?",
+      "expected_output": "Conda was designed to be a cross-operating system and language-independent package manager that addresses binary dependency complexities, whereas pip had not historically addressed the binary dependency problem as deeply.",
+      "context": [
+        "apackage manager that works on windowsmac os 10 and linux the sameright and it wasn't there like you don'thave anything like that you have and forpeople who don't know rpm is redoperating system specific packagingcorrect it's an operating specific yesso do you create the the design uhquestions do you create an umbrellapackage manager then yes cross operatingsystem yes that was the decision and aneighboring design question is do youalso create a package manager that spansmultiple programming languages correctexactly that was the world we faced andwe decided to go multiple operatingsystems multiple and programminglanguage independent because even pythonin particular was important was scipyhas a bunch of 4chan in it right andscikit-learn has links to a bunch of cplus there's a lot of compiled code andthe python package managers especiallyearly on didn't even support that"
+      ],
+      "metadata": {
+        "timestamp": "212:26",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What are the three main things people are willing to pay for in open-source infrastructure?",
+      "expected_output": "According to Travis, people will pay for really good user interfaces, faster runtimes (efficiency), and professional support/services.",
+      "context": [
+        "people will pay for one they'll pay forreally good user interfacesright and so and so i'm always lookingfor what are the things people will payfor that you can actually adapt to theopen source infrastructure one isdefinitely user interfaces the second isspeed yeah like a better run time fasterrun time and then when you say peopleyou mean like a small number of peoplepay a lot of money but then there's alsothis other mechanism that that's true aton of people pay that's true a littlebit"
+      ],
+      "metadata": {
+        "timestamp": "205:33",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "How does Quansight Labs fund its non-profit mission to support open-source maintainers?",
+      "expected_output": "Quansight Labs is funded through a portion of the profits from the Quansight consulting business and their venture fund, Quansight Initiate.",
+      "context": [
+        "quonsite labs is aseparate organization it's a non-profitmissionthe profits of quansite help fund it infact every project that wehave at quansite a portion of the moneygoes directly to quansite labs to helpkeep it funded",
+        "ineed to create a venture fund so wecreated a venture fund called quonsetinitiate at the same time it's an angelfund really"
+      ],
+      "metadata": {
+        "timestamp": "226:24",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What is the main goal of the 'data-apis.org' project?",
+      "expected_output": "The goal is not to unify all array implementations, but to create a unified API standard so that different libraries (like PyTorch and TensorFlow) can operate nicely over multi-dimensional arrays.",
+      "context": [
+        "we are working onsomething now calleddatadashapis.org data.api.org you can gothere today and it'sit's our answer it's my answer you knowit's not just me it's me and ralph andand athen and aaron and a lot ofcompanies are helping us at quansitelabsuh it's not unifying all the arrays it'screating an api that is unified"
+      ],
+      "metadata": {
+        "timestamp": "122:55",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is 'Numba' and how does it improve Python's performance?",
+      "expected_output": "Numba is a tool that maps Python byte code to LLVM to produce compiled, native binary code, allowing for significant speed increases, particularly for array operations.",
+      "context": [
+        "the whole goal of numberis to translate python byte codeto llvm and so lvm actually does thecode generation"
+      ],
+      "metadata": {
+        "timestamp": "199:39",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "Why does Travis suggest that hiring is 'multi-dimensional'?",
+      "expected_output": "He argues that measuring candidates against a single axis (like 'best' or 'worst') is flawed because the space of skills is multi-dimensional and different stages of a company require different specific capabilities.",
+      "context": [
+        "thewhole idea of measuring ourselvesagainst the unit a single axis is flawedbecause we're not it's amulti-dimensional space and how do youorder a multi-dimensional space thereisn't one ordering so this whole ideayou you immediately have projected intoa thing when you're talking about hiringor best or worst or better or not betterso what is the thing you're actuallyneeding"
+      ],
+      "metadata": {
+        "timestamp": "258:33",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is the significance of the 'bolt-ons' mentioned regarding TensorFlow?",
+      "expected_output": "Travis criticizes the early API design of TensorFlow, which felt like an awkward addition to the Python ecosystem rather than being built natively for it, leading to a poor user experience for Python developers.",
+      "context": [
+        "bothgoogle and facebookdid not it's not like they supportedpython or numpy initially they justrealized they had to they they came tothis world and then all the users likehey where's the numpy interfaceoh and then they kind of came late to itand then they had these bolt-onstensorflow's bolt oni don't mean to offend but it was so bad"
+      ],
+      "metadata": {
+        "timestamp": "124:54",
+        "difficulty": "difficult"
+      }
+    }
+  ]
+}

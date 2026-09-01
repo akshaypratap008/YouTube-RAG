@@ -1,0 +1,117 @@
+{
+  "video_title": "Data Science Job Interview – Full Mock Interview",
+  "video_url": "https://www.youtube.com/watch?v=sD468LfeVdc&t=4858s",
+  "goldens": [
+    {
+      "input": "Who is conducting the mock interview?",
+      "expected_output": "The interviewer is Keith Galli, a senior data scientist.",
+      "context": [
+        "KeithGalli is an experienced data scientistand interviewer, and in this video heinterviews Kylie Ying"
+      ],
+      "metadata": {
+        "timestamp": "07:38",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What specific AI topics is Kylie Ying interested in?",
+      "expected_output": "She is particularly interested in reinforcement learning, robotics, and building superhuman AIs for games like chess and poker.",
+      "context": [
+        "I think I'm reallyinterested in reinforcement learningumand just getting a computer to beathumans at certain things or robotics inthe sense of like self-driving cars. Ithink that's really interesting, beingable to teach a robot how tointeract and basically do what a humanwould do. Um also things like superhumanchess AIs or superhuman poker AIs"
+      ],
+      "metadata": {
+        "timestamp": "06:23",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What is the primary bot issue described in the scenario?",
+      "expected_output": "The platform faces coordinated bot attacks where bots quickly reply to posts (specifically from the CEO, Mr. Elong Tusk) to promote scams, money schemes, or share propaganda and fake news.",
+      "context": [
+        "our CEO, Mr. Elon Tusk,it has been complaining a lot recently.We're a social media site. Um, maybesimilar to something that you might beaware of. Um, butour CEO has been complaining a lotrecently about the serious bot issuethat's kind of infiltrated our site or,you know, he kind of has mentioned hasinfiltrated our site and uh,become aa serious issue that we want to look at.We want to, you know, mitigate and andand solve. So, you know, some thingsthat these bots are causing some issuesare,you know, they're quickly responding,you know, when our CEO posts and youknow, within a minute there's, you know,hundreds of replies promoting some sortof, you know, site, some sort ofprogram, some sort of, you know, moneyscheme. Uh, so there's bots that aredoing these, you know, quick postings.Uh, there's, you know, coordinated botsthat are all over the, you know, theecosystem that areuh, sharing propagandist messages andsharing fake news messages"
+      ],
+      "metadata": {
+        "timestamp": "08:37",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What features does Kylie suggest investigating to detect bot accounts?",
+      "expected_output": "She suggests looking at the content of posts (hashtags, links, timing), account attributes (follower/following counts and ratios), and engagement data (repetitive content, whether followers are also spam accounts).",
+      "context": [
+        "So, I think in terms of content of thepost, these are things such as um howmany people do they tag?How many tags? Or for example,um timing of the post or words mentionedin the post.umWhat are other things? Maybe links.Maybemaybe images.umLet's see what else.When I make a post,I type something, send it out, maybe tagWell, okay. By tags I meanaccounts tagged, but also I think likekeyword tags could also be another thingto look at.Okay. So, like hashtags versus accountstagged. Accounts versus Yeah, that makessense.Yeah. Yeah. Yeah. Hashtags.umSo, I think that's thatthat covers a lot of like what would bein a post. And then the account makingthe post, we might want to see like howmany followersYep.they have.Uh maybethe number of accounts following orfollowed.Yep.So, followers and follow me following.Mhm.Umand I think maybe like looking at aratio between that mightbe a good idea as well",
+        "the types of posts that they make.Like how repetitive are the posts thatthey make?So, if the account is posting the samething every time,like hey, check out mylikeYeah.YouTube video and the same link everysingle time, then it's likely thatthat's spam, right?Mhm.Umcontent ofaccount posts"
+      ],
+      "metadata": {
+        "timestamp": "15:46",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What is a specific internal system feature that could help identify spam?",
+      "expected_output": "The team could use the 'report spam' data, where high counts or rates of users marking a post or account as spam serve as a key indicator.",
+      "context": [
+        "you guys have probably a report spamfeature. correct?Yeah. Yeah, we do.Okay, so I would say likeI meansomething that we could do is how manytimes has it been reported spam.Mhm.Umor like how many times has somethingsimilar been reported spam.But I do think that is a big indicationin terms of both the content and theaccount itself"
+      ],
+      "metadata": {
+        "timestamp": "19:08",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "Why might relying solely on user reports for spam labeling be problematic?",
+      "expected_output": "It can be influenced by bad actors or trolls who might conduct targeted attacks to label innocent users as spam, making the system less robust.",
+      "context": [
+        "there's a lot of trolls on socialmedia, a lot of people that are badactors. And when we're designing asystem like this, we need to keep thatin mind. There might be targetedattacks, people labeling something theydon't like as spam"
+      ],
+      "metadata": {
+        "timestamp": "49:31",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What is the suggested approach for handling post timing in the model?",
+      "expected_output": "Convert timestamps into an integer representation, such as seconds or milliseconds since the Epoch, to detect spikes in activity, like 10 posts occurring within a single second.",
+      "context": [
+        "timing of posts. I think that can beeasily converted touh likean epoch value or something. Umand the only reason why I want toconsider the timing of the post isbecauseif for example, the last 10 posts wereposted within like 1 second of eachother,Yeah.that probably indicates a spam bot,right? Um so that's the only reason whyI want to consider this timing and Ithink that it would make sense to maybeuse some sort of integer representation.So maybe like seconds or millisecondssince epoch"
+      ],
+      "metadata": {
+        "timestamp": "38:11",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "How does Kylie propose handling email address data for the model?",
+      "expected_output": "She suggests an encoding scheme using common email domains (binary 0 or 1) and checking for random characters in the prefix, as bots may use low-quality or suspicious email patterns.",
+      "context": [
+        "email addresses of the account.Yeah.So, that could go under the accountmaking the post. So, like email address.Um I don't know whether or not yourequire all these emails to be verifiedbut maybe likemaybe if it'snot a common domainMhm.or maybe ifummaybe if like there's a lot of randomletters inthe email like the prefix, then thosecould all point toummore spam-like"
+      ],
+      "metadata": {
+        "timestamp": "35:39",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What technical implementation strategy does Keith suggest for processing high volumes of tweets?",
+      "expected_output": "He suggests using batching to process groups of tweets at once rather than handling them individually, which would be inefficient given the volume on the platform.",
+      "context": [
+        "a big thing that you could havebrought up was like batching.And just explicitly mentioned like youprobably don't want to take one tweet ata time cuz that's going to likelike if we think about all of Gwitteras a parallel to Twitter obviously.Umthere's so many tweets happening.There's so many potential bot accountsthat if we were trying to handle theseon an individual level, like it wouldjust be in crazy like intenseprocessing. So we would need to like,you know, maybe we have a window openfor 5 seconds or something that likecollects a big batch of these"
+      ],
+      "metadata": {
+        "timestamp": "120:45",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is the significance of the follower-to-following ratio in detecting bots?",
+      "expected_output": "It acts as a feature to identify accounts that follow a massive number of users while having very few followers themselves, which is a common behavior pattern for spam bots.",
+      "context": [
+        "looking at aratio between that mightbe a good idea as well.UmSay that one more time. I missed that.Maybe like the ratio betweenOkay.the number of accounts that they followand then how many followers theyactually have"
+      ],
+      "metadata": {
+        "timestamp": "17:41",
+        "difficulty": "medium"
+      }
+    }
+  ]
+}

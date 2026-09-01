@@ -1,0 +1,116 @@
+{
+  "video_title": "Andrew Ng: Deep Learning, Education, and Real-World AI | Lex Fridman Podcast #73",
+  "video_url": "https://www.youtube.com/watch?v=0jspaMLxBig&t=99s",
+  "goldens": [
+    {
+      "input": "What was the primary reason Andrew Ng decided to create online courses?",
+      "expected_output": "His goal was to help anyone with an interest in machine learning to break into the field and foster a broad, global community of learners.",
+      "context": [
+        "broad as possible as global as possibleso really try to reach as many peopleinterested in machine learning and AI aspossible I really want to help anyonethat had an interest in machine learningto break into fields"
+      ],
+      "metadata": {
+        "timestamp": "08:00",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "What was the 'failed' feature Andrew Ng attempted to implement in his early online education platform?",
+      "expected_output": "He built a feature that allowed multiple people to be logged into the same website simultaneously to watch videos together, but it was rarely used because learners preferred watching independently.",
+      "context": [
+        "one of the features I was really excitedabout and really proud of was build thiswebsite where multiple people could belogged into the website at the same timeso today if you go to a website you knowif you're logged in and then I want tolog in you need to log out it was thesame browser the same computer but Ithought well one of two people say youand me were watching a video together infront of the computer what if a websitecould have you type your name andpassword hit me type in their passwordand then now the computer knows both ofus are watching together and it givesboth of us credit for anything we do asa group influences feature rolled it outin a higher in school in San Franciscowe had about 20-something users worththe teacher there Sacred Heart Cathedralprep teachers great and guess whatzero people use the speaker it turns outpeople studying online they want towatch the videos by themselves so youcan playback pause at your own speedrather than in groups"
+      ],
+      "metadata": {
+        "timestamp": "10:06",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What was the significance of the helicopter project in Pieter Abbeel’s PhD thesis?",
+      "expected_output": "It was a pioneering application of reinforcement learning to make a helicopter fly upside down and perform complex aerial maneuvers.",
+      "context": [
+        "Peter'sPhD thesis was using reinforcementlearning to fly helicopters and so youknow actually even today the websiteHelly thought stanford.edu heö I don'tStanford are you still up here watchvideos of us using reinforcementlearning to make the helicopter flyupside down five loops rolls"
+      ],
+      "metadata": {
+        "timestamp": "18:42",
+        "difficulty": "easy"
+      }
+    },
+    {
+      "input": "According to Andrew Ng, what did researchers 'get wrong' during the early days of Google Brain?",
+      "expected_output": "They initially put too much emphasis on unsupervised learning instead of focusing on the immense potential of supervised learning.",
+      "context": [
+        "there'sjust no way that most of what we know isthrough supervised learning the wife youget so many visit information is fromsucking in images audio thoseexperiences in the world and so thatarguments and a lot of known forcesargument you go going to really convinceme that there's a lot of power tounsupervised learning so that was thepart that we actually maybe maybe gonewrong I still think I was learning isreally important but we but but in theearly days you know 10 15 years ago andall of us thought that was the pathforward"
+      ],
+      "metadata": {
+        "timestamp": "23:34",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What key insight did Adam Coates provide that influenced the direction of Google Brain?",
+      "expected_output": "Coates generated a graph showing that increasing the scale of the model and the training data led to better performance, which gave Ng the conviction to pursue large-scale deep learning.",
+      "context": [
+        "the part we got rightwas the importance of scale so Adamcalls another wonderful person fortunatesaid worth of him he was in my group ofStanford at the time and Adam had runthese experiments at Stanford showingthat the bigger we train a learningalgorithm the better performance and itwas based on that it was a graph thathadn't generated you know where thex-axis y-axis lines going up into theright so bigger paint make this thingthe better his performance accuracy isthe vertical axis so it's really basedon that chart that Adam generated thathe gave me the conviction that you couldscale these models way bigger than whatwe could on the few CPUs we shouldunderstand that then we could get evenbetter results and it was really basedon that one figure that Adam generatedthat gave me the conviction to go"
+      ],
+      "metadata": {
+        "timestamp": "25:49",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "How does Andrew Ng suggest one should debug machine learning algorithms?",
+      "expected_output": "He advises a systematic approach to identifying why a model is not improving, including checking for overfitting, trying different regularization techniques, or varying architectures, rather than just using a standard code debugger.",
+      "context": [
+        "the people that are really good atdebugging machine learning algorithmsare easily 10xmaybe 100x faster at getting somethingto work so and the basic process ofdebugging is so the the bug in this casewhy is in this thing learning learningimproving sort of going into thequestions of overfitting and all thosekinds of things that's that's thelogical space that the debugging ishappening in would in your networkyeah the often question is why doesn'tit work yet well can I expect iteventually work and what are the thingsI could trychange the architecture malteaser moreregularization different optimizationalgorithm you know the different typesof data are so to answer those questionssystematically so that you don't headingdown so you don't spend six monthshitting down the blind alley"
+      ],
+      "metadata": {
+        "timestamp": "39:05",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "What does Ng identify as the current limitation of reinforcement learning in real-world settings?",
+      "expected_output": "While reinforcement learning is powerful for games and simulations, there is a lack of widespread, impactful, and deployed real-world industrial applications compared to other methods.",
+      "context": [
+        "I feel like we mighthave almost come full circle with todaythere's so much but so much hype so muchexcitement yeah about reinforcementlearning but again we're hunting formore applications"
+      ],
+      "metadata": {
+        "timestamp": "43:39",
+        "difficulty": "medium"
+      }
+    },
+    {
+      "input": "Can you describe the 'self-supervised' learning technique mentioned regarding image rotation?",
+      "expected_output": "It involves taking unlabeled images, rotating them by multiples of 90 degrees, and training a neural network to predict the original orientation, essentially generating labels automatically.",
+      "context": [
+        "here's the examples selfsupervised learning let's say we grab alot of unlabeled images off the internetso with infinite amounts of this type ofdata I'm going to take each image androtate it by a random multiple of 90degrees and then I'm going to train asupervised near Network to predict whatwas the original orientation so hassomething rotated 90 degrees hundredeighty degrees turns in seven degrees orzero degrees so you can generate aninfinite amount of label data becauseyou rotate to the image"
+      ],
+      "metadata": {
+        "timestamp": "46:50",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is the 'AI transformation playbook' suggested for companies?",
+      "expected_output": "It is a guide for companies to start small, with internal projects like speech recognition or computer vision, to build expertise and proof-of-concept before scaling to core business operations.",
+      "context": [
+        "I published a documentcalled the AI transformation playbookthat's online and talk briefly ifeveryone course on Coursera about thelong term journey that companies shouldtake but the first step is actually tostart small I've seen lot more companiesfail by starting to bake than bystarting to small"
+      ],
+      "metadata": {
+        "timestamp": "114:34",
+        "difficulty": "difficult"
+      }
+    },
+    {
+      "input": "What is Andrew Ng's stance on Artificial General Intelligence (AGI)?",
+      "expected_output": "He believes humanity will eventually reach AGI, but he finds it impossible to estimate whether that will take 100, 500, or 5,000 years.",
+      "context": [
+        "I would love to get the AGI and Ithink humanity will but whether it takesa hundred years or 500 or 5,000 I findhard to estimate"
+      ],
+      "metadata": {
+        "timestamp": "121:38",
+        "difficulty": "easy"
+      }
+    }
+  ]
+}
