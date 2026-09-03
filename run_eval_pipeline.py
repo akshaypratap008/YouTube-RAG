@@ -1,6 +1,8 @@
 from src.yt_rag.evals.eval_pipeline import EvalPipeline
 from yt_rag.evals.retriever_eval import RetrivalEval
 from src.yt_rag.evals.generator_eval import GeneratorEval
+from yt_rag.evals.full_rag_eval_pipeline import RagEval
+
 import os
 
 if __name__ == "__main__":
@@ -19,9 +21,13 @@ if __name__ == "__main__":
 
     # eval_pipeline.run_evaluations()
 
-    # ------ Generator eval ----
-    gen_eval_pipeline = GeneratorEval()
-    gen_eval_pipeline.run(eval_set_names="7ARBJQn6QkM.json")
+    # # ------ Generator eval ----
+    # gen_eval_pipeline = GeneratorEval()
+    # gen_eval_pipeline.run(eval_set_names="sD468LfeVdc.json")
+
+    # -------- Full rag pipeline -----
+    rag_eval_pipeline = RagEval()
+    rag_eval_pipeline.run(eval_set_names="hmtuvNfytjM.json")
 
 
 

@@ -1,0 +1,11 @@
+eval_set_name,test_name,model_name,success,faithfulness_score,faithfulness_success,answer_relevance_score,answer_relevance_success,contextual_relevancy_score,contextual_relevancy_success
+0jspaMLxBig.json,test_case_3,gpt-4o-mini,False,0.5,False,0.5,False,0.36,False
+0jspaMLxBig.json,test_case_9,gpt-4o-mini,False,0.75,True,1.0,True,0.05714285714285714,False
+0jspaMLxBig.json,test_case_8,gpt-4o-mini,False,1.0,True,0.0,False,0.15789473684210525,False
+0jspaMLxBig.json,test_case_4,gpt-4o-mini,False,1.0,True,0.75,True,0.48,False
+0jspaMLxBig.json,test_case_6,gpt-4o-mini,False,0.6666666666666666,False,1.0,True,0.2222222222222222,False
+0jspaMLxBig.json,test_case_5,gpt-4o-mini,False,1.0,True,1.0,True,0.16129032258064516,False
+0jspaMLxBig.json,test_case_0,gpt-4o-mini,False,1.0,True,1.0,True,0.3793103448275862,False
+0jspaMLxBig.json,test_case_1,gpt-4o-mini,False,0.6666666666666666,False,0.6666666666666666,False,0.11764705882352941,False
+0jspaMLxBig.json,test_case_2,gpt-4o-mini,False,1.0,True,1.0,True,0.1,False
+0jspaMLxBig.json,test_case_7,gpt-4o-mini,False,0.6666666666666666,False,1.0,True,0.13953488372093023,False

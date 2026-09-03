@@ -5,7 +5,7 @@ import json
 
 from src.yt_rag.components.search import RAGSearch
 from deepeval.test_case import LLMTestCase
-from deepeval.metrics import FaithfulnessMetric, AnswerRelevancyMetric
+from deepeval.metrics import FaithfulnessMetric, AnswerRelevancyMetric, ContextualRelevancyMetric
 from deepeval.evaluate import evaluate
 from deepeval.evaluate.configs import CacheConfig
 from src.yt_rag.logger import logging
@@ -17,9 +17,11 @@ GOLDENS_PATH = "rag_evaluation/evaluation_set/deep_eval_goldens"
 JUDGE_MODEL = "gpt-4o-mini"
 THRESHOLD = 0.7
 
+# os.environ["DEEPEVAL_PER_TASK_TIMEOUT_SECONDS_OVERRIDE"] = "600"
 
-class GeneratorEval:
-    """This class contains components which can be used to evaluate the generator using deepeval library. It only evaluates the genrator and therefore compares the generated answer with the ideal context"""
+
+class RagEval:
+    """This class contains components which can be used to evaluate the generator using deepeval library."""
 
     def __init__(self, goldens_path:str = GOLDENS_PATH, judge_model_name:str = JUDGE_MODEL, threshold:float = THRESHOLD):
         self.GOLDENS_PATH = goldens_path
@@ -48,35 +50,50 @@ class GeneratorEval:
             goldens = eval_set['goldens']
 
             # create test cases
-            generator = RAGSearch(url = video_url)
+            generator = RAGSearch(url = video_url, llm_model="gpt-4o")
             for g in goldens:
-                context = g['context']
                 input = g['input']
 
-                # generate answer using our llm model providing the ideal context from eval set
+                # context is fetched from retriever
+                context = generator.search(query = input)
+
+                # answer is generated using the generator
                 answer = generator.generate_response(context = context, query=input)
+
+                print(
+                    f"\nQuestion: {input}"
+                    f"\nChunks: {len(context)}"
+                    f"\nWords per chunk: {[len(chunk.split()) for chunk in context]}"
+                    f"\nTotal context words: {sum(len(chunk.split()) for chunk in context)}"
+                    f"\nAnswer words: {len(answer.split())}\n"
+                )
 
                 test_cases.append(
                     LLMTestCase(
                         input= input,
                         actual_output=answer,
                         retrieval_context=context,
-                        # no expected answer
+                        # expected answer is not needed
                     )
                 )
 
             # define metrics
             metrics = [
-                FaithfulnessMetric(
+                ContextualRelevancyMetric(
                     threshold= self.threshold,
                     model = self.judge_model_name,
-                    include_reason= True
-                ),
-                AnswerRelevancyMetric(
-                    threshold= self.threshold,
-                    model = self.judge_model_name,
-                    include_reason= True
+                    include_reason= False
                 )
+                # FaithfulnessMetric(
+                #     threshold= self.threshold,
+                #     model = self.judge_model_name,
+                #     include_reason= False
+                # ),
+                # AnswerRelevancyMetric(
+                #     threshold= self.threshold,
+                #     model = self.judge_model_name,
+                #     include_reason= False
+                # )
             ]
 
             # evaluate
@@ -89,7 +106,7 @@ class GeneratorEval:
                 )
             )
             logging.info(f'[INFO] - {name} - Evaluation complete for {name}')
-            self.save_results(results = results, eval_set_name=name)
+            # self.save_results(results = results, eval_set_name=name)
             logging.info(f'[INFO] - {name} - Evaluation saved in csv')
             
 
@@ -105,6 +122,8 @@ class GeneratorEval:
                 "faithfulness_success": None,
                 "answer_relevance_score": None,
                 "answer_relevance_success": None,
+                "contextual_relevancy_score": None,
+                "contextual_relevancy_success": None
             }
 
             for metric_data in test_result.metrics_data:
@@ -116,13 +135,17 @@ class GeneratorEval:
                 elif metric_data.name == "Answer Relevancy":
                     row["answer_relevance_score"] = metric_data.score
                     row["answer_relevance_success"] = metric_data.success
+                elif metric_data.name == "Contextual Relevancy":
+                    row["contextual_relevancy_score"] = metric_data.score
+                    row["contextual_relevancy_success"] = metric_data.success
+
 
             rows.append(row)
 
         results_df = pd.DataFrame(rows)
 
         try:
-            file_path = Path("rag_evaluation/eval_results/deep_eval_generator_results.csv")
+            file_path = Path("rag_evaluation/eval_results/full_rag_eval_deepeval.csv")
             if file_path.exists():
                 df = pd.read_csv(file_path)
                 # concat result df and original df

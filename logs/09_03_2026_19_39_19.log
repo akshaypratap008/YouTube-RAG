@@ -1,0 +1,12 @@
+[ 2026-09-03 19:39:48,798] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 19:39:48,805] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 19:39:48,901] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-09-03 19:39:48,941] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-09-03 19:39:48,941] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-09-03 19:39:49,293] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-09-03 19:39:49,421] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 19:39:49,423] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 19:39:49,830] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 19:39:49,832] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 19:39:49,833] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9

@@ -1,0 +1,28 @@
+[ 2026-09-03 22:47:02,369] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:02,373] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:02,380] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-09-03 22:47:02,380] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-09-03 22:47:02,380] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-09-03 22:47:02,415] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-09-03 22:47:02,526] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:02,530] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:02,645] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:02,647] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:02,648] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-03 22:47:04,145] 46 root - INFO - [INFO] - hmtuvNfytjM.json - golden dataset json file loaded
+[ 2026-09-03 22:47:04,146] 41 root - INFO - [INFO] hmtuvNfytjM : Extracted video id from url
+[ 2026-09-03 22:47:04,147] 29 root - INFO - [INFO] hmtuvNfytjM : Vector store initialised for hmtuvNfytjM
+[ 2026-09-03 22:47:04,149] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-09-03 22:47:04,149] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-09-03 22:47:04,149] 56 root - INFO - [INFO] hmtuvNfytjM Existing vetorstore loaded for hmtuvNfytjM
+[ 2026-09-03 22:47:06,309] 65 root - INFO - [INFO] hmtuvNfytjM OpenAI chat model initialised: gpt\u20114o-large
+[ 2026-09-03 22:47:06,309] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-09-03 22:47:08,064] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-09-03 22:47:08,074] 66 root - INFO - [INFO] Query embedding generated for query: What is one of the most exciting capabilities of GPT-5 according to Sam Altman?. Query embedding dimension: (1, 3072)
+[ 2026-09-03 22:47:08,076] 26 root - INFO - [INFO] Pickle file faiss_store\hmtuvNfytjM\metadata.pkl loaded
+[ 2026-09-03 22:47:08,076] 86 root - INFO - [INFO] hmtuvNfytjM : Faiss index and Metadata loaded
+[ 2026-09-03 22:47:08,076] 110 root - INFO - [INFO] hmtuvNfytjM : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-09-03 22:47:08,076] 99 root - INFO - [INFO] hmtuvNfytjM Query search completed. Relevant context extracted for query: What is one of the most exciting capabilities of GPT-5 according to Sam Altman?
+[ 2026-09-03 22:47:08,077] 118 root - INFO - [INFO] Prompt with context and query loaded
+[ 2026-09-03 22:47:08,835] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
