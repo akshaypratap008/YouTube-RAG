@@ -50,7 +50,7 @@ class RagEval:
             goldens = eval_set['goldens']
 
             # create test cases
-            generator = RAGSearch(url = video_url, llm_model="gpt-4o")
+            generator = RAGSearch(url = video_url)
             for g in goldens:
                 input = g['input']
 
@@ -83,17 +83,17 @@ class RagEval:
                     threshold= self.threshold,
                     model = self.judge_model_name,
                     include_reason= False
+                ),
+                FaithfulnessMetric(
+                    threshold= self.threshold,
+                    model = self.judge_model_name,
+                    include_reason= False
+                ),
+                AnswerRelevancyMetric(
+                    threshold= self.threshold,
+                    model = self.judge_model_name,
+                    include_reason= False
                 )
-                # FaithfulnessMetric(
-                #     threshold= self.threshold,
-                #     model = self.judge_model_name,
-                #     include_reason= False
-                # ),
-                # AnswerRelevancyMetric(
-                #     threshold= self.threshold,
-                #     model = self.judge_model_name,
-                #     include_reason= False
-                # )
             ]
 
             # evaluate
@@ -106,7 +106,7 @@ class RagEval:
                 )
             )
             logging.info(f'[INFO] - {name} - Evaluation complete for {name}')
-            # self.save_results(results = results, eval_set_name=name)
+            self.save_results(results = results, eval_set_name=name)
             logging.info(f'[INFO] - {name} - Evaluation saved in csv')
             
 
