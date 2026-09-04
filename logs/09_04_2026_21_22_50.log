@@ -1,0 +1,26 @@
+[ 2026-09-04 21:22:58,319] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:58,322] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:58,328] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-09-04 21:22:58,328] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-09-04 21:22:58,328] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-09-04 21:22:58,359] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-09-04 21:22:58,454] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:58,457] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:58,562] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:58,564] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:58,565] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:22:59,711] 20 root - INFO - [INFO] - g-eval evaluation started
+[ 2026-09-04 21:22:59,712] 41 root - INFO - [INFO] 0jspaMLxBig : Extracted video id from url
+[ 2026-09-04 21:22:59,733] 29 root - INFO - [INFO] 0jspaMLxBig : Vector store initialised for 0jspaMLxBig
+[ 2026-09-04 21:22:59,829] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-09-04 21:22:59,829] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-09-04 21:22:59,829] 56 root - INFO - [INFO] 0jspaMLxBig Existing vetorstore loaded for 0jspaMLxBig
+[ 2026-09-04 21:23:02,956] 65 root - INFO - [INFO] 0jspaMLxBig OpenAI chat model initialised: gpt-4o-mini
+[ 2026-09-04 21:23:02,956] 28 root - INFO - [INFO] Loading Embedding Model: text-embedding-3-large
+[ 2026-09-04 21:23:06,961] 1025 httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+[ 2026-09-04 21:23:07,031] 66 root - INFO - [INFO] Query embedding generated for query: What was the primary reason Andrew Ng decided to create online courses?. Query embedding dimension: (1, 3072)
+[ 2026-09-04 21:23:07,040] 26 root - INFO - [INFO] Pickle file faiss_store\0jspaMLxBig\metadata.pkl loaded
+[ 2026-09-04 21:23:07,040] 86 root - INFO - [INFO] 0jspaMLxBig : Faiss index and Metadata loaded
+[ 2026-09-04 21:23:07,052] 110 root - INFO - [INFO] 0jspaMLxBig : Vectorestore search for nearest vectors completed for query embedding of dimension (1, 3072)
+[ 2026-09-04 21:23:07,053] 99 root - INFO - [INFO] 0jspaMLxBig Query search completed. Relevant context extracted for query: What was the primary reason Andrew Ng decided to create online courses?

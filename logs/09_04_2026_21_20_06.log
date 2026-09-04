@@ -1,0 +1,13 @@
+[ 2026-09-04 21:20:14,681] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:14,684] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:14,690] 132 faiss.loader - INFO - Loading faiss with AVX2 support.
+[ 2026-09-04 21:20:14,690] 137 faiss.loader - INFO - Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+[ 2026-09-04 21:20:14,690] 156 faiss.loader - INFO - Loading faiss.
+[ 2026-09-04 21:20:14,723] 158 faiss.loader - INFO - Successfully loaded faiss.
+[ 2026-09-04 21:20:14,755] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:14,757] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:14,831] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:14,832] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:14,833] 35 dotenv.main - WARNING - python-dotenv could not parse statement starting at line 9
+[ 2026-09-04 21:20:16,024] 20 root - INFO - [INFO] - g-eval evaluation started
